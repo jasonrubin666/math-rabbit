@@ -6,6 +6,11 @@
 // rabbit inherits everything Scratch does to that sprite: show/hide, size, ghost fades,
 // and layering under the logo and flying cards. The costume Scratch picks drives the face:
 // a "...Mouth..." costume opens the jaw, a "...Blink..." costume shuts the eyes.
+//
+// Those mouth/blink costume swaps are absorbed here: the sprite stays on its base pose
+// ("Dad", "Dad2") and only the rabbit's face changes. TurboWarp's interpolation skips size
+// and rotation smoothing on any frame where the costume changes, so letting the swaps
+// through would make the scene jerk every time the scientist talks or blinks.
 import { createRabbit } from './rabbit-renderer.js';
 
 const SCIENTIST_SPRITES = ['TitleScreenDad', 'GameOver2T'];
@@ -73,7 +78,19 @@ async function main() {
     }
   }
 
-  let last = performance.now();
+  const face = new Map(targets.map(t => [t, { jaw: 0, lid: 0 }]));
+  for (const t of targets) {
+    const setCostume = t.setCostume.bind(t);
+    t.setCostume = (index) => {
+      const costumes = t.getCostumes(), wanted = costumes[index];
+      if (!wanted) return setCostume(index);
+      face.set(t, { jaw: /mouth/i.test(wanted.name) ? 1 : 0, lid: /blink/i.test(wanted.name) ? 1 : 0 });
+      const base = t.getCostumeIndexByName(wanted.name.replace(/mouth\d*|blink/i, '') || 'Dad');
+      return setCostume(base >= 0 ? base : index);
+    };
+  }
+
+  let last = performance.now(), lastRender = 0, renderMs = 0, lastCostume = null;
   const visibleScientist = () => targets.find(t => t.visible);
 
   // Redraw the rabbit into the current costume just before Scratch draws the stage.
@@ -81,16 +98,21 @@ async function main() {
   renderer.draw = function () {
     const t = visibleScientist();
     if (t) {
-      const now = performance.now(), dt = Math.min(0.1, (now - last) / 1000); last = now;
+      const now = performance.now();
       const costume = t.getCostumes()[t.currentCostume];
       const l = layout.get(costume);
-      if (l) {
-        rabbit.anim.external = { jaw: /mouth/i.test(costume.name) ? 1 : 0, lid: /blink/i.test(costume.name) ? 1 : 0 };
+      // With interpolation the stage draws at the display rate. Redraw the rabbit every frame
+      // when it's cheap; on slower devices drop it to ~30fps (Scratch still moves the sprite smoothly).
+      const due = costume !== lastCostume || renderMs < 8 || now - lastRender > 30;
+      if (l && due) {
+        const dt = Math.min(0.1, (now - last) / 1000); last = now; lastRender = now; lastCostume = costume;
+        rabbit.anim.external = face.get(t);
         rabbit.render(dt);
         ctx.clearRect(0, 0, OUT_W, OUT_H);
         ctx.drawImage(glCanvas, 0, 0);
         ctx.drawImage(desk, ...l.desk);
         renderer.updateBitmapSkin(costume.skinId, out, l.res, l.center);
+        renderMs = renderMs * 0.9 + (performance.now() - now) * 0.1;
       }
     }
     return draw();
@@ -99,7 +121,7 @@ async function main() {
   // Scratch only redraws when something changes; keep the rabbit breathing while it's on screen.
   const tick = () => { if (visibleScientist()) vm.runtime.requestRedraw(); requestAnimationFrame(tick); };
   requestAnimationFrame(tick);
-  window.mathRabbit = { rabbit, layout };
+  window.mathRabbit = { rabbit, layout, stats: () => ({ renderMs }) };
 }
 
 main().catch(err => console.error('[rabbit] failed to start:', err));

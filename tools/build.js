@@ -30,6 +30,8 @@ const BRIDGE_TAG = '<script type="module" src="rabbit/bridge.js"></script>\n';
   p.options.loadingScreen.progressBar = true;
   p.options.appearance.accent = '#ff4c4c';
   p.options.controls.fullscreen.enabled = true;
+  // Smooth sprite motion between Scratch's 30 steps/sec at the display's refresh rate (game speed unchanged)
+  p.options.interpolation = true;
   // iPad: no text selection, long-press callouts, or double-tap/pinch zoom on the stage
   p.options.custom.css = `
 html, body { touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
