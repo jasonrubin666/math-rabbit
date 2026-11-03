@@ -32,6 +32,9 @@ const BRIDGE_TAG = '<script type="module" src="rabbit/bridge.js"></script>\n';
   p.options.controls.fullscreen.enabled = true;
   // Smooth sprite motion between Scratch's 30 steps/sec at the display's refresh rate (game speed unchanged)
   p.options.interpolation = true;
+  // Without this the renderer rounds sprite positions to whole stage pixels (2-4 screen px on an iPad),
+  // which makes slow bobbing step instead of glide. Despite the name it also covers sprites; the game has no pen.
+  p.options.highQualityPen = true;
   // iPad: no text selection, long-press callouts, or double-tap/pinch zoom on the stage
   p.options.custom.css = `
 html, body { touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
