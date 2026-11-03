@@ -62,7 +62,7 @@ function artSlots(): Plugin {
       }
       let code = `export default ${JSON.stringify(out)};`;
       // asset references resolve to their final hashed paths at build time
-      code = code.replace(/"__ART_URL_(\w+)__"/g, (_m, ref) => `import.meta.ROLLUP_FILE_URL_${ref}`);
+      code = code.replace(/"__ART_URL_([\w$]+)__"/g, (_m, ref) => `import.meta.ROLLUP_FILE_URL_${ref}`);
       return code;
     },
     configureServer(server) {
@@ -121,7 +121,7 @@ function sounds(): Plugin {
           : `/@sounds/${encodeURIComponent(name)}`;
       }
       return `export default ${JSON.stringify(urls)};`
-        .replace(/"__SOUND_URL_(\w+)__"/g, (_m, ref) => `import.meta.ROLLUP_FILE_URL_${ref}`);
+        .replace(/"__SOUND_URL_([\w$]+)__"/g, (_m, ref) => `import.meta.ROLLUP_FILE_URL_${ref}`);
     },
     configureServer(server) {
       server.middlewares.use('/@sounds/', (req, res, next) => {

@@ -8,7 +8,7 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 const Packager = require('@turbowarp/packager');
 
-const KEEP = new Set(['rabbit', 'apple-touch-icon.png', 'favicon.png', '.nojekyll']);
+const KEEP = new Set(['rabbit', 'v2', 'apple-touch-icon.png', 'favicon.png', '.nojekyll']);
 const HEAD_TAGS = `<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-fullscreen">
