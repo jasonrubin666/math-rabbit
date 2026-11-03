@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "maddad", "runtimeExecutable": "npx", "runtimeArgs": ["-y", "http-server@14.1.1", "/Users/jasonrubin/Documents/AI/MadDad/docs", "-p", "8765", "-c-1"], "port": 8765 }
+    { "name": "mathrabbit", "runtimeExecutable": "npx", "runtimeArgs": ["-y", "http-server@14.1.1", "docs", "-p", "8792", "-c-1"], "port": 8792 }
   ]
 }

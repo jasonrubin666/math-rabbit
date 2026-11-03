@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>Mad Dad Math Lab</title>
+  <title>Math Rabbit</title>
   <style>
     body {
       color: #ffffff;
@@ -148,7 +148,7 @@ html, body { touch-action: none; overscroll-behavior: none; -webkit-user-select:
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-fullscreen">
-<meta name="apple-mobile-web-app-title" content="Mad Dad Math">
+<meta name="apple-mobile-web-app-title" content="Math Rabbit">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="favicon.png">
 
@@ -169,7 +169,7 @@ html, body { touch-action: none; overscroll-behavior: none; -webkit-user-select:
 
   <div id="loading" class="screen">
     <noscript>Enable JavaScript</noscript>
-    <h1 class="loading-text">Mad Dad Math Lab</h1>
+    <h1 class="loading-text">Math Rabbit</h1>
     
     <div class="progress-bar-outer"><div class="progress-bar-inner" id="loading-inner"></div></div>
   </div>
@@ -233,7 +233,7 @@ html, body { touch-action: none; overscroll-behavior: none; -webkit-user-select:
       scaffolding.setAccentColor("#ff4c4c");
 
       try {
-        scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "818082244"));
+        scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], ""));
       } catch (error) {
         console.error(error);
       }
@@ -387,5 +387,6 @@ document.addEventListener('dblclick', e => e.preventDefault(), { passive: false 
     };
     run().catch(handleError);
   </script>
+<script type="module" src="rabbit/bridge.js"></script>
 </body>
 </html>
