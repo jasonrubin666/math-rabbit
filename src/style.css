@@ -32,3 +32,25 @@ html, body {
   pointer-events: none;
   will-change: transform;
 }
+
+/* a blank Scratch costume */
+#stage img.blank {
+  display: none;
+}
+
+/* First tap: unlocks sound on iPad (Mad Dad's green flag). */
+#tap-to-start {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2f6b34;
+  font-size: 56px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1000;
+}

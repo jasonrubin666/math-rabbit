@@ -8,7 +8,8 @@ export const WRONG_PENALTY = 5;
  */
 export function pointsForCorrect(secondsLeft: number, fullSeconds: number, streakBefore: number): number {
   const speed = Number.isFinite(fullSeconds) ? Math.max(0, Math.min(1, secondsLeft / fullSeconds)) : 1;
-  return 5 + 5 * speed + Math.round(streakBefore / 3);
+  // whole points (Mad Dad allowed fractions like 9.5, which its digit display then mis-rounded)
+  return Math.round(5 + 5 * speed) + Math.round(streakBefore / 3);
 }
 
 /** What the score popup shows. */

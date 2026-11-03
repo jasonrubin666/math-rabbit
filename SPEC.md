@@ -163,6 +163,16 @@ The current clips are Mad Dad's voice. *The rabbit will need its own voice: reco
 
 ---
 
+## 9b. Deliberate changes in the rewrite
+
+Small fixes to things the original did by accident:
+
+- **Empty Enter is ignored.** Mad Dad counted Enter with nothing typed as a wrong answer (−5).
+- **Points are whole numbers.** Mad Dad's speed bonus produced fractions like 9.5, and its digit display then rounded each digit separately (sometimes wrongly).
+- **Zeros show on the calculator score.** Mad Dad showed every 0 as a blank, so 20 read "2 ". Now only leading zeros are blank.
+- **Input locks while a card leaves.** In the rewrite's first version a fast second tap could answer the same card twice; answers are now accepted only while a card is settled face up.
+- **Floating title cards keep Mad Dad's original spread.** In the Scratch build, calming the title zoom also pulled them toward the center, because they read the same zoom value.
+
 ## 10. Art the rewrite needs (slots for the new art)
 
 Each of these is a separate image today. The new art can replace them one at a time.

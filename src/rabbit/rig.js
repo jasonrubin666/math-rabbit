@@ -123,6 +123,7 @@ export class Animator {
     this.ear = { L: { a: 0, v: 0 }, R: { a: 0, v: 0 } };
     this.prevYaw = 0;
     this.external = null;        // { jaw: 0..1, lid: 0..1 } when something else (the Scratch game) drives the face
+    this.voiceJaw = 0;           // 0..1 loudness of the voice clip playing now
   }
   blink(t) { this.blinkStart = t; }
   wiggle(t) { this.twitch = { side: Math.random() < 0.5 ? -1 : 1, start: t, both: true }; }
@@ -167,6 +168,7 @@ export class Animator {
       jawTarget = Math.max(0, 0.55 + 0.45 * Math.sin(s * 2 * Math.PI * 4.2) * Math.sin(s * 2 * Math.PI * 1.3 + 0.7)) + this.syllableKick * 0.4;
     }
     if (this.external) jawTarget = this.external.jaw;
+    jawTarget = Math.max(jawTarget, this.voiceJaw);
     this.syllableKick *= Math.exp(-dt * 10);
     this.jaw += (Math.min(jawTarget, 1) - this.jaw) * (1 - Math.exp(-dt * 25));
     const jaw = M4.mul(head, M4.about(RIG.jawPivot, M4.rotX(0.22 * this.jaw)));

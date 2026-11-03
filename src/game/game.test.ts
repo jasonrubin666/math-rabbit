@@ -42,7 +42,8 @@ describe('scoring', () => {
   it('rewards speed and streaks', () => {
     expect(pointsForCorrect(20, 20, 0)).toBe(10);
     expect(pointsForCorrect(0, 20, 0)).toBe(5);
-    expect(pointsForCorrect(10, 20, 6)).toBe(9.5);
+    expect(pointsForCorrect(10, 20, 6)).toBe(10);
+    expect(pointsForCorrect(7, 20, 0)).toBe(7);
     expect(pointsForCorrect(0, Infinity, 0)).toBe(10);
   });
   it('labels popups like the original', () => {
