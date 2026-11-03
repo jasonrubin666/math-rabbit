@@ -120,8 +120,8 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     c.back.show(false);
     front.setCostume('CardBack').setEffects({}).show(true);
     front.el.style.zIndex = '200';
-    top.setCostume(String(c.problem.top)).setEffects({}).show(false);
-    bottom.setCostume(String(c.problem.bottom)).setEffects({}).show(false);
+    top.setCostume(c.problem.top).setEffects({}).show(false);
+    bottom.setCostume(c.problem.bottom).setEffects({}).show(false);
     for (const d of entryDigits) d.setEffects({}).show(true);
     const t0 = now, spin0 = rand(0, 100), mover0 = rand(0, 100);
     let settled = false;

@@ -2,28 +2,17 @@
 import slots, { type ArtSlot } from 'virtual:art';
 import { applyPose, type Pose } from './pose';
 import { STAGE_H, STAGE_W } from './stage';
+import { resolveCostume } from './costume';
 
-const byName = new Map<string, Map<string, number>>();   // sprite -> costume name -> index
-const countOf = new Map<string, number>();
+const names = new Map<string, string[]>();   // sprite -> costume names in order
 for (const key of Object.keys(slots)) {
   const [sprite, index] = key.split('/');
-  if (!byName.has(sprite)) byName.set(sprite, new Map());
-  byName.get(sprite)!.set(slots[key].name, +index);
-  countOf.set(sprite, Math.max(countOf.get(sprite) ?? 0, +index));
+  if (!names.has(sprite)) names.set(sprite, []);
+  names.get(sprite)![+index - 1] = slots[key].name;
 }
 
-/**
- * Scratch's "switch costume to": a costume name if one matches, otherwise a number counted from 1
- * that wraps around (so 0 is the last costume, which is how Mad Dad shows the digit 0).
- */
-export function costumeIndex(sprite: string, costume: string | number): number {
-  const named = byName.get(sprite)?.get(String(costume));
-  if (named) return named;
-  const n = Math.round(Number(costume));
-  if (Number.isNaN(n)) throw new Error(`${sprite} has no costume "${costume}"`);
-  const count = countOf.get(sprite) ?? 1;
-  return (((n - 1) % count) + count) % count + 1;
-}
+/** Pass numbers for game values (digits, card numbers) and text for named costumes, as Mad Dad did. */
+export const costumeIndex = (sprite: string, costume: string | number) => resolveCostume(names.get(sprite) ?? [], costume);
 
 export type Effects = { ghost?: number; brightness?: number; color?: number };
 
