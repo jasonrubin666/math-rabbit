@@ -1,0 +1,34 @@
+:root {
+  --letterbox: #000;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--letterbox);
+  overflow: hidden;
+  /* iPad: no scrolling, zooming, text selection or long-press callouts */
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The 480×360 Scratch-sized stage, letterboxed to fit the window. */
+#stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100vw, calc(100vh * 4 / 3));
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  contain: strict;
+}
+
+#stage img {
+  pointer-events: none;
+  will-change: transform;
+}
