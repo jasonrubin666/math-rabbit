@@ -21,7 +21,7 @@ const FOV = (30 * Math.PI) / 180;
 const EARS_ROOM = 0.45;
 const RABBIT_VIEW = {
   cam: {
-    yaw: 0, pitch: 0, dist: 1.6, target: [-0.035, -0.02, 0],
+    yaw: 0, pitch: 0, dist: 2.02, target: [-0.045, -0.005, 0],
     fov: 2 * Math.atan(Math.tan(FOV / 2) * (1 + EARS_ROOM)),
     centerY: -EARS_ROOM / (1 + EARS_ROOM),
   },
