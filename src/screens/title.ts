@@ -184,7 +184,7 @@ export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, 
         if (c.gone) continue;
         const dir = c.dir + c.spin * FPS * t;
         const x = c.x + (c.x / 10) * 3 * sinD(spin);
-        c.sprite.setPose({ x, y: c.y + 10 * sinD(dir), size: c.size + 4 * (5 + 3 * sinD(spin)), direction: dir });
+        c.sprite.setPose({ x, y: c.y + 10 * sinD(dir), size: c.size + 4 * (5 + 1.5 * sinD(spin)),   /* zoom pulse halved from Mad Dad's ±12 */ direction: dir });
       }
       // the start button shimmers a little, 30 times a second
       if (Math.floor(t * FPS) !== flicker) {
