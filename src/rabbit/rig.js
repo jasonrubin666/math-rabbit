@@ -122,8 +122,10 @@ const rand = (a, b) => a + Math.random() * (b - a);
 
 export class Animator {
   constructor() {
-    this.look = [0, 0];          // pointer target, -1..1
+    this.look = [0, 0];          // where he looks, -1..1 (left/right, down/up)
     this.lookSmooth = [0, 0];
+    this.wander = true;          // pick new places to look on his own every few seconds
+    this.nextGlance = 0.8;
     this.talking = false; this.talkStart = 0; this.jaw = 0; this.syllableKick = 0;
     this.nextBlink = 1.5; this.blinkStart = -1;
     this.nextTwitch = 2.5; this.twitch = { side: 0, start: -10 };
@@ -138,18 +140,30 @@ export class Animator {
 
   // Returns { bones: Float32Array(16*5), lid: [L, R] closedness 0..1 }
   update(t, dt) {
+    // looking around: a new glance every 1-3.5 s, now and then straight back at the player
+    if (this.wander && t > this.nextGlance) {
+      this.look = Math.random() < 0.3 ? [rand(-0.1, 0.1), rand(-0.05, 0.1)] : [rand(-0.75, 0.75), rand(-0.35, 0.45)];
+      this.nextGlance = t + rand(1, 3.5);
+    }
     const k = 1 - Math.exp(-dt * 4);
     this.lookSmooth[0] += (this.look[0] - this.lookSmooth[0]) * k;
     this.lookSmooth[1] += (this.look[1] - this.lookSmooth[1]) * k;
 
     // head: idle drift + look-at
-    const yaw = 0.07 * Math.sin(0.31 * t) + 0.035 * Math.sin(0.83 * t + 1) + 0.38 * this.lookSmooth[0];
+    // (the body turns part of the way toward a glance too, so the head turns a little less than before)
+    const yaw = 0.07 * Math.sin(0.31 * t) + 0.035 * Math.sin(0.83 * t + 1) + 0.3 * this.lookSmooth[0];
     const pitch = 0.035 * Math.sin(0.47 * t + 2) - 0.22 * this.lookSmooth[1] + (this.talking ? 0.025 * Math.sin(t * 7.3) : 0);
     const roll = 0.03 * Math.sin(0.23 * t + 0.5) - 0.06 * this.lookSmooth[0];
 
     // breathing (chest swells from the bottom of the bust)
     const breath = 0.5 + 0.5 * Math.sin(t * 2 * Math.PI / 3.8);
-    const torso = M4.about([0, -0.5, -0.02], M4.scale([1 + 0.006 * breath, 1 + 0.01 * breath, 1 + 0.012 * breath]));
+    // upper body: slow sway, lean and turn (toward where he looks), pivoting at the bottom of the sweater
+    // so its hidden edge stays behind the desk
+    const bodyYaw = 0.05 * Math.sin(0.21 * t + 1) + 0.12 * this.lookSmooth[0];
+    const bodyRoll = 0.025 * Math.sin(0.37 * t) - 0.03 * this.lookSmooth[0];
+    const bodyLean = 0.02 * Math.sin(0.29 * t + 2) - 0.03 * this.lookSmooth[1];
+    const sway = M4.mul(M4.rotY(bodyYaw), M4.mul(M4.rotZ(bodyRoll), M4.rotX(bodyLean)));
+    const torso = M4.about([0, -0.5, -0.02], M4.mul(sway, M4.scale([1 + 0.006 * breath, 1 + 0.01 * breath, 1 + 0.012 * breath])));
     const head = M4.mul(torso, M4.about(RIG.headPivot, M4.mul(M4.rotY(yaw), M4.mul(M4.rotX(pitch), M4.rotZ(roll)))));
 
     // ears: springy lag behind head turns + random twitches
