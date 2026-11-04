@@ -29,14 +29,15 @@ const toTitle = () => show(() => titleScreen(stage, host, settings, () => show((
 const toReport = (r: GameResult) => show(() => reportScreen(stage, host, r, toTitle));
 
 // fetch the text fonts now, so numbers and labels never show in a fallback font mid-game
-void Promise.all(['500 16px "Noto Sans"', '16px Knewave'].map(f => document.fonts.load(f, '0123456789%+-∞ABCabc!')));
+// (text is laid out by measuring the fonts, so the title waits for them; they are bundled, so this is quick)
+const fontsReady = Promise.all(['500 16px "Noto Sans"', '16px Knewave', '16px "Baby Rabbit"'].map(f => document.fonts.load(f, '0123456789%+-∞ABCabc!')));
 
 // iPad Safari only plays sound after a tap, so the game starts from one (Mad Dad's green flag)
 const tapToStart = document.getElementById('tap-to-start')!;
 tapToStart.addEventListener('pointerdown', () => {
   unlock();
   tapToStart.remove();
-  toTitle();
+  void fontsReady.then(toTitle, toTitle);
 }, { once: true });
 document.addEventListener('pointerdown', unlock);
 

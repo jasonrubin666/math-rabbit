@@ -1,6 +1,7 @@
-// Text costumes: Mad Dad's numbers, labels and popups were Scratch text, so they are set here in the
-// same fonts instead of being drawn as pictures. Scratch's "Sans Serif" is Noto Sans Medium and its
-// "Marker" is Knewave; both are bundled (see main.ts), so text looks the same on every device.
+// Text costumes: Mad Dad's numbers, labels and popups were Scratch text, so they are set here with a
+// font instead of being drawn as pictures. Mad Dad's "Sans Serif" (Noto Sans Medium) text is now set in
+// Baby Rabbit; its "Marker" (Knewave) popups stay as they were. All fonts are bundled, so text looks the
+// same on every device.
 import type { ArtSlot, TextRun } from 'virtual:art';
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -11,10 +12,25 @@ const SVG = 'http://www.w3.org/2000/svg';
 const GLYPH_INK_HEIGHT = 0.36;
 const GLYPH_INK_MIDDLE = 0.18;
 
-export const FONTS: Record<string, { family: string; weight: number }> = {
-  'Sans Serif': { family: '"Noto Sans", sans-serif', weight: 500 },
+/**
+ * `layout` is the font Mad Dad's text was placed for. When a font stands in for it, each run is centered
+ * where the original text sat, and shrunk if it would spill out of its box. Baby Rabbit has no ∞, so
+ * that falls back to Noto Sans.
+ */
+// `scale` sizes a stand-in font so its digits and capitals stand as tall as the original's (Baby Rabbit's
+// are 0.486 em tall, Noto Sans's 0.724 em).
+export const FONTS: Record<string, { family: string; weight: number; layout?: string; scale?: number }> = {
+  'Sans Serif': { family: '"Baby Rabbit", "Noto Sans", sans-serif', weight: 400, layout: '500 100px "Noto Sans"', scale: 1.49 },
   Marker: { family: 'Knewave, cursive', weight: 400 },
 };
+
+let measure: CanvasRenderingContext2D | null = null;
+/** Width of `text` at font size 1 in a CSS font ("<weight> 100px <family>"). */
+function widthOf(text: string, font: string) {
+  measure ??= document.createElement('canvas').getContext('2d')!;
+  measure.font = font;
+  return measure.measureText(text).width / 100;
+}
 
 type TextSlot = Pick<ArtSlot, 'url' | 'stageW' | 'stageH' | 'textW' | 'textH' | 'fileW' | 'fileH' | 'text'>;
 
@@ -49,10 +65,21 @@ function textRun(run: TextRun, box: { w: number; h: number }): SVGTextElement {
   const placed = run.x !== undefined && run.y !== undefined;
   const x = placed ? run.x! : box.w / 2;
   const y = placed ? run.y! : box.h / 2;
-  const centered = !placed || run.center;
-  const fontSize = run.center ? run.size / GLYPH_INK_HEIGHT : run.size;
+  let centered = !placed || run.center;
+  let fontSize = run.center ? run.size / GLYPH_INK_HEIGHT : run.size;
+  let textX = x;
+  if (font.layout && placed && !run.center && (run.anchor ?? 'start') === 'start') {
+    // center the stand-in font on where the original text sat, shrinking it to fit the box if needed
+    fontSize *= font.scale ?? 1;
+    const was = widthOf(run.text, font.layout) * run.size;
+    let now = widthOf(run.text, `${font.weight} 100px ${font.family}`) * fontSize;
+    const room = box.w * 0.96;
+    if (now > room) { fontSize *= room / now; now = room; }
+    textX = Math.min(Math.max(x + was / 2, now / 2), box.w - now / 2);
+    centered = true;
+  }
   t.textContent = run.text;
-  t.setAttribute('x', String(x));
+  t.setAttribute('x', String(textX));
   t.setAttribute('y', String(run.center ? y + GLYPH_INK_MIDDLE * fontSize : y));
   t.setAttribute('font-family', font.family);
   t.setAttribute('font-weight', String(font.weight));

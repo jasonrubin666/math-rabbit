@@ -1,3 +1,10 @@
+/* The game's main font (numbers, labels); see src/ui/text.ts */
+@font-face {
+  font-family: "Baby Rabbit";
+  src: url("./fonts/baby-rabbit.ttf") format("truetype");
+  font-display: block;
+}
+
 :root {
   --letterbox: #000;
 }
