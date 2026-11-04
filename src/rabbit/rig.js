@@ -12,10 +12,13 @@ export const RIG = {
   // ear never drags the scalp with it.
   earY0: 0.148, earY1: 0.172,
   earPivotL: [-0.06, 0.158, 0.0], earPivotR: [0.065, 0.158, 0.0],
-  // The mouth is a small smile: center y -0.117, corners ~-0.109 at |x|=0.03.
-  mouthY: -0.117, mouthCurve: 8.9,
-  jawPivot: [0.005, -0.12, 0.05],
-  jawZ: [0.10, 0.14], jawX: [0.045, 0.08],
+  // The mouth is the seam where the two cheek pads (with the pink nose between them) meet the round chin:
+  // center y -0.126, curving down to ~-0.137 at |x|=0.035.
+  mouthY: -0.126, mouthCurve: -9.0,
+  jawPivot: [0.005, -0.126, 0.03],
+  jawZ: [0.10, 0.14], jawX: [0.04, 0.065],
+  // the chin ends close to the neck, so the jaw fades out over a short band above it
+  jawNeckBlend: 0.012,
   // the eye whites (the left one is a little bigger); z reaches back to the whites' outer edges
   eyeL: { c: [-0.078, 0.0, 0.1], r: [0.043, 0.045] },
   eyeR: { c: [0.085, 0.006, 0.1], r: [0.038, 0.047] },
@@ -40,7 +43,7 @@ export function computeWeights(pos, n) {
     const ear = smooth(RIG.earY0, RIG.earY1, y);
     const mouthLine = RIG.mouthY + RIG.mouthCurve * x * x;
     const jaw = smooth(0, 0.006, mouthLine - y) * smooth(RIG.jawZ[0], RIG.jawZ[1], z)
-      * (1 - smooth(RIG.jawX[0], RIG.jawX[1], Math.abs(x))) * smooth(RIG.neckY, RIG.neckY + 0.025, y);
+      * (1 - smooth(RIG.jawX[0], RIG.jawX[1], Math.abs(x))) * smooth(RIG.neckY, RIG.neckY + RIG.jawNeckBlend, y);
     w.fill(0);
     w[BONES.torso] = 1 - head;
     w[x < 0 ? BONES.earL : BONES.earR] = head * ear;
