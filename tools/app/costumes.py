@@ -5,7 +5,8 @@
 For every costume ("<Sprite>/<index>") records the art image id from art/manifest.json (null for the
 blank costumes the art pipeline leaves out) plus where the costume sat in Scratch: its on-stage size and
 rotation center, in stage units. The app draws whatever file currently holds that image id
-(art/replace/ first) into that box.
+(art/replace/ first) into that box, or, when the manifest gives the use a "place", at that spot inside
+it (the end-of-game score digits reuse the big score digit art, shrunk and tilted).
 """
 import json
 import re
@@ -15,7 +16,7 @@ import zipfile
 
 sb3, manifest_path, out_path = sys.argv[1:4]
 manifest = json.load(open(manifest_path))
-image_of = {(u['sprite'], u['index']): img['id'] for img in manifest['images'] for u in img['uses']}
+use_of = {(u['sprite'], u['index']): (img['id'], u.get('place')) for img in manifest['images'] for u in img['uses']}
 
 with zipfile.ZipFile(sb3) as z:
     project = json.loads(z.read('project.json'))
@@ -34,7 +35,7 @@ with zipfile.ZipFile(sb3) as z:
     out = {}
     for t in project['targets']:
         for i, c in enumerate(t['costumes'], 1):
-            image = image_of.get((t['name'], i))   # None: a blank costume
+            image, place = use_of.get((t['name'], i), (None, None))   # None: a blank costume
             res = c.get('bitmapResolution', 1)
             pw, ph = pixel_size(c['md5ext'], c['dataFormat'])
             out[f"{t['name']}/{i}"] = {
@@ -42,6 +43,8 @@ with zipfile.ZipFile(sb3) as z:
                 'stageW': round(pw / res, 3), 'stageH': round(ph / res, 3),
                 'centerX': round(c['rotationCenterX'] / res, 3), 'centerY': round(c['rotationCenterY'] / res, 3),
             }
+            if place:
+                out[f"{t['name']}/{i}"]['place'] = place
 
 json.dump(out, open(out_path, 'w'), indent=0, sort_keys=True)
 print(f'{len(out)} costumes -> {out_path}')

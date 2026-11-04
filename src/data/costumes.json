@@ -1850,240 +1850,450 @@
 "FinalScoreHundreds/1": {
 "centerX": 96.639,
 "centerY": 74.308,
-"image": 168,
+"image": 112,
 "name": "1",
+"place": {
+"h": 96.926,
+"rotate": 1.939,
+"w": 79.401,
+"x": -14.666,
+"y": -3.465
+},
 "stageH": 93.427,
 "stageW": 49.221
 },
 "FinalScoreHundreds/10": {
 "centerX": 103.83,
 "centerY": 71.425,
-"image": 177,
+"image": 121,
 "name": "10",
+"place": {
+"h": 93.56,
+"rotate": 0.026,
+"w": 76.643,
+"x": -0.648,
+"y": -2.072
+},
 "stageH": 89.797,
 "stageW": 75.994
 },
 "FinalScoreHundreds/2": {
 "centerX": 98.863,
 "centerY": 69.285,
-"image": 169,
+"image": 113,
 "name": "2",
+"place": {
+"h": 91.533,
+"rotate": 1.931,
+"w": 74.983,
+"x": -4.062,
+"y": -3.615
+},
 "stageH": 88.545,
 "stageW": 66.038
 },
 "FinalScoreHundreds/3": {
 "centerX": 96.387,
 "centerY": 71.891,
-"image": 170,
+"image": 114,
 "name": "3",
+"place": {
+"h": 92.194,
+"rotate": 2.901,
+"w": 75.524,
+"x": -4.576,
+"y": -2.504
+},
 "stageH": 91.571,
 "stageW": 61.575
 },
 "FinalScoreHundreds/4": {
 "centerX": 105.784,
 "centerY": 74.307,
-"image": 171,
+"image": 115,
 "name": "4",
+"place": {
+"h": 96.758,
+"rotate": 2.011,
+"w": 79.263,
+"x": -0.605,
+"y": -3.349
+},
 "stageH": 93.952,
 "stageW": 77.426
 },
 "FinalScoreHundreds/5": {
 "centerX": 98.499,
 "centerY": 73.065,
-"image": 172,
+"image": 116,
 "name": "5",
+"place": {
+"h": 94.617,
+"rotate": 2.184,
+"w": 77.509,
+"x": -5.21,
+"y": -2.426
+},
 "stageH": 92.328,
 "stageW": 64.139
 },
 "FinalScoreHundreds/6": {
 "centerX": 103.816,
 "centerY": 73.589,
-"image": 173,
+"image": 117,
 "name": "6",
+"place": {
+"h": 93.918,
+"rotate": 1.72,
+"w": 76.936,
+"x": 0.364,
+"y": -2.498
+},
 "stageH": 92.607,
 "stageW": 75.807
 },
 "FinalScoreHundreds/7": {
 "centerX": 97.947,
 "centerY": 72.425,
-"image": 174,
+"image": 118,
 "name": "7",
+"place": {
+"h": 95.289,
+"rotate": 1.727,
+"w": 78.06,
+"x": -3.891,
+"y": -2.662
+},
 "stageH": 91.923,
 "stageW": 67.381
 },
 "FinalScoreHundreds/8": {
 "centerX": 104.629,
 "centerY": 72.363,
-"image": 175,
+"image": 119,
 "name": "8",
+"place": {
+"h": 92.736,
+"rotate": 2.012,
+"w": 75.968,
+"x": 1.84,
+"y": -2.1
+},
 "stageH": 91.867,
 "stageW": 77.348
 },
 "FinalScoreHundreds/9": {
 "centerX": 105.074,
 "centerY": 73.235,
-"image": 176,
+"image": 120,
 "name": "9",
+"place": {
+"h": 95.143,
+"rotate": 1.829,
+"w": 77.94,
+"x": 0.173,
+"y": -2.195
+},
 "stageH": 93.587,
 "stageW": 76.603
 },
 "FinalScoreOnes/1": {
 "centerX": -34.507,
 "centerY": 69.889,
-"image": 179,
+"image": 112,
 "name": "1",
+"place": {
+"h": 96.926,
+"rotate": 1.026,
+"w": 79.401,
+"x": -16.183,
+"y": -3.181
+},
 "stageH": 92.73,
 "stageW": 47.776
 },
 "FinalScoreOnes/10": {
 "centerX": -26.081,
 "centerY": 71.174,
-"image": 177,
+"image": 121,
 "name": "10",
+"place": {
+"h": 93.56,
+"rotate": 0.25,
+"w": 76.643,
+"x": -0.289,
+"y": -2.074
+},
 "stageH": 90.093,
 "stageW": 76.344
 },
 "FinalScoreOnes/2": {
 "centerX": -32.416,
 "centerY": 65.522,
-"image": 169,
+"image": 113,
 "name": "2",
+"place": {
+"h": 91.533,
+"rotate": 1.931,
+"w": 74.983,
+"x": -4.062,
+"y": -3.615
+},
 "stageH": 88.545,
 "stageW": 66.038
 },
 "FinalScoreOnes/3": {
 "centerX": -37.905,
 "centerY": 67.981,
-"image": 170,
+"image": 114,
 "name": "3",
+"place": {
+"h": 92.194,
+"rotate": 2.901,
+"w": 75.524,
+"x": -4.576,
+"y": -2.503
+},
 "stageH": 91.571,
 "stageW": 61.574
 },
 "FinalScoreOnes/4": {
 "centerX": -27.417,
 "centerY": 70.329,
-"image": 171,
+"image": 115,
 "name": "4",
+"place": {
+"h": 96.758,
+"rotate": 2.011,
+"w": 79.263,
+"x": -0.605,
+"y": -3.349
+},
 "stageH": 93.952,
 "stageW": 77.426
 },
 "FinalScoreOnes/5": {
 "centerX": -36.792,
 "centerY": 68.62,
-"image": 172,
+"image": 116,
 "name": "5",
+"place": {
+"h": 94.617,
+"rotate": 2.183,
+"w": 77.509,
+"x": -5.211,
+"y": -2.426
+},
 "stageH": 92.327,
 "stageW": 64.138
 },
 "FinalScoreOnes/6": {
 "centerX": -27.298,
 "centerY": 69.842,
-"image": 173,
+"image": 117,
 "name": "6",
+"place": {
+"h": 93.918,
+"rotate": 1.72,
+"w": 76.936,
+"x": 0.362,
+"y": -2.498
+},
 "stageH": 92.606,
 "stageW": 75.806
 },
 "FinalScoreOnes/7": {
 "centerX": -36.519,
 "centerY": 68.219,
-"image": 174,
+"image": 118,
 "name": "7",
+"place": {
+"h": 95.284,
+"rotate": 1.726,
+"w": 78.055,
+"x": -3.892,
+"y": -2.661
+},
 "stageH": 91.917,
 "stageW": 67.376
 },
 "FinalScoreOnes/8": {
 "centerX": -27.886,
 "centerY": 67.454,
-"image": 175,
+"image": 119,
 "name": "8",
+"place": {
+"h": 92.742,
+"rotate": 2.013,
+"w": 75.973,
+"x": 1.841,
+"y": -2.1
+},
 "stageH": 91.873,
 "stageW": 77.353
 },
 "FinalScoreOnes/9": {
 "centerX": -27.433,
 "centerY": 69.487,
-"image": 176,
+"image": 120,
 "name": "9",
+"place": {
+"h": 95.143,
+"rotate": 1.83,
+"w": 77.94,
+"x": 0.175,
+"y": -2.195
+},
 "stageH": 93.588,
 "stageW": 76.604
 },
 "FinalTens/1": {
 "centerX": 28.842,
 "centerY": 71.525,
-"image": 178,
+"image": 112,
 "name": "1",
+"place": {
+"h": 96.926,
+"rotate": 0.732,
+"w": 79.401,
+"x": -16.67,
+"y": -3.09
+},
 "stageH": 92.501,
 "stageW": 47.309
 },
 "FinalTens/10": {
 "centerX": 38.925,
 "centerY": 71.758,
-"image": 177,
+"image": 121,
 "name": "10",
+"place": {
+"h": 93.56,
+"rotate": 0.251,
+"w": 76.643,
+"x": -0.291,
+"y": -2.075
+},
 "stageH": 90.095,
 "stageW": 76.345
 },
 "FinalTens/2": {
 "centerX": 32.634,
 "centerY": 67.072,
-"image": 169,
+"image": 113,
 "name": "2",
+"place": {
+"h": 91.533,
+"rotate": 1.931,
+"w": 74.983,
+"x": -4.062,
+"y": -3.615
+},
 "stageH": 88.545,
 "stageW": 66.038
 },
 "FinalTens/3": {
 "centerX": 29.465,
 "centerY": 69.697,
-"image": 170,
+"image": 114,
 "name": "3",
+"place": {
+"h": 92.194,
+"rotate": 2.901,
+"w": 75.524,
+"x": -4.573,
+"y": -2.502
+},
 "stageH": 91.57,
 "stageW": 61.574
 },
 "FinalTens/4": {
 "centerX": 38.721,
 "centerY": 72.087,
-"image": 171,
+"image": 115,
 "name": "4",
+"place": {
+"h": 96.758,
+"rotate": 2.011,
+"w": 79.263,
+"x": -0.605,
+"y": -3.349
+},
 "stageH": 93.952,
 "stageW": 77.426
 },
 "FinalTens/5": {
 "centerX": 29.81,
 "centerY": 70.841,
-"image": 172,
+"image": 116,
 "name": "5",
+"place": {
+"h": 94.617,
+"rotate": 2.183,
+"w": 77.509,
+"x": -5.211,
+"y": -2.426
+},
 "stageH": 92.327,
 "stageW": 64.138
 },
 "FinalTens/6": {
 "centerX": 38.606,
 "centerY": 71.657,
-"image": 173,
+"image": 117,
 "name": "6",
+"place": {
+"h": 93.918,
+"rotate": 1.72,
+"w": 76.936,
+"x": 0.365,
+"y": -2.496
+},
 "stageH": 92.605,
 "stageW": 75.805
 },
 "FinalTens/7": {
 "centerX": 30.196,
 "centerY": 69.977,
-"image": 174,
+"image": 118,
 "name": "7",
+"place": {
+"h": 95.284,
+"rotate": 1.726,
+"w": 78.055,
+"x": -3.892,
+"y": -2.661
+},
 "stageH": 91.917,
 "stageW": 67.376
 },
 "FinalTens/8": {
 "centerX": 39.874,
 "centerY": 69.906,
-"image": 175,
+"image": 119,
 "name": "8",
+"place": {
+"h": 92.742,
+"rotate": 2.013,
+"w": 75.973,
+"x": 1.841,
+"y": -2.1
+},
 "stageH": 91.873,
 "stageW": 77.353
 },
 "FinalTens/9": {
 "centerX": 38.936,
 "centerY": 71.245,
-"image": 176,
+"image": 120,
 "name": "9",
+"place": {
+"h": 95.143,
+"rotate": 1.83,
+"w": 77.94,
+"x": 0.175,
+"y": -2.195
+},
 "stageH": 93.588,
 "stageW": 76.604
 },

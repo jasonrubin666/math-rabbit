@@ -12,7 +12,9 @@ const COSTUMES = path.resolve(import.meta.dirname, 'src/data/costumes.json');
 const VIRTUAL_ID = 'virtual:art';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
 
-type Costume = { image: number | null; name: string; stageW: number; stageH: number; centerX: number; centerY: number };
+/** Where a shared image sits inside a costume's box (costume units, rotated clockwise about x, y). */
+type Place = { x: number; y: number; w: number; h: number; rotate: number };
+type Costume = { image: number | null; name: string; stageW: number; stageH: number; centerX: number; centerY: number; place?: Place };
 /** One run of text, drawn with a font instead of an image (art/manifest.json images[].text[]). */
 export type TextRun = {
   text: string; font: string; color: string;

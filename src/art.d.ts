@@ -11,6 +11,9 @@ declare module 'virtual:art' {
     centerY: number;
     /** the Scratch costume name */
     name: string;
+    /** when set, the image is drawn at this spot inside the box instead of filling it: top-left (x, y),
+     *  size w × h, rotated `rotate` degrees clockwise about (x, y), all in costume units */
+    place?: { x: number; y: number; w: number; h: number; rotate: number };
     /** text costumes: the image's own size, which the text runs and shape are laid out in
      *  (stretched to the costume's box, as the image was) */
     textW?: number;

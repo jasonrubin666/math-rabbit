@@ -53,6 +53,12 @@ export class Sprite {
     if (this.textEl) this.el.append(this.textEl);
     const url = this.textEl ? '' : slot.url;
     if (url) this.img.src = url; else this.img.removeAttribute('src');
+    const p = slot.place;   // a shared image placed inside the box (else it fills the box, per the CSS)
+    Object.assign(this.img.style, p ? {
+      left: `${(100 * p.x) / slot.stageW}%`, top: `${(100 * p.y) / slot.stageH}%`,
+      width: `${(100 * p.w) / slot.stageW}%`, height: `${(100 * p.h) / slot.stageH}%`,
+      transformOrigin: '0 0', transform: p.rotate ? `rotate(${p.rotate}deg)` : '',
+    } : { left: '', top: '', width: '', height: '', transformOrigin: '', transform: '' });
     this.img.hidden = !url;
     this.el.classList.toggle('blank', !url && !this.textEl);
     return this;
