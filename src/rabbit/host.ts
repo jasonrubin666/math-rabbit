@@ -32,6 +32,8 @@ const RABBIT_VIEW = {
     centerY: -EARS_ROOM / (1 + EARS_ROOM),
   },
   tint: [0.9, 0.93, 0.82],
+  // the fur wisps along his outline at 40% strength: at this size full-strength wisps look scratchy
+  fuzz: 0.4,
 };
 
 export type Host = Awaited<ReturnType<typeof createHost>>;
