@@ -78,9 +78,13 @@ export async function createHost() {
     applyPose(el, { x: x - ox, y: y + oy, size: k * 100, direction });
   }
 
-  function setEffects({ ghost = 0, brightness = 0 }: { ghost?: number; brightness?: number }) {
+  /** Scratch graphic effects, as on sprites: ghost 0..100, brightness -100..100, color (hue) 0..200 per turn. */
+  function setEffects({ ghost = 0, brightness = 0, color = 0 }: { ghost?: number; brightness?: number; color?: number }) {
     el.style.opacity = String(1 - Math.min(100, Math.max(0, ghost)) / 100);
-    el.style.filter = brightness ? `brightness(${Math.max(0, 1 + brightness / 100)})` : '';
+    const filters = [];
+    if (brightness) filters.push(`brightness(${Math.max(0, 1 + brightness / 100)})`);
+    if (color) filters.push(`hue-rotate(${color * 1.8}deg)`);
+    el.style.filter = filters.join(' ');
   }
 
   /** Draw one frame; keeps the canvas at device resolution for its on-screen size. */

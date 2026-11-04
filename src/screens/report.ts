@@ -82,7 +82,8 @@ export function reportScreen(stage: HTMLElement, host: Host, result: GameResult,
       const dir = 90 + 0.75 * sinD(spin / 2);
       scene.setPose({ size: zoom, direction: dir }).setEffects({ ghost: 100 * (1 - sceneFade), color: perfect ? -150 * (t - t0) : 0 });
       host.setPose('gameOver', { x: 0, y: -30, size: zoom + 1.25 * (sinD(spin) + 1), direction: dir });
-      host.setEffects({ ghost: 100 * (1 - sceneFade) });
+      // the rabbit and his desk cycle colors with the scene on a perfect game, as the scientist did
+      host.setEffects({ ghost: 100 * (1 - sceneFade), color: perfect ? -150 * (t - t0) : 0 });
       // the report card floats
       const pose = { x: 90, y: -10 * cosD(spin), size: 89.75 + 1.75 * sinD(spin / 2), direction: 90 - 1.25 * cosD(spin / 2) };
       const fade = 100 * (1 - fadeIn);

@@ -1,7 +1,7 @@
 // Text costumes: Mad Dad's numbers, labels and popups were Scratch text, so they are set here with a
-// font instead of being drawn as pictures. Mad Dad's "Sans Serif" (Noto Sans Medium) text is now set in
-// Baby Rabbit; its "Marker" (Knewave) popups stay as they were. All fonts are bundled, so text looks the
-// same on every device.
+// font instead of being drawn as pictures. All of it is now set in Baby Rabbit, standing in for Mad Dad's
+// "Sans Serif" (Noto Sans Medium) and "Marker" (Knewave). Fonts are bundled, so text looks the same on
+// every device.
 import type { ArtSlot, TextRun } from 'virtual:art';
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -18,10 +18,12 @@ const GLYPH_INK_MIDDLE = 0.18;
  * that falls back to Noto Sans.
  */
 // `scale` sizes a stand-in font so its digits and capitals stand as tall as the original's (Baby Rabbit's
-// are 0.486 em tall, Noto Sans's 0.724 em).
-export const FONTS: Record<string, { family: string; weight: number; layout?: string; scale?: number }> = {
-  'Sans Serif': { family: '"Baby Rabbit", "Noto Sans", sans-serif', weight: 400, layout: '500 100px "Noto Sans"', scale: 1.49 },
-  Marker: { family: 'Knewave, cursive', weight: 400 },
+// are 0.484 em tall, Noto Sans's 0.724 em, Knewave's 0.85 em).
+type Font = { family: string; weight: number; layout?: string; scale?: number };
+const BABY_RABBIT = { family: '"Baby Rabbit", "Noto Sans", sans-serif', weight: 400 };   // its only weight
+export const FONTS: Record<string, Font> = {
+  'Sans Serif': { ...BABY_RABBIT, layout: '500 100px "Noto Sans"', scale: 1.49 },
+  Marker: { ...BABY_RABBIT, layout: '400 100px Knewave', scale: 1.76 },
 };
 
 let measure: CanvasRenderingContext2D | null = null;
