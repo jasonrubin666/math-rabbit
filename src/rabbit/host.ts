@@ -21,7 +21,9 @@ const FOV = (30 * Math.PI) / 180;
 const EARS_ROOM = 0.45;
 const RABBIT_VIEW = {
   cam: {
-    yaw: 0, pitch: 0, dist: 2.02, target: [-0.045, -0.005, 0],
+    // dist 2.525 shows him at 80% of the size dist 2.02 did; target y puts the bottom of his
+    // sweater (y -0.493) just below the desk's top edge (87% down the frame), so most of him shows
+    yaw: 0, pitch: 0, dist: 2.525, target: [-0.045, 0.048, 0],
     fov: 2 * Math.atan(Math.tan(FOV / 2) * (1 + EARS_ROOM)),
     centerY: -EARS_ROOM / (1 + EARS_ROOM),
   },
