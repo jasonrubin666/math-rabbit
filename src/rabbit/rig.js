@@ -5,18 +5,22 @@ export const BONES = { torso: 0, head: 1, earL: 2, earR: 3, jaw: 4 };
 export const FLAG = { none: 0, eyeL: 1, eyeR: 2, mouth: 3, wisp: 4, nearEye: 5 };
 
 export const RIG = {
-  neckY: -0.118, neckBlend: 0.022,
-  headPivot: [0, -0.12, 0.0],
-  // The head dome tops out at y~0.19; the two ears are separate lobes from y~0.20 up.
-  // Keep the blend band above the dome so moving an ear never drags the scalp with it.
-  earY0: 0.19, earY1: 0.215,
-  earPivotL: [-0.06, 0.2, -0.005], earPivotR: [0.06, 0.2, -0.005],
-  // Mouth line droops toward the corners: y = mouthY + mouthCurve * x^2 (picked: center -0.040, corners ~-0.051 at |x|=0.05)
-  mouthY: -0.040, mouthCurve: -4.4,
-  jawPivot: [0, -0.04, 0.02],
+  // The head is a bell from the neck (y~-0.205) up to a dome that tops out at y~0.147 in the middle.
+  neckY: -0.205, neckBlend: 0.017,
+  headPivot: [0.005, -0.21, -0.02],
+  // The two ears are separate lobes from y~0.155 up; keep the blend band above the dome so moving an
+  // ear never drags the scalp with it.
+  earY0: 0.148, earY1: 0.172,
+  earPivotL: [-0.06, 0.158, 0.0], earPivotR: [0.065, 0.158, 0.0],
+  // The mouth is a small smile: center y -0.117, corners ~-0.109 at |x|=0.03.
+  mouthY: -0.117, mouthCurve: 8.9,
+  jawPivot: [0.005, -0.12, 0.05],
   jawZ: [0.10, 0.14], jawX: [0.045, 0.08],
-  eyeL: { c: [-0.073, 0.094, 0.09], r: [0.034, 0.037] },
-  eyeR: { c: [0.073, 0.094, 0.09], r: [0.034, 0.037] },
+  // the eye whites (the left one is a little bigger); z reaches back to the whites' outer edges
+  eyeL: { c: [-0.078, 0.0, 0.1], r: [0.043, 0.045] },
+  eyeR: { c: [0.085, 0.006, 0.1], r: [0.038, 0.047] },
+  // the eyelid takes its color from the fur this far out (in eye radii, squared), above the light eye-ring
+  lidRing: [2.6, 4.0],
 };
 
 const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
@@ -64,7 +68,7 @@ export function sampleLidColor(pos, rgba, n) {
     const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
     for (const eye of [RIG.eyeL, RIG.eyeR]) {
       const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
-      if (d > 1.4 && d < 2.2 && dy > 0 && z > eye.c[2] - 0.045 && rgba[4 * i + 3] > 128) {
+      if (d > RIG.lidRing[0] && d < RIG.lidRing[1] && dy > 0 && z > eye.c[2] - 0.045 && rgba[4 * i + 3] > 128) {
         acc[0] += rgba[4 * i]; acc[1] += rgba[4 * i + 1]; acc[2] += rgba[4 * i + 2]; count++;
       }
     }
@@ -186,7 +190,7 @@ export class Animator {
 
 // Fur fringe: thin, semi-transparent wisps sprouting outward from fur splats (not sweater, eyes or mouth).
 // A splat's surface normal is its shortest axis, flipped to point away from the body part it belongs to.
-const PART_CENTER = { [BONES.torso]: [0, -0.3, 0], [BONES.head]: [0, 0.03, 0], [BONES.jaw]: [0, -0.06, 0.08] };
+const PART_CENTER = { [BONES.torso]: [0, -0.37, 0], [BONES.head]: [0, -0.03, 0], [BONES.jaw]: [0, -0.14, 0.12] };
 export function buildWisps(pos, rgba, axes, rig, n, density = 0.35) {
   const out = [];
   for (let i = 0; i < n; i++) {

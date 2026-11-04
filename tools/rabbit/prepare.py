@@ -1,8 +1,9 @@
 """TRELLIS Gaussian .ply -> cleaned web/rabbit.splat (32 B/splat: pos f32x3, scale f32x3, rgba u8x4, quat u8x4).
 
-Cleanup: drops near-transparent splats and the two stray "tails" TRELLIS invented
-(one on the back of the neck, one at the bottom of the sweater).
-Usage: python prepare.py source/rabbit_brown.ply web/rabbit.splat
+Cleanup: drops near-transparent splats. (The first rabbit, rabbit_brown.ply in git history, also needed
+two stray "tails" TRELLIS invented cut away; the current one has only its real cotton tail, on its back.)
+A new rabbit also needs its landmarks re-measured in src/rabbit/rig.js (RIG).
+Usage: python tools/rabbit/prepare.py rabbit-source/rabbit.ply src/rabbit/rabbit.splat
 """
 import sys, os
 import numpy as np
@@ -12,10 +13,7 @@ from splatlib import load_ply
 d = load_ply(sys.argv[1])
 p = d['xyz']
 keep = d['opacity'] > 0.02
-neck_tail = (np.abs(p[:, 0]) < 0.045) & (p[:, 1] > -0.14) & (p[:, 1] < -0.075) & (p[:, 2] < -0.118)
-bottom_tail = (np.abs(p[:, 0]) < 0.065) & (p[:, 1] < -0.38) & (p[:, 2] < -0.128)
-keep &= ~neck_tail & ~bottom_tail
-print(f'kept {keep.sum()} of {len(p)} (neck tail {neck_tail.sum()}, bottom tail {bottom_tail.sum()})')
+print(f'kept {keep.sum()} of {len(p)}')
 
 n = int(keep.sum())
 rec = np.zeros(n, dtype=[('pos', '<f4', 3), ('scale', '<f4', 3), ('rgba', 'u1', 4), ('quat', 'u1', 4)])

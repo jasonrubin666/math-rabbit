@@ -14,7 +14,19 @@ export const HOST_COSTUMES = {
 const BASE = HOST_COSTUMES.title;
 const FRAME_H = 260.861;
 const DESK = { left: 5.0, top: 63.54, width: 86.23, height: 55.37 };   // % of the frame
-const RABBIT_VIEW = { cam: { yaw: 0, pitch: 0, fov: (30 * Math.PI) / 180, dist: 2.02, target: [-0.045, 0.045, 0] }, tint: [0.9, 0.93, 0.82] };
+// The camera frames the rabbit in the scientist's frame. His ears reach above it, so the canvas extends
+// EARS_ROOM × the frame's height above the frame, with the same view (the extra fov and the off-center
+// view keep everything in the frame exactly where it was).
+const FOV = (30 * Math.PI) / 180;
+const EARS_ROOM = 0.45;
+const RABBIT_VIEW = {
+  cam: {
+    yaw: 0, pitch: 0, dist: 1.6, target: [-0.035, -0.02, 0],
+    fov: 2 * Math.atan(Math.tan(FOV / 2) * (1 + EARS_ROOM)),
+    centerY: -EARS_ROOM / (1 + EARS_ROOM),
+  },
+  tint: [0.9, 0.93, 0.82],
+};
 
 export type Host = Awaited<ReturnType<typeof createHost>>;
 
@@ -30,7 +42,9 @@ export async function createHost() {
     transformOrigin: `${(100 * BASE.cx) / BASE.w}% ${(100 * BASE.cy) / FRAME_H}%`,
   });
   const canvas = document.createElement('canvas');
-  Object.assign(canvas.style, { position: 'absolute', inset: '0', width: '100%', height: '100%' });
+  Object.assign(canvas.style, {
+    position: 'absolute', left: '0', width: '100%', top: `${-100 * EARS_ROOM}%`, height: `${100 * (1 + EARS_ROOM)}%`,
+  });
   const desk = document.createElement('img');
   desk.src = deskUrl;
   desk.alt = '';

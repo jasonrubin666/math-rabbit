@@ -224,7 +224,8 @@ export async function createRabbit(canvas, opts = {}) {
     const f = norm(sub(target, e)), x = norm(cross(f, [0, 1, 0])), y = cross(f, x);
     const view = new Float32Array([x[0], y[0], f[0], 0, x[1], y[1], f[1], 0, x[2], y[2], f[2], 0, -dot(x, e), -dot(y, e), -dot(f, e), 1]);
     const fy = h / (2 * Math.tan(cam.fov / 2)), fx = fy, zn = 0.05, zf = 50;
-    const proj = new Float32Array([2 * fx / w, 0, 0, 0, 0, -2 * fy / h, 0, 0, 0, 0, zf / (zf - zn), 1, 0, 0, -(zf * zn) / (zf - zn), 0]);
+    // centerY moves the view's center up or down the canvas (NDC units), for a canvas taller than the view
+    const proj = new Float32Array([2 * fx / w, 0, 0, 0, 0, -2 * fy / h, 0, 0, 0, cam.centerY || 0, zf / (zf - zn), 1, 0, 0, -(zf * zn) / (zf - zn), 0]);
     return { view, proj, fx, fy };
   }
 
