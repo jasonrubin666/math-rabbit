@@ -34,10 +34,11 @@ CSS_FONT = {
     'Curly': 'Griffy, cursive',
     'Pixel': '"Grand9K Pixel", monospace',
 }
-# Art the game draws that isn't a Scratch costume: (name, file in the repo, stage units per pixel).
-# The desk is cut from the scientist portraits (TitleScreenDad, GameOver2T), which are skipped because the
-# 3D rabbit draws over them; the rabbit sits behind it on the title and report card screens.
-EXTRAS = [('Rabbit desk', 'src/rabbit/desk.png', 0.5)]
+# Art the game draws that isn't a Scratch costume: (name, master copy in the repo, stage units per pixel,
+# where the game uses it). The desk was cut from the scientist portraits (TitleScreenDad, GameOver2T), which
+# are skipped because the 3D rabbit draws over them; the rabbit sits behind it on the title and report card
+# screens. Its only copy is its file in art/originals/, so it is kept, not regenerated.
+EXTRAS = [('Rabbit desk', 'art/originals/268 Rabbit desk.png', 0.5, 'src/rabbit/host.ts (virtual:art extras)')]
 # Drawn as a path but really a character
 GLYPH_PATHS = {('Timer', '999'): '∞'}
 
@@ -210,15 +211,17 @@ def add_extras(art, manifest, next_id):
     """Copy EXTRAS into originals/ with ids after the shapes, listed under "extras" in the manifest."""
     from PIL import Image
     manifest['extras'] = []
-    for n, (name, src, unit) in enumerate(EXTRAS, next_id):
-        src = art.resolve().parent / src
+    for n, (name, src, unit, used_in) in enumerate(EXTRAS, next_id):
+        src = Path(__file__).resolve().parents[2] / src
         stem = f'{n:03d} {name}'
         fmt = src.suffix[1:].lower()
-        (art / 'originals' / f'{stem}.{fmt}').write_bytes(src.read_bytes())
+        dest = art / 'originals' / f'{stem}.{fmt}'
+        if dest.resolve() != src:
+            dest.write_bytes(src.read_bytes())
         w, h = Image.open(src).size
         manifest['extras'].append({'id': n, 'name': stem, 'file': f'originals/{stem}.{fmt}', 'format': fmt,
                                    'stage_w': round(w * unit, 1), 'stage_h': round(h * unit, 1), 'kind': 'art',
-                                   'used_in': str(src.relative_to(art.resolve().parent))})
+                                   'used_in': used_in})
 
 
 def write_gallery(art, manifest):

@@ -11,6 +11,7 @@ pad), so each costume gets a copy scaled to its own spot: the new art keeps the 
 the original file in originals/. Draw a PNG at 2 pixels per stage unit, i.e. twice the stage size in the
 manifest, for the same sharpness as the original.
 """
+import base64
 import hashlib
 import io
 import json
@@ -83,6 +84,21 @@ def main(sb3='MadDad.sb3', art='art', out='MathRabbit.sb3'):
         for use in image['uses']:
             c = targets[use['sprite']]['costumes'][use['index'] - 1]
             old_w, old_h = stage_size(src.read(c['md5ext']), c['dataFormat'], c.get('bitmapResolution', 1))
+            if 'place' in use:  # a smaller, tilted copy: same box and centre, the new art drawn where "place" says
+                p = use['place']
+                href = f'data:image/{"svg+xml" if fmt == "svg" else "png"};base64,{base64.b64encode(data).decode()}'
+                body = (f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
+                        f'width="{old_w}" height="{old_h}" viewBox="0 0 {old_w} {old_h}"><image x="{p["x"]}" '
+                        f'y="{p["y"]}" width="{p["w"]}" height="{p["h"]}" preserveAspectRatio="none" '
+                        f'transform="rotate({p["rotate"]} {p["x"]} {p["y"]})" xlink:href="{href}"/></svg>').encode()
+                md5 = hashlib.md5(body).hexdigest()
+                res = c.get('bitmapResolution', 1)
+                c.update(assetId=md5, md5ext=f'{md5}.svg', dataFormat='svg',
+                         rotationCenterX=c['rotationCenterX'] / res, rotationCenterY=c['rotationCenterY'] / res)
+                c.pop('bitmapResolution', None)
+                new_assets[c['md5ext']] = body
+                count += 1
+                continue
             k = old_w / orig_w if orig_w else 1  # how much bigger this spot draws the art than originals/ has it
             w, h = new_w * k, new_h * k
             body = scaled_svg(data, w, h) if fmt == 'svg' else scaled_png(data, w, h)

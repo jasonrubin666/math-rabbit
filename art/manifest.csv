@@ -110,16 +110,16 @@ id,kind,file,format,stage_w,stage_h,text,font,base,uses,used_by
 109,text,originals/109 NumberTop 52.svg,svg,38.2,44.3,98,Sans Serif,,1,NumberTop#98 52
 110,text,originals/110 NumberTop 51.svg,svg,38.2,44.3,99,Sans Serif,,1,NumberTop#99 51
 111,text,originals/111 EntryHundreds 10.svg,svg,56.0,124.9,0,Sans Serif,,13,EntryHundreds#10 10; EntryTens#10 10; EntryOnes#10 10; 4DigitTopOnes#10 10; 4DigitBottomThousands#10 10; 4DigitBottomHundreds#10 10; 4DigitBottomTens#10 10; 4DigitBottomOnes#10 10; 4DigitEntry10Thousands#10 10; 4DigitEntryThousands#10 10; 4DigitEntryHundreds#10 10; 4DigitEntryTens#10 10; 4DigitEntryOnes#10 10
-112,art,originals/112 ScoreThousands Score1.png,png,222.0,271.0,,,,5,ScoreThousands#1 Score1; ScoreHundreds#1 Score1; ScoreTens#1 Score1; ScoreOnes#1 Score1; Score:#1 Score1
-113,art,originals/113 ScoreThousands Score2.png,png,222.0,271.0,,,,5,ScoreThousands#2 Score2; ScoreHundreds#2 Score2; ScoreTens#2 Score2; ScoreOnes#2 Score2; Score:#2 Score2
-114,art,originals/114 ScoreThousands Score3.png,png,222.0,271.0,,,,5,ScoreThousands#3 Score3; ScoreHundreds#3 Score3; ScoreTens#3 Score3; ScoreOnes#3 Score3; Score:#3 Score3
-115,art,originals/115 ScoreThousands Score4.png,png,222.0,271.0,,,,5,ScoreThousands#4 Score4; ScoreHundreds#4 Score4; ScoreTens#4 Score4; ScoreOnes#4 Score4; Score:#4 Score4
-116,art,originals/116 ScoreThousands Score5.png,png,222.0,271.0,,,,5,ScoreThousands#5 Score5; ScoreHundreds#5 Score5; ScoreTens#5 Score5; ScoreOnes#5 Score5; Score:#5 Score5
-117,art,originals/117 ScoreThousands Score6.png,png,222.0,271.0,,,,5,ScoreThousands#6 Score6; ScoreHundreds#6 Score6; ScoreTens#6 Score6; ScoreOnes#6 Score6; Score:#6 Score6
-118,art,originals/118 ScoreThousands Score7.png,png,222.0,271.0,,,,5,ScoreThousands#7 Score7; ScoreHundreds#7 Score7; ScoreTens#7 Score7; ScoreOnes#7 Score7; Score:#7 Score7
-119,art,originals/119 ScoreThousands Score8.png,png,222.0,271.0,,,,5,ScoreThousands#8 Score8; ScoreHundreds#8 Score8; ScoreTens#8 Score8; ScoreOnes#8 Score8; Score:#8 Score8
-120,art,originals/120 ScoreThousands Score9.png,png,222.0,271.0,,,,5,ScoreThousands#9 Score9; ScoreHundreds#9 Score9; ScoreTens#9 Score9; ScoreOnes#9 Score9; Score:#9 Score9
-121,art,originals/121 ScoreThousands Score10.png,png,222.0,271.0,,,,4,ScoreThousands#10 Score10; ScoreHundreds#10 Score10; ScoreTens#10 Score10; ScoreOnes#10 Score10
+112,art,originals/112 ScoreThousands Score1.png,png,222.0,271.0,,,,8,ScoreThousands#1 Score1; ScoreHundreds#1 Score1; ScoreTens#1 Score1; ScoreOnes#1 Score1; Score:#1 Score1; FinalScoreHundreds#1 1; FinalTens#1 1; FinalScoreOnes#1 1
+113,art,originals/113 ScoreThousands Score2.png,png,222.0,271.0,,,,8,ScoreThousands#2 Score2; ScoreHundreds#2 Score2; ScoreTens#2 Score2; ScoreOnes#2 Score2; Score:#2 Score2; FinalScoreHundreds#2 2; FinalTens#2 2; FinalScoreOnes#2 2
+114,art,originals/114 ScoreThousands Score3.png,png,222.0,271.0,,,,8,ScoreThousands#3 Score3; ScoreHundreds#3 Score3; ScoreTens#3 Score3; ScoreOnes#3 Score3; Score:#3 Score3; FinalScoreHundreds#3 3; FinalTens#3 3; FinalScoreOnes#3 3
+115,art,originals/115 ScoreThousands Score4.png,png,222.0,271.0,,,,8,ScoreThousands#4 Score4; ScoreHundreds#4 Score4; ScoreTens#4 Score4; ScoreOnes#4 Score4; Score:#4 Score4; FinalScoreHundreds#4 4; FinalTens#4 4; FinalScoreOnes#4 4
+116,art,originals/116 ScoreThousands Score5.png,png,222.0,271.0,,,,8,ScoreThousands#5 Score5; ScoreHundreds#5 Score5; ScoreTens#5 Score5; ScoreOnes#5 Score5; Score:#5 Score5; FinalScoreHundreds#5 5; FinalTens#5 5; FinalScoreOnes#5 5
+117,art,originals/117 ScoreThousands Score6.png,png,222.0,271.0,,,,8,ScoreThousands#6 Score6; ScoreHundreds#6 Score6; ScoreTens#6 Score6; ScoreOnes#6 Score6; Score:#6 Score6; FinalScoreHundreds#6 6; FinalTens#6 6; FinalScoreOnes#6 6
+118,art,originals/118 ScoreThousands Score7.png,png,222.0,271.0,,,,8,ScoreThousands#7 Score7; ScoreHundreds#7 Score7; ScoreTens#7 Score7; ScoreOnes#7 Score7; Score:#7 Score7; FinalScoreHundreds#7 7; FinalTens#7 7; FinalScoreOnes#7 7
+119,art,originals/119 ScoreThousands Score8.png,png,222.0,271.0,,,,8,ScoreThousands#8 Score8; ScoreHundreds#8 Score8; ScoreTens#8 Score8; ScoreOnes#8 Score8; Score:#8 Score8; FinalScoreHundreds#8 8; FinalTens#8 8; FinalScoreOnes#8 8
+120,art,originals/120 ScoreThousands Score9.png,png,222.0,271.0,,,,8,ScoreThousands#9 Score9; ScoreHundreds#9 Score9; ScoreTens#9 Score9; ScoreOnes#9 Score9; Score:#9 Score9; FinalScoreHundreds#9 9; FinalTens#9 9; FinalScoreOnes#9 9
+121,art,originals/121 ScoreThousands Score10.png,png,222.0,271.0,,,,7,ScoreThousands#10 Score10; ScoreHundreds#10 Score10; ScoreTens#10 Score10; ScoreOnes#10 Score10; FinalScoreHundreds#10 10; FinalTens#10 10; FinalScoreOnes#10 10
 122,art,originals/122 Score_ Score10.png,png,196.0,173.0,,,,1,Score:#10 Score10
 123,text on art,originals/123 Boom -5.svg,svg,60.4,60.2,-5,Marker,262,1,Boom#2 -5
 124,text on art,originals/124 Boom huge.svg,svg,79.4,38.9,HUGE!,Marker,263,1,Boom#3 huge
@@ -166,18 +166,6 @@ id,kind,file,format,stage_w,stage_h,text,font,base,uses,used_by
 165,art,originals/165 TitleCard costume6.png,png,66.0,105.0,,,,1,TitleCard#10 costume6
 166,art,originals/166 TitleCard costume7.png,png,66.0,105.0,,,,1,TitleCard#11 costume7
 167,art,originals/167 StartButton Start2.png,png,250.0,90.0,,,,1,StartButton#1 Start2
-168,art,originals/168 FinalScoreHundreds 1.svg,svg,49.2,93.4,,,,1,FinalScoreHundreds#1 1
-169,art,originals/169 FinalScoreHundreds 2.svg,svg,66.0,88.5,,,,3,FinalScoreHundreds#2 2; FinalTens#2 2; FinalScoreOnes#2 2
-170,art,originals/170 FinalScoreHundreds 3.svg,svg,61.6,91.6,,,,3,FinalScoreHundreds#3 3; FinalTens#3 3; FinalScoreOnes#3 3
-171,art,originals/171 FinalScoreHundreds 4.svg,svg,77.4,94.0,,,,3,FinalScoreHundreds#4 4; FinalTens#4 4; FinalScoreOnes#4 4
-172,art,originals/172 FinalScoreHundreds 5.svg,svg,64.1,92.3,,,,3,FinalScoreHundreds#5 5; FinalTens#5 5; FinalScoreOnes#5 5
-173,art,originals/173 FinalScoreHundreds 6.svg,svg,75.8,92.6,,,,3,FinalScoreHundreds#6 6; FinalTens#6 6; FinalScoreOnes#6 6
-174,art,originals/174 FinalScoreHundreds 7.svg,svg,67.4,91.9,,,,3,FinalScoreHundreds#7 7; FinalTens#7 7; FinalScoreOnes#7 7
-175,art,originals/175 FinalScoreHundreds 8.svg,svg,77.4,91.9,,,,3,FinalScoreHundreds#8 8; FinalTens#8 8; FinalScoreOnes#8 8
-176,art,originals/176 FinalScoreHundreds 9.svg,svg,76.6,93.6,,,,3,FinalScoreHundreds#9 9; FinalTens#9 9; FinalScoreOnes#9 9
-177,art,originals/177 FinalScoreHundreds 10.svg,svg,76.3,90.1,,,,3,FinalScoreHundreds#10 10; FinalTens#10 10; FinalScoreOnes#10 10
-178,art,originals/178 FinalTens 1.svg,svg,47.3,92.5,,,,1,FinalTens#1 1
-179,art,originals/179 FinalScoreOnes 1.svg,svg,47.8,92.7,,,,1,FinalScoreOnes#1 1
 180,art,originals/180 Confetti costume1.svg,svg,16.0,9.2,,,,1,Confetti#1 costume1
 181,art,originals/181 Confetti costume2.svg,svg,18.2,11.5,,,,1,Confetti#2 costume2
 182,art,originals/182 Confetti costume3.svg,svg,17.2,11.5,,,,1,Confetti#3 costume3
@@ -266,4 +254,4 @@ id,kind,file,format,stage_w,stage_h,text,font,base,uses,used_by
 265,art,originals/265 Key2 costume1 shape.svg,svg,26.9,27.8,,,,0,"shape for images 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156"
 266,art,originals/266 4DigitTopThousands 1 shape.svg,svg,56.0,124.9,,,,0,"shape for images 241, 242, 243, 244, 245, 246, 247, 248, 249, 250"
 267,art,originals/267 4DigitTopThousands 11 shape.svg,svg,56.0,125.1,,,,0,"shape for images 251, 252, 253, 254, 255, 256, 257, 258, 259, 260"
-268,art,originals/268 Rabbit desk.png,png,300.0,144.5,,,,0,src/rabbit/desk.png
+268,art,originals/268 Rabbit desk.png,png,300.0,144.5,,,,0,src/rabbit/host.ts (virtual:art extras)

@@ -11,6 +11,8 @@ Writes into the art folder:
   replace/                       put new art here with the same file name (.png or .svg)
   manifest.json / manifest.csv   every image: its size, and every costume (sprite + number) that uses it
   index.html                     contact sheet, showing replacements once they exist
+Costumes in FOLD_INTO sprites are smaller, tilted crops of another image: they become uses of that image
+with a "place" (where it sits in the costume) instead of images of their own, and their numbers stay unused.
 Then classify.py marks the images that are only text (to draw with a font) and splits text off shapes.
 Skipped: the scientist sprites the 3D rabbit draws over, and blank (fully transparent) costumes.
 """
@@ -31,6 +33,10 @@ RABBIT_DRIVEN = {'TitleScreenDad', 'GameOver2T'}  # docs/rabbit/bridge.js draws 
 KEEP_FRAMES_APART = {'ScoreSheet'}  # near-identical animation frames ("tap me" blink) that must stay two images
 # Column copies of the same art, offset by a few pixels per column: costume N of each is one image
 SAME_ART = [{'4DigitTopThousands', '4DigitTopHundreds', '4DigitTopTens'}]
+# Sprites whose costumes are a smaller, tilted crop of another sprite's art: costume N of each shows costume N
+# of the other. They fold into that image after numbering (their numbers become gaps, so no other id moves),
+# and each of their uses gets "place": where the shared image sits inside that costume.
+FOLD_INTO = {'FinalScoreHundreds': 'ScoreOnes', 'FinalTens': 'ScoreOnes', 'FinalScoreOnes': 'ScoreOnes'}
 KEY = (255, 0, 255)  # render background, so white-on-transparent art still shows up
 
 
@@ -107,6 +113,41 @@ def same(a, b):
     return sum(1 for v in d if v > 48) / len(d) < 0.0015
 
 
+def ink_box(im):
+    return im.getchannel('A').point(lambda v: 255 if v > 128 else 0).getbbox()
+
+
+def placement(svg, target):
+    """Where the whole of `target` (an RGBA image, 2 px per stage unit) sits in a costume whose SVG embeds a
+    crop of it: {x, y (its top-left), w, h, rotate (degrees clockwise about x, y)} in costume units."""
+    import base64
+    import math
+    tag = re.search(r'<image\b[^>]*>', svg).group(0)
+    num = lambda name: float(re.search(rf'\b{name}="([-\d.e]+)"', tag).group(1))
+    t = re.search(r'transform="([^"]*)"', tag)
+    rot = re.search(r'rotate\(([-\d.e]+)\)', t.group(1) if t else '')
+    sc = re.search(r'scale\(([-\d.e]+)(?:[ ,]+([-\d.e]+))?\)', t.group(1) if t else '')
+    r = float(rot.group(1)) if rot else 0.0
+    s = float(sc.group(1)) if sc else 1.0
+    tx = sum(float(a) for a, _ in re.findall(r'translate\(([-\d.e]+)[ ,]+([-\d.e]+)\)', svg[:svg.index(tag)]))
+    ty = sum(float(b) for _, b in re.findall(r'translate\(([-\d.e]+)[ ,]+([-\d.e]+)\)', svg[:svg.index(tag)]))
+    emb = Image.open(io.BytesIO(base64.b64decode(re.search(r'base64,([^"]+)', tag).group(1)))).convert('RGBA')
+    # The embedded bitmap is a 1:1 pixel crop of the target (same colours, a slightly heavier glow): find where,
+    # starting from the drawn areas' centres
+    a, b = ink_box(target), ink_box(emb)
+    gx, gy = round((a[0] + a[2] - b[0] - b[2]) / 2), round((a[1] + a[3] - b[1] - b[3]) / 2)
+    rgb, whole = emb.convert('RGB'), target.convert('RGB')
+
+    def mismatch(o):
+        crop = whole.crop((o[0], o[1], o[0] + emb.width, o[1] + emb.height))
+        return sum(ImageChops.difference(crop, rgb).convert('L').getdata())
+    ox, oy = min(((gx + dx, gy + dy) for dx in range(-12, 13) for dy in range(-12, 13)), key=mismatch)
+    lx, ly = s * (num('x') - ox), s * (num('y') - oy)  # the target's (0, 0), before rotating
+    c, sn = math.cos(math.radians(r)), math.sin(math.radians(r))
+    return {'x': round(tx + c * lx - sn * ly, 3), 'y': round(ty + sn * lx + c * ly, 3),
+            'w': round(s * target.width, 3), 'h': round(s * target.height, 3), 'rotate': round(r, 3)}
+
+
 def main(sb3='MadDad.sb3', out='art'):
     out = Path(out)
     z = zipfile.ZipFile(sb3)
@@ -161,13 +202,13 @@ def main(sb3='MadDad.sb3', out='art'):
 
     (out / 'originals').mkdir(parents=True, exist_ok=True)
     (out / 'replace').mkdir(exist_ok=True)
-    images = []
+    images, kept = [], {}
     for n, g in enumerate(groups, 1):
         keep = max(g, key=area)
+        kept[n] = keep
         first = uses[g[0]][0]
         fmt = keep.rsplit('.', 1)[1]
         stem = f'{n:03d} {safe(first["sprite"])} {safe(first["costume"])}'
-        (out / 'originals' / f'{stem}.{fmt}').write_bytes(data[keep])
         if fmt == 'svg':
             w, h = svg_size(data[keep])
         else:
@@ -178,6 +219,18 @@ def main(sb3='MadDad.sb3', out='art'):
             'stage_w': round(w, 1), 'stage_h': round(h, 1),
             'uses': [{**u, 'md5ext': k} for k in g for u in uses[k]],
         })
+
+    # Fold the cropped copies into the image they were cut from (see FOLD_INTO)
+    def shows(sprite, index):
+        return next(im for im in images for u in im['uses'] if (u['sprite'], u['index']) == (sprite, index))
+    for im in [im for im in images if im['uses'] and all(u['sprite'] in FOLD_INTO for u in im['uses'])]:
+        for u in im['uses']:
+            into = shows(FOLD_INTO[u['sprite']], u['index'])
+            target = Image.open(io.BytesIO(data[kept[into['id']]])).convert('RGBA')
+            into['uses'].append({**u, 'place': placement(data[u['md5ext']].decode(), target)})
+        images.remove(im)
+    for im in images:
+        (out / im['file']).write_bytes(data[kept[im['id']]])
 
     manifest = {'source': Path(sb3).name, 'images': images, 'skipped': skipped}
     (out / 'manifest.json').write_text(json.dumps(manifest, indent=1))
