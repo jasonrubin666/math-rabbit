@@ -3,8 +3,8 @@
 import { createRabbit } from './rabbit-renderer.js';
 import { extras } from 'virtual:art';
 
-// The desk is art image 268 (art/replace/268* replaces it). New art is drawn into the same box (DESK),
-// so the top edge that hides the bottom of the rabbit stays where it is.
+// The desk is art image 268 (art/replace/268*), drawn in front of the rabbit with the paws on it under
+// his sleeves. It is laid out from the picture's own shape (see deskLayout).
 const DESK_ART = 268;
 import { applyPose, type Pose } from '../ui/pose';
 import { voiceLevel } from '../audio';
@@ -17,7 +17,17 @@ export const HOST_COSTUMES = {
 } as const;
 const BASE = HOST_COSTUMES.title;
 const FRAME_H = 260.861;
-const DESK = { left: 5.0, top: 63.54, width: 86.23, height: 55.37 };   // % of the frame
+/**
+ * Where the desk goes, in % of the frame, for a picture `aspect` (width / height) wide: as wide as the
+ * frame, its drawn paws (centered 52.5% across the picture) under the middle of his sweater (52.47%
+ * across the frame), and its bottom on the bottom of the screen when the title scene is zoomed all the
+ * way out (121.34% down the frame). The tabletop then hides the bottom of his sweater (89.5% down).
+ */
+const FRAME_ASPECT = 347.815 / 260.861;
+function deskLayout(aspect: number) {
+  const width = 100, height = (width * FRAME_ASPECT) / aspect;
+  return { left: 52.47 - 0.525 * width, top: 121.34 - height, width, height };
+}
 // The camera frames the rabbit in the scientist's frame. His ears reach above it, so the canvas extends
 // EARS_ROOM × the frame's height above the frame, with the same view (the extra fov and the off-center
 // view keep everything in the frame exactly where it was).
@@ -58,9 +68,13 @@ export async function createHost() {
   const desk = document.createElement('img');
   desk.src = extras[DESK_ART]?.url ?? '';
   desk.alt = '';
-  Object.assign(desk.style, {
-    position: 'absolute', left: `${DESK.left}%`, top: `${DESK.top}%`, width: `${DESK.width}%`, height: `${DESK.height}%`,
-  });
+  desk.style.position = 'absolute';
+  const placeDesk = () => {
+    const d = deskLayout(desk.naturalWidth / desk.naturalHeight || 2087 / 1161);
+    Object.assign(desk.style, { left: `${d.left}%`, top: `${d.top}%`, width: `${d.width}%`, height: `${d.height}%` });
+  };
+  placeDesk();
+  desk.addEventListener('load', placeDesk);
   el.append(canvas, desk);
 
   const rabbit = await createRabbit(canvas, RABBIT_VIEW);
