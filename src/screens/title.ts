@@ -165,13 +165,13 @@ export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, 
         // as it grows, so its top edge (the art fills its box to the top) stays on screen.
         logo.setPose({ y: 105 - 10 * zoom, size: 70 * (1 + 0.15 * zoom), direction: 90 + 6 * cosD(spin) });
       }
-      // floating cards breathe out from the center and bob as they spin (Mad Dad's original spread)
+      // floating cards breathe out from the center and bob as they spin (Mad Dad's original spread); near
+      // the edges they simply slide off screen (Mad Dad faded them out there, since Scratch keeps sprites on stage)
       for (const c of cards) {
         if (c.gone) continue;
         const dir = c.dir + c.spin * FPS * t;
         const x = c.x + (c.x / 10) * 3 * sinD(spin);
         c.sprite.setPose({ x, y: c.y + 10 * sinD(dir), size: c.size + 4 * (5 + 3 * sinD(spin)), direction: dir });
-        c.sprite.setEffects({ ghost: Math.abs(x) > 220 ? (Math.abs(x) - 220) * 5 : 0 });
       }
       // the start button shimmers a little, 30 times a second
       if (Math.floor(t * FPS) !== flicker) {
