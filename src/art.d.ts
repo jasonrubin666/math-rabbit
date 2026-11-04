@@ -43,6 +43,9 @@ declare module 'virtual:art' {
   /** Keyed "<Sprite>/<costume index>", e.g. "Logo/1". */
   const slots: Record<string, ArtSlot>;
   export default slots;
+  /** Art outside the Scratch costumes (manifest "extras"), by id: art/replace/NNN* wins over the original.
+   *  stageW/stageH are the original's size in stage units. */
+  export const extras: Record<number, { url: string; stageW: number; stageH: number }>;
 }
 
 declare module 'virtual:sounds' {

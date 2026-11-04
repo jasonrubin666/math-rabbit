@@ -37,8 +37,11 @@ type Slot = Omit<Costume, 'image'> & {
   text?: TextRun[];
 };
 
-function readSlots(): Map<string, Slot> {
-  const manifest: { images: ManifestImage[]; shapes?: ManifestImage[] } =
+/** Art the game shows outside any Scratch costume (the rabbit's desk), by manifest id. */
+type Extra = { file: string; stageW: number; stageH: number };
+
+function readArt(): { slots: Map<string, Slot>; extras: Map<number, Extra> } {
+  const manifest: { images: ManifestImage[]; shapes?: ManifestImage[]; extras?: ManifestImage[] } =
     JSON.parse(fs.readFileSync(path.join(ART_DIR, 'manifest.json'), 'utf8'));
   const replaceDir = path.join(ART_DIR, 'replace');
   const replacements = fs.existsSync(replaceDir)
@@ -50,7 +53,7 @@ function readSlots(): Map<string, Slot> {
     return r && path.join(replaceDir, r);
   };
   const byId = new Map<number, ManifestImage>();
-  for (const img of [...manifest.images, ...(manifest.shapes ?? [])]) byId.set(img.id, img);
+  for (const img of [...manifest.images, ...(manifest.shapes ?? []), ...(manifest.extras ?? [])]) byId.set(img.id, img);
   const fileOf = (id: number) => { const img = byId.get(id); return img && (replacementOf(id) ?? path.join(ART_DIR, img.file)); };
 
   // What an image draws: a drawn replacement always wins; otherwise text is set in a font
@@ -75,7 +78,9 @@ function readSlots(): Map<string, Slot> {
     const drawing = image === null ? { file: '' } : drawingOf(image);
     if (drawing) slots.set(key, { ...drawing, ...geometry });
   }
-  return slots;
+  const extras = new Map<number, Extra>();
+  for (const img of manifest.extras ?? []) extras.set(img.id, { file: fileOf(img.id)!, stageW: img.stage_w, stageH: img.stage_h });
+  return { slots, extras };
 }
 
 function artSlots(): Plugin {
@@ -86,22 +91,28 @@ function artSlots(): Plugin {
     resolveId(id) { return id === VIRTUAL_ID ? RESOLVED_ID : undefined; },
     load(id) {
       if (id !== RESOLVED_ID) return;
-      const out: Record<string, Omit<Slot, 'file'> & { url: string }> = {};
+      const { slots, extras } = readArt();
       const urls = new Map<string, string>();   // one emitted asset per file, however many costumes share it
-      for (const [key, s] of readSlots()) {
-        if (s.file && !fs.existsSync(s.file)) continue;
-        let url = s.file ? urls.get(s.file) : '';
+      const urlOf = (file: string) => {
+        let url = urls.get(file);
         if (url === undefined) {
-          this.addWatchFile(s.file);
+          this.addWatchFile(file);
           url = isBuild
-            ? `__ART_URL_${this.emitFile({ type: 'asset', name: path.basename(s.file), source: fs.readFileSync(s.file) })}__`
-            : '/@fs' + s.file;
-          urls.set(s.file, url);
+            ? `__ART_URL_${this.emitFile({ type: 'asset', name: path.basename(file), source: fs.readFileSync(file) })}__`
+            : '/@fs' + file;
+          urls.set(file, url);
         }
-        const { file: _file, ...geometry } = s;
-        out[key] = { url, ...geometry };
+        return url;
+      };
+      const out: Record<string, Omit<Slot, 'file'> & { url: string }> = {};
+      for (const [key, s] of slots) {
+        if (s.file && !fs.existsSync(s.file)) continue;
+        const { file, ...geometry } = s;
+        out[key] = { url: file ? urlOf(file) : '', ...geometry };
       }
-      let code = `export default ${JSON.stringify(out)};`;
+      const outExtras: Record<number, Omit<Extra, 'file'> & { url: string }> = {};
+      for (const [id, { file, ...size }] of extras) if (fs.existsSync(file)) outExtras[id] = { url: urlOf(file), ...size };
+      let code = `export default ${JSON.stringify(out)};\nexport const extras = ${JSON.stringify(outExtras)};`;
       // asset references resolve to their final hashed paths at build time
       code = code.replace(/"__ART_URL_([\w$]+)__"/g, (_m, ref) => `import.meta.ROLLUP_FILE_URL_${ref}`);
       return code;

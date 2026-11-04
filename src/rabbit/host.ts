@@ -1,7 +1,11 @@
 // The rabbit at his desk: a WebGL rabbit canvas with the desk image in front, laid out where the
 // Mad Dad scientist costumes sat (same rotation centers, same size math) so Mad Dad's poses carry over.
 import { createRabbit } from './rabbit-renderer.js';
-import deskUrl from './desk.png';
+import { extras } from 'virtual:art';
+
+// The desk is art image 268 (art/replace/268* replaces it). New art is drawn into the same box (DESK),
+// so the top edge that hides the bottom of the rabbit stays where it is.
+const DESK_ART = 268;
 import { applyPose, type Pose } from '../ui/pose';
 import { voiceLevel } from '../audio';
 
@@ -48,7 +52,7 @@ export async function createHost() {
     position: 'absolute', left: '0', width: '100%', top: `${-100 * EARS_ROOM}%`, height: `${100 * (1 + EARS_ROOM)}%`,
   });
   const desk = document.createElement('img');
-  desk.src = deskUrl;
+  desk.src = extras[DESK_ART]?.url ?? '';
   desk.alt = '';
   Object.assign(desk.style, {
     position: 'absolute', left: `${DESK.left}%`, top: `${DESK.top}%`, width: `${DESK.width}%`, height: `${DESK.height}%`,
