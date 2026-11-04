@@ -2,7 +2,6 @@ import '@fontsource/noto-sans/500.css';
 import '@fontsource/knewave/400.css';
 import './style.css';
 import { STAGE_W } from './ui/stage';
-import { setStageUnit } from './ui/pose';
 import { createHost } from './rabbit/host';
 import { unlock } from './audio';
 import { loadSettings } from './settings';
@@ -13,8 +12,10 @@ import { reportScreen } from './screens/report';
 type Screen = { update(t: number): void; destroy(): void };
 
 const stage = document.getElementById('stage')!;
-new ResizeObserver(() => setStageUnit(stage.clientWidth / STAGE_W)).observe(stage);
-setStageUnit(stage.clientWidth / STAGE_W);
+// stage pixels per stage unit, for poses (see ui/pose.ts)
+const setStageUnit = () => stage.style.setProperty('--u', `${stage.clientWidth / STAGE_W}px`);
+new ResizeObserver(setStageUnit).observe(stage);
+setStageUnit();
 
 const host = await createHost();
 const settings = loadSettings();
