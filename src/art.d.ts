@@ -1,5 +1,5 @@
 declare module 'virtual:art' {
-  /** One costume slot from art/manifest.csv, resolved to art/replace/ when a replacement exists. */
+  /** One costume slot from art/manifest.json, resolved to art/replace/ when a replacement exists. */
   export type ArtSlot = {
     /** '' for a blank costume */
     url: string;
@@ -11,6 +11,34 @@ declare module 'virtual:art' {
     centerY: number;
     /** the Scratch costume name */
     name: string;
+    /** text costumes: the image's own size, which the text runs and shape are laid out in
+     *  (stretched to the costume's box, as the image was) */
+    textW?: number;
+    textH?: number;
+    /** for a shape under text: its own size (it shares the image's top-left) */
+    fileW?: number;
+    fileH?: number;
+    /** text set in a font over the image, back to front */
+    text?: TextRun[];
+  };
+  /** A run of text, in the image's units (textW × textH); the sprite's size % scales it like the image. */
+  export type TextRun = {
+    text: string;
+    /** Scratch font name: "Sans Serif" or "Marker" */
+    font: string;
+    color: string;
+    size: number;
+    /** start of the baseline from the costume's top-left; centered in the box when missing */
+    x?: number;
+    y?: number;
+    rotate?: number;
+    anchor?: 'start' | 'middle' | 'end';
+    stroke?: string | null;
+    stroke_width?: number | null;
+    /** for text on a shape: false when it is painted under the shape */
+    over_base?: boolean;
+    /** a glyph drawn as a picture in Mad Dad (∞): centered on x, y */
+    center?: boolean;
   };
   /** Keyed "<Sprite>/<costume index>", e.g. "Logo/1". */
   const slots: Record<string, ArtSlot>;

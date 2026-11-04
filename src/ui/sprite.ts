@@ -1,5 +1,7 @@
-// A Scratch-like sprite: an <img> showing one of a Scratch sprite's costumes, posed in stage units.
+// A Scratch-like sprite showing one of a Scratch sprite's costumes, posed in stage units: a box holding
+// the costume's image and, for text costumes, the text set in its font (see ./text.ts).
 import slots, { type ArtSlot } from 'virtual:art';
+import { drawText } from './text';
 import { applyPose, type Pose } from './pose';
 import { STAGE_H, STAGE_W } from './stage';
 import { resolveCostume } from './costume';
@@ -17,13 +19,17 @@ export const costumeIndex = (sprite: string, costume: string | number) => resolv
 export type Effects = { ghost?: number; brightness?: number; color?: number };
 
 export class Sprite {
-  readonly el = document.createElement('img');
+  readonly el = document.createElement('div');
+  private readonly img = document.createElement('img');
+  private textEl?: SVGSVGElement;
   slot!: ArtSlot;
   private pose: Pose = {};
 
   constructor(readonly sprite: string, costume: string | number = 1, z = 0) {
-    this.el.alt = '';
-    this.el.draggable = false;
+    this.el.className = 'sprite';
+    this.img.alt = '';
+    this.img.draggable = false;
+    this.el.append(this.img);
     this.el.style.position = 'absolute';
     this.el.style.zIndex = String(z);
     this.setCostume(costume);
@@ -41,8 +47,14 @@ export class Sprite {
       height: `${(100 * slot.stageH) / STAGE_H}%`,
       transformOrigin: `${(100 * slot.centerX) / slot.stageW}% ${(100 * slot.centerY) / slot.stageH}%`,
     });
-    if (slot.url) this.el.src = slot.url; else this.el.removeAttribute('src');
-    this.el.classList.toggle('blank', !slot.url);
+    // a text costume draws its shape (if any) inside its text <svg>, to paint text under or over it
+    this.textEl?.remove();
+    this.textEl = slot.text?.length ? drawText(slot) : undefined;
+    if (this.textEl) this.el.append(this.textEl);
+    const url = this.textEl ? '' : slot.url;
+    if (url) this.img.src = url; else this.img.removeAttribute('src');
+    this.img.hidden = !url;
+    this.el.classList.toggle('blank', !url && !this.textEl);
     return this;
   }
 

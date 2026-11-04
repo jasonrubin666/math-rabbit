@@ -30,11 +30,33 @@ html, body {
 
 #stage img {
   pointer-events: none;
+}
+
+/* a sprite: its costume's box, holding the image and/or its text */
+#stage .sprite {
+  pointer-events: none;
   will-change: transform;
+}
+#stage .sprite > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#stage .sprite > img[hidden] {
+  display: none;
+}
+#stage .costume-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
 /* a blank Scratch costume */
-#stage img.blank {
+#stage .sprite.blank {
   display: none;
 }
 

@@ -13,26 +13,67 @@ const VIRTUAL_ID = 'virtual:art';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
 
 type Costume = { image: number | null; name: string; stageW: number; stageH: number; centerX: number; centerY: number };
-type Slot = Omit<Costume, 'image'> & { file: string };
+/** One run of text, drawn with a font instead of an image (art/manifest.json images[].text[]). */
+export type TextRun = {
+  text: string; font: string; color: string;
+  /** font size, and x/y (the start of the baseline from the image's top-left), in costume units */
+  size: number; x?: number; y?: number;
+  rotate?: number; anchor?: 'start' | 'middle' | 'end';
+  stroke?: string | null; stroke_width?: number | null;
+  over_base?: boolean; center?: boolean;
+};
+type ManifestImage = {
+  id: number; file: string; stage_w: number; stage_h: number;
+  kind?: 'art' | 'text' | 'text on art'; text?: TextRun[]; base?: number;
+};
+type Slot = Omit<Costume, 'image'> & {
+  /** '' when nothing is drawn from a file (a blank costume, or text only) */
+  file: string;
+  /** text costumes: the image's own size, which the runs (and the shape under them) are laid out in;
+   *  the costume can show the image scaled (the card numbers reuse one image at several sizes) */
+  textW?: number; textH?: number;
+  /** for text on a shape: the shape's own size (it shares the image's top-left) */
+  fileW?: number; fileH?: number;
+  text?: TextRun[];
+};
 
 function readSlots(): Map<string, Slot> {
-  const manifest: { images: { id: number; file: string }[] } = JSON.parse(fs.readFileSync(path.join(ART_DIR, 'manifest.json'), 'utf8'));
+  const manifest: { images: ManifestImage[]; shapes?: ManifestImage[] } =
+    JSON.parse(fs.readFileSync(path.join(ART_DIR, 'manifest.json'), 'utf8'));
   const replaceDir = path.join(ART_DIR, 'replace');
   const replacements = fs.existsSync(replaceDir)
     ? fs.readdirSync(replaceDir).filter(n => /^\d{3}.*\.(png|svg|jpe?g|webp)$/i.test(n))
     : [];
-  const fileOf = new Map<number, string>();
-  for (const img of manifest.images) {
-    const nnn = String(img.id).padStart(3, '0');
-    const replacement = replacements.find(n => n.startsWith(nnn));
-    fileOf.set(img.id, replacement ? path.join(replaceDir, replacement) : path.join(ART_DIR, img.file));
-  }
+  const replacementOf = (id: number) => {
+    const nnn = String(id).padStart(3, '0');
+    const r = replacements.find(n => n.startsWith(nnn));
+    return r && path.join(replaceDir, r);
+  };
+  const byId = new Map<number, ManifestImage>();
+  for (const img of [...manifest.images, ...(manifest.shapes ?? [])]) byId.set(img.id, img);
+  const fileOf = (id: number) => { const img = byId.get(id); return img && (replacementOf(id) ?? path.join(ART_DIR, img.file)); };
+
+  // What an image draws: a drawn replacement always wins; otherwise text is set in a font
+  // (on its shape, for "text on art") and only real art comes from its original file.
+  type Drawing = Pick<Slot, 'file' | 'textW' | 'textH' | 'fileW' | 'fileH' | 'text'>;
+  const drawingOf = (id: number): Drawing | undefined => {
+    const img = byId.get(id);
+    if (!img) return undefined;
+    const replacement = replacementOf(id);
+    if (replacement || !img.text?.length || img.kind === 'art' || !img.kind) return { file: replacement ?? path.join(ART_DIR, img.file) };
+    const text = { text: img.text, textW: img.stage_w, textH: img.stage_h };
+    if (img.kind === 'text') return { file: '', ...text };
+    const base = img.base !== undefined ? byId.get(img.base) : undefined;
+    if (!base) return { file: path.join(ART_DIR, img.file) };
+    return { file: fileOf(base.id)!, fileW: base.stage_w, fileH: base.stage_h, ...text };
+  };
+
   const costumes: Record<string, Costume> = JSON.parse(fs.readFileSync(COSTUMES, 'utf8'));
   const slots = new Map<string, Slot>();
   for (const [key, { image, ...geometry }] of Object.entries(costumes)) {
     // a replacement is drawn into the original costume's box on stage; blank costumes get no file
-    const file = image === null ? '' : fileOf.get(image);
-    if (file !== undefined) slots.set(key, { file, ...geometry });
+    const drawing = image === null ? { file: '' } : drawingOf(image);
+    if (drawing) slots.set(key, { ...drawing, ...geometry });
   }
   return slots;
 }

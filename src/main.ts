@@ -1,3 +1,5 @@
+import '@fontsource/noto-sans/500.css';
+import '@fontsource/knewave/400.css';
 import './style.css';
 import { STAGE_W } from './ui/stage';
 import { setStageUnit } from './ui/pose';
@@ -24,6 +26,9 @@ function show(next: () => Screen) {
 }
 const toTitle = () => show(() => titleScreen(stage, host, settings, () => show(() => cardsScreen(stage, settings, toReport))));
 const toReport = (r: GameResult) => show(() => reportScreen(stage, host, r, toTitle));
+
+// fetch the text fonts now, so numbers and labels never show in a fallback font mid-game
+void Promise.all(['500 16px "Noto Sans"', '16px Knewave'].map(f => document.fonts.load(f, '0123456789%+-∞ABCabc!')));
 
 // iPad Safari only plays sound after a tap, so the game starts from one (Mad Dad's green flag)
 const tapToStart = document.getElementById('tap-to-start')!;
