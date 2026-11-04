@@ -28,6 +28,19 @@ function coverSize(y: number, tilt: number) {
   return 100 * need;
 }
 
+/**
+ * A random starting spot for a floating title card (Mad Dad's ranges) that never passes behind the logo.
+ * The logo covers about |x| < 107, y > 47 at its biggest; a card swings its x between 0.7× and 1.3× its
+ * start, bobs ±10 and is up to ~15 units across its middle, so a card starting above y = 7 must start at
+ * least 175 out from the middle.
+ */
+function cardSpot(x0: number, x1: number) {
+  for (;;) {
+    const x = randInt(x0, x1), y = randInt(-150, 125);
+    if (y <= 7 || Math.abs(x) >= 175) return { x, y };
+  }
+}
+
 type TitleCard = { sprite: Sprite; x: number; y: number; size: number; spin: number; dir: number; gone: boolean };
 
 export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, onStart: (s: Settings) => void) {
@@ -46,7 +59,7 @@ export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, 
     for (let i = 0; i < n; i++) {
       const card: TitleCard = {
         sprite: new Sprite('TitleCard', randInt(1, designs), 56).addTo(stage),
-        x: randInt(x0, x1), y: randInt(-150, 125), size: randInt(20, 30), spin: randInt(-5, 5), dir: randInt(0, 360), gone: false,
+        ...cardSpot(x0, x1), size: randInt(20, 30), spin: randInt(-5, 5), dir: randInt(0, 360), gone: false,
       };
       card.sprite.onTap(() => scope.run(() => familyClip(card)));
       cards.push(card);
@@ -162,8 +175,8 @@ export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, 
       host.setPose('title', { y: sceneY + 0.8 + 0.8 * sinD(spin), size: hostSize - hostShrink, direction: sceneDir });
       if (!starting) {
         // the logo zooms 15% and bobs 10 units in step with the scene, keeping Mad Dad's sway. It moves down
-        // as it grows, so its top edge (the art fills its box to the top) stays on screen.
-        logo.setPose({ y: 105 - 10 * zoom, size: 70 * (1 + 0.15 * zoom), direction: 90 + 6 * cosD(spin) });
+        // as it grows, so its top edge (the cartoon bunny's ears) only pokes off the screen a little at times.
+        logo.setPose({ y: 120 - 10 * zoom, size: 70 * (1 + 0.15 * zoom), direction: 90 + 6 * cosD(spin) });
       }
       // floating cards breathe out from the center and bob as they spin (Mad Dad's original spread); near
       // the edges they simply slide off screen (Mad Dad faded them out there, since Scratch keeps sprites on stage)
