@@ -24,6 +24,13 @@ export const RIG = {
   eyeR: { c: [0.085, 0.006, 0.1], r: [0.038, 0.047] },
   // the eyelid takes its color from the fur this far out (in eye radii, squared), above the light eye-ring
   lidRing: [2.6, 4.0],
+  // Moving pupils: the eye whites (c, r) are repainted each frame as white with a dark pupil (radius
+  // `pupilR`) whose resting spot is where the model's pupil is (toward the nose and a little down, i.e.
+  // looking at the player); glances move it up to `pupilTravel` (x, y) from there.
+  whiteL: { c: [-0.0785, 0.0], r: [0.0345, 0.037], pupil: [-0.065, -0.013] },
+  whiteR: { c: [0.083, 0.005], r: [0.032, 0.041], pupil: [0.064, -0.015] },
+  pupilR: 0.0135, pupilTravel: [0.012, 0.01],
+  scleraColor: [0.77, 0.76, 0.75], pupilColor: [0.07, 0.045, 0.03],
 };
 
 const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
@@ -125,6 +132,7 @@ export class Animator {
     this.look = [0, 0];          // where he looks, -1..1 (left/right, down/up)
     this.lookSmooth = [0, 0];
     this.wander = true;          // pick new places to look on his own every few seconds
+    this.eyes = [0, 0];          // where the pupils point, -1..1; they move faster than the head
     this.nextGlance = 0.8;
     this.talking = false; this.talkStart = 0; this.jaw = 0; this.syllableKick = 0;
     this.nextBlink = 1.5; this.blinkStart = -1;
@@ -201,7 +209,11 @@ export class Animator {
 
     const bones = new Float32Array(16 * 5);
     [torso, head, earL, earR, jaw].forEach((m, i) => bones.set(m, i * 16));
-    return { bones, lid: [lid, lid] };
+    // pupils dart toward the glance, ahead of the head
+    const ke = 1 - Math.exp(-dt * 18);
+    this.eyes[0] += (this.look[0] - this.eyes[0]) * ke;
+    this.eyes[1] += (this.look[1] - this.eyes[1]) * ke;
+    return { bones, lid: [lid, lid], eyes: this.eyes };
   }
 }
 
