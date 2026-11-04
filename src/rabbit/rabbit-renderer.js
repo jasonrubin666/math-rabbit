@@ -17,6 +17,7 @@ uniform vec3 uLidColor;
 uniform float uFluff;         // splat size multiplier (softer look)
 uniform float uFuzz;          // fur-wisp opacity (fluffy fringe)
 uniform vec3 uTint;           // scene lighting match
+uniform float uLift;          // brightens mid-tones (a gamma of 1/uLift) without blowing out highlights
 in vec2 aPos; in uint aIndex;
 out vec4 vColor; out vec2 vPos;
 ivec2 tc(uint i) { return ivec2(int(i & 2047u), int(i >> 11u)); }
@@ -71,7 +72,7 @@ void main() {
       else if (c > 0.8) col = uLidColor * 0.8;   // fully shut: cover the sliver under the lash line
     }
   }
-  col *= uTint;
+  col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
   vColor = vec4(col, flag == 4 ? D.a * uFuzz : D.a);
   vPos = aPos * 1.5;
   vec2 center = pos2d.xy / pos2d.w;
@@ -123,7 +124,7 @@ function decodeSplats(buf) {
 export async function createRabbit(canvas, opts = {}) {
   const {
     splatUrl = new URL('rabbit.splat', import.meta.url),
-    cam: camOpts = {}, tint = [1, 1, 1], fluff = 1.3, fuzz = 1,
+    cam: camOpts = {}, tint = [1, 1, 1], lift = 1, fluff = 1.3, fuzz = 1,
   } = opts;
   const gl = canvas.getContext('webgl2', { antialias: false, premultipliedAlpha: true, alpha: true });
   if (!gl) throw new Error('WebGL2 not available');
@@ -253,7 +254,7 @@ export async function createRabbit(canvas, opts = {}) {
   }
 
   const anim = new Animator();
-  const settings = { fluff, fuzz, tint };
+  const settings = { fluff, fuzz, tint, lift };
   let clock = 0;
 
   function render(dt) {
@@ -271,6 +272,7 @@ export async function createRabbit(canvas, opts = {}) {
     gl.uniform1f(U('uFluff'), settings.fluff);
     gl.uniform1f(U('uFuzz'), settings.fuzz);
     gl.uniform3fv(U('uTint'), settings.tint);
+    gl.uniform1f(U('uLift'), settings.lift);
     sortSplats(m.view, bones);
     gl.bindBuffer(gl.ARRAY_BUFFER, indexBuf);
     gl.bufferSubData(gl.ARRAY_BUFFER, 0, order);

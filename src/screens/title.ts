@@ -161,9 +161,9 @@ export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, 
       hostSize = sceneSize + 1.5 * (2.5 + 2.5 * sinD(spin));
       host.setPose('title', { y: sceneY + 0.8 + 0.8 * sinD(spin), size: hostSize - hostShrink, direction: sceneDir });
       if (!starting) {
-        // the logo zooms and bobs with the background (as if printed on it), and keeps Mad Dad's sway
-        const k = sceneSize / 100;
-        logo.setPose({ y: 128 * k + sceneY, size: 70 * k, direction: 90 + 6 * cosD(spin) });
+        // the logo zooms 15% and bobs 10 units in step with the scene, keeping Mad Dad's sway. It moves down
+        // as it grows, so its top edge (the art fills its box to the top) stays on screen.
+        logo.setPose({ y: 105 - 10 * zoom, size: 70 * (1 + 0.15 * zoom), direction: 90 + 6 * cosD(spin) });
       }
       // floating cards breathe out from the center and bob as they spin (Mad Dad's original spread)
       for (const c of cards) {

@@ -31,7 +31,9 @@ const RABBIT_VIEW = {
     fov: 2 * Math.atan(Math.tan(FOV / 2) * (1 + EARS_ROOM)),
     centerY: -EARS_ROOM / (1 + EARS_ROOM),
   },
-  tint: [1.15, 1.13, 1.06],   // brighter than the splats as exported, slightly warm, to sit in the lit lab
+  // brighter than the splats as exported: mid-tones lifted (his fur), highlights kept, slightly warm
+  tint: [1.12, 1.1, 1.04],
+  lift: 1.35,
   // the fur wisps along his outline at 40% strength: at this size full-strength wisps look scratchy
   fuzz: 0.4,
 };
