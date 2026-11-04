@@ -16,6 +16,18 @@ const MODE_VOICE: Record<string, string> = {
 const modeVoice = (m: Mode) => (kindOf(m) === 'clock' ? 'SettingsOperatorClock' : MODE_VOICE[m]);
 const timerCostume = (s: number) => (Number.isFinite(s) ? String(s) : '999');
 
+/** The size (%) at which the full-screen picture, moved up by y and tilted `tilt` degrees, still covers
+ *  the whole 480×360 screen. */
+function coverSize(y: number, tilt: number) {
+  const c = cosD(tilt), sn = sinD(tilt);
+  let need = 1;
+  for (const [x, cy] of [[240, 180], [-240, 180], [240, -180], [-240, -180]]) {
+    const dy = cy - y;   // screen corner relative to the picture's center, turned into the picture's frame
+    need = Math.max(need, Math.abs(x * c + dy * sn) / 240, Math.abs(-x * sn + dy * c) / 180);
+  }
+  return 100 * need;
+}
+
 type TitleCard = { sprite: Sprite; x: number; y: number; size: number; spin: number; dir: number; gone: boolean };
 
 export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, onStart: (s: Settings) => void) {
@@ -137,10 +149,14 @@ export function titleScreen(stage: HTMLElement, host: Host, settings: Settings, 
   return {
     update(t: number) {
       const spin = 30 * t;
-      // whole scene: zoom 100–101.5%, gentle bob, tilt ±¾° (calmed from Mad Dad)
-      const sceneSize = 100.75 + 0.75 * sinD(spin);
-      const sceneY = -10 * sinD(spin);
-      const sceneDir = 90 + 0.75 * sinD(spin / 2);
+      // whole scene (calmed from Mad Dad): `zoom` goes 0 (all the way out) to 1 (all the way in). The bob
+      // and the ±¾° tilt grow with it, and the picture is always just big enough to cover the screen, so
+      // zoomed all the way out it fits the screen exactly.
+      const zoom = (1 + sinD(spin)) / 2;
+      const sceneY = -3 * zoom;
+      const tilt = 0.75 * zoom * sinD(spin / 2);
+      const sceneDir = 90 + tilt;
+      const sceneSize = coverSize(sceneY, tilt) * (1 + 0.01 * zoom);
       lab.setPose({ y: sceneY, size: sceneSize, direction: sceneDir });
       hostSize = sceneSize + 1.5 * (2.5 + 2.5 * sinD(spin));
       host.setPose('title', { y: sceneY + 0.8 + 0.8 * sinD(spin), size: hostSize - hostShrink, direction: sceneDir });
