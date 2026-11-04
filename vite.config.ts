@@ -5,7 +5,7 @@ import { strFromU8, unzipSync } from 'fflate';
 
 // Art slots: each Scratch costume is addressable as "<Sprite>/<index>" (src/data/costumes.json, made by
 // tools/app/costumes.py, holds where it sat on stage and which art image it shows). The image file comes
-// from art/manifest.json: art/replace/NNN* wins over art/originals/..., so new art shows up here exactly
+// from art/manifest.json: art/replace/NNN* wins over art/originals/... (.jpg over .png when both exist), so new art shows up here exactly
 // as it does in the Scratch build. The app imports `virtual:art` to get each slot's URL and geometry.
 const ART_DIR = path.resolve(import.meta.dirname, 'art');
 const COSTUMES = path.resolve(import.meta.dirname, 'src/data/costumes.json');
@@ -49,9 +49,13 @@ function readArt(): { slots: Map<string, Slot>; extras: Map<number, Extra> } {
   const replacements = fs.existsSync(replaceDir)
     ? fs.readdirSync(replaceDir).filter(n => /^\d{3}.*\.(png|svg|jpe?g|webp)$/i.test(n))
     : [];
+  // When one image has several files (say a full-quality .png kept next to its compressed .jpg), the
+  // web-friendly one wins: .jpg/.jpeg, then .webp, then .png, then .svg.
+  const PREFERENCE = ['jpg', 'jpeg', 'webp', 'png', 'svg'];
+  const rank = (n: string) => PREFERENCE.indexOf(n.split('.').pop()!.toLowerCase());
   const replacementOf = (id: number) => {
     const nnn = String(id).padStart(3, '0');
-    const r = replacements.find(n => n.startsWith(nnn));
+    const r = replacements.filter(n => n.startsWith(nnn) && !/\d/.test(n[3] ?? '')).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))[0];
     return r && path.join(replaceDir, r);
   };
   const byId = new Map<number, ManifestImage>();
