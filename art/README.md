@@ -10,7 +10,7 @@ So: 86 pictures + 6 shapes.
 
 ## Files
 
-- `originals/NNN <name>.svg|png`: the Mad Dad art. 001–261 are the merged images (numbers the rewrite already uses); 262–267 are the shapes split out from under text.
+- `originals/NNN <name>.svg|png`: the 92 Mad Dad images to draw. Numbers up to 261 are the merged images (gaps are text, drawn with a font, so they have no file); 262–267 are the shapes split out from under text.
 - `replace/`: put new art here starting with the same 3-digit number (`112 rabbit one.png` replaces `112 ScoreThousands Score1.png`). PNG or SVG.
 - `index.html`: what to draw, then a table of the text styles. Serve the folder so replacements show up: `npx http-server art -p 8793`.
 - `manifest.json` / `manifest.csv`: every image, with:
