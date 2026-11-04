@@ -275,7 +275,8 @@ table{{border-collapse:collapse;background:#fff}} td,th{{border:1px solid #ddd;p
 .sw{{display:inline-block;width:12px;height:12px;border:1px solid #999;margin-right:4px;vertical-align:middle}}
 </style>
 <h1>Math Rabbit art: {len(draw)} images to draw</h1>
-<p>To replace one, save new art as <code>replace/&lt;same 3-digit number&gt; anything.png</code> (or .svg).
+<p>To replace one, save new art as <code>replace/&lt;same 3-digit number&gt; anything.png</code> (or .jpg, .webp, .svg;
+with several for one number, .jpg wins, then .webp, .png, .svg).
 Green outline = already replaced. Serve this folder (<code>npx http-server art</code>), not file://.
 <span id="count">0</span> of {len(draw)} done.</p>
 <div class="grid">{''.join(tile(im) for im in draw)}</div>
@@ -295,7 +296,11 @@ images. Sizes are in costume units (the sprite's own size % scales them on stage
   }} catch {{}}
   let done = 0;
   for (const fig of document.querySelectorAll('figure')) {{
-    const hit = names.find(n => n.startsWith(fig.dataset.name.slice(0, 3)));
+    // several files for one number: .jpg first, then .webp, .png, .svg (as the game picks), then by name
+    const rank = n => ({{jpg: 0, jpeg: 0, webp: 1, png: 2, svg: 3}})[n.split('.').pop().toLowerCase()];
+    const nnn = fig.dataset.name.slice(0, 3);
+    const hit = names.filter(n => n.startsWith(nnn) && !/\d/.test(n[3] ?? ''))
+      .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))[0];
     if (!hit) continue;
     fig.querySelector('img').src = 'replace/' + encodeURIComponent(hit);
     fig.classList.add('done');

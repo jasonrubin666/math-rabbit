@@ -5,7 +5,8 @@
 
 This is for the current Scratch-packaged game. A rewrite can read art/manifest.json instead.
 
-A file in replace/ matches an image by its 3-digit number (the rest of the name can change), .png or .svg.
+A file in replace/ matches an image by its 3-digit number (the rest of the name can change): .jpg, .webp, .png or
+.svg, in that order of preference when one number has several files.
 Some images appear at several sizes in the game (the digit "1" is drawn small on the cards and big on the
 pad), so each costume gets a copy scaled to its own spot: the new art keeps the size it has relative to
 the original file in originals/. Draw a PNG at 2 pixels per stage unit, i.e. twice the stage size in the
@@ -24,6 +25,17 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent))
 from extract import svg_head, svg_size  # noqa: E402
+
+
+# When an image has several files in replace/, the first kind here wins (then the name): a compressed .jpg
+# can sit next to the full-quality .png it came from. Subfolders are ignored.
+REPLACE_ORDER = {'.jpg': 0, '.jpeg': 0, '.webp': 1, '.png': 2, '.svg': 3}
+
+
+def to_png(data):
+    buf = io.BytesIO()
+    Image.open(io.BytesIO(data)).save(buf, 'PNG')
+    return buf.getvalue()
 
 
 def stage_size(data, fmt, res=None):
@@ -60,11 +72,11 @@ def main(sb3='MadDad.sb3', art='art', out='MathRabbit.sb3'):
     src = zipfile.ZipFile(sb3)
     project = json.loads(src.read('project.json'))
     targets = {t['name']: t for t in project['targets']}
-    replacements = {}
-    for p in sorted((art / 'replace').glob('*')):
-        m = re.match(r'(\d{3})\b', p.name)
-        if m and p.suffix.lower() in ('.png', '.svg'):
-            replacements[int(m.group(1))] = p
+    replacements = {}  # same choice as the rewrite (vite.config.ts): files directly in replace/, by REPLACE_ORDER
+    for p in sorted((art / 'replace').iterdir(), key=lambda p: (REPLACE_ORDER.get(p.suffix.lower(), 9), p.name.casefold())):
+        m = re.match(r'(\d{3})(?!\d)', p.name)
+        if m and p.is_file() and p.suffix.lower() in REPLACE_ORDER:
+            replacements.setdefault(int(m.group(1)), p)
 
     new_assets, count, warnings = {}, 0, []
     for image in manifest['images']:
@@ -72,6 +84,8 @@ def main(sb3='MadDad.sb3', art='art', out='MathRabbit.sb3'):
         if not path:
             continue
         data, fmt = path.read_bytes(), path.suffix.lower()[1:]
+        if fmt != 'svg':  # Scratch costumes are PNG or SVG
+            data, fmt = to_png(data), 'png'
         new_w, new_h = stage_size(data, fmt)
         if not (new_w and new_h):
             warnings.append(f'{path.name}: could not read its size, skipped')

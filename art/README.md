@@ -13,7 +13,10 @@ So: 74 pictures + 6 shapes, plus the desk the rabbit sits behind (268), which is
 ## Files
 
 - `originals/NNN <name>.svg|png`: the 81 images to draw. Numbers up to 261 are the merged images (gaps are text, drawn with a font, or were folded into another image, so they have no file); 262–267 are the shapes split out from under text; 268 is the rabbit's desk.
-- `replace/`: put new art here starting with the same 3-digit number (`112 rabbit one.png` replaces `112 ScoreThousands Score1.png`). PNG or SVG.
+- `replace/`: put new art here starting with the same 3-digit number (`112 rabbit one.png` replaces `112 ScoreThousands Score1.png`).
+  JPG, WebP, PNG or SVG. When one number has several files, `.jpg`/`.jpeg` wins, then `.webp`, `.png`, `.svg` (then
+  by name), so a compressed `.jpg` can sit next to its full-quality `.png`. Subfolders (like `Original Size/`) are
+  ignored. The rewrite and `apply.py` pick the same file.
 - `index.html`: what to draw, then a table of the text styles. Serve the folder so replacements show up: `npx http-server art -p 8793`.
 - `manifest.json` / `manifest.csv`: every image, with:
   - `kind`: `art`, `text` or `text on art`
