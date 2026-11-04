@@ -11,6 +11,10 @@ Adds to each image in art/manifest.json, without renumbering or removing anythin
   base: for "text on art", the id of the image holding the shape without its text
 Shapes that aren't already an image get new ids after the last image, listed under "shapes" in the
 manifest, with their file in originals/ like any other image.
+
+The original files of text and text-on-art images are then deleted from originals/: nothing draws them
+(the rewrite sets the text in a font, over the shape's own file). Each image's "asset" field names its
+copy inside the .sb3, which is where this reads the SVG from when the file is gone.
 """
 import csv
 import hashlib
@@ -18,6 +22,7 @@ import html
 import json
 import re
 import sys
+import zipfile
 from pathlib import Path
 
 # Scratch 3's built-in fonts (scratch-render-fonts)
@@ -118,7 +123,18 @@ def main(art='art'):
         f.unlink()
 
     art_by_key, shapes, next_id = {}, {}, max(im['id'] for im in images) + 1
-    svgs = {im['id']: (art / im['file']).read_text() for im in images if im['format'] == 'svg'}
+    sb3 = None
+    svgs = {}
+    for im in images:
+        f = art / im['file']
+        if f.exists():
+            data = f.read_bytes()
+            im['asset'] = f'{hashlib.md5(data).hexdigest()}.{im["format"]}'
+        else:
+            sb3 = sb3 or zipfile.ZipFile(art.resolve().parent / manifest['source'])
+            data = sb3.read(im['asset'])
+        if im['format'] == 'svg':
+            svgs[im['id']] = data.decode('utf-8')
     for im in images:
         svg = svgs.get(im['id'])
         im.pop('base', None)
@@ -163,6 +179,9 @@ def main(art='art'):
         shapes[key]['used_by'].append(im['id'])
 
     manifest['shapes'] = list(shapes.values())
+    for im in images:
+        if im['kind'] != 'art':
+            (art / im['file']).unlink(missing_ok=True)
     (art / 'manifest.json').write_text(json.dumps(manifest, indent=1, ensure_ascii=False))
     with open(art / 'manifest.csv', 'w', newline='') as f:
         w = csv.writer(f)
