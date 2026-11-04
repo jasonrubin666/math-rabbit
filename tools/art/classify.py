@@ -34,6 +34,10 @@ CSS_FONT = {
     'Curly': 'Griffy, cursive',
     'Pixel': '"Grand9K Pixel", monospace',
 }
+# Art the game draws that isn't a Scratch costume: (name, file in the repo, stage units per pixel).
+# The desk is cut from the scientist portraits (TitleScreenDad, GameOver2T), which are skipped because the
+# 3D rabbit draws over them; the rabbit sits behind it on the title and report card screens.
+EXTRAS = [('Rabbit desk', 'src/rabbit/desk.png', 0.5)]
 # Drawn as a path but really a character
 GLYPH_PATHS = {('Timer', '999'): '∞'}
 
@@ -179,6 +183,7 @@ def main(art='art'):
         shapes[key]['used_by'].append(im['id'])
 
     manifest['shapes'] = list(shapes.values())
+    add_extras(art, manifest, next_id)
     for im in images:
         if im['kind'] != 'art':
             (art / im['file']).unlink(missing_ok=True)
@@ -186,30 +191,47 @@ def main(art='art'):
     with open(art / 'manifest.csv', 'w', newline='') as f:
         w = csv.writer(f)
         w.writerow(['id', 'kind', 'file', 'format', 'stage_w', 'stage_h', 'text', 'font', 'base', 'uses', 'used_by'])
-        for im in images + manifest['shapes']:
+        for im in images + manifest['shapes'] + manifest['extras']:
             t = im.get('text') or []
             w.writerow([im['id'], im['kind'], im['file'], im['format'], im['stage_w'], im['stage_h'],
                         ' | '.join(r['text'] for r in t), ', '.join(sorted({r['font'] for r in t})), im.get('base', ''),
                         len(im.get('uses', [])),
                         '; '.join(f'{u["sprite"]}#{u["index"]} {u["costume"]}' for u in im.get('uses', []))
-                        or 'shape for images ' + ', '.join(map(str, im.get('used_by', [])))])
+                        or im.get('used_in') or 'shape for images ' + ', '.join(map(str, im.get('used_by', [])))])
     write_gallery(art, manifest)
 
     kinds = {k: sum(1 for im in images if im['kind'] == k) for k in ('art', 'text', 'text on art')}
-    todo = kinds['art'] + len(shapes)
+    todo = kinds['art'] + len(shapes) + len(manifest['extras'])
     print(f'{len(images)} images: {kinds["art"]} art, {kinds["text"]} text only, {kinds["text on art"]} text on a shape '
           f'({len(shapes)} new shape files). Art to draw: {todo}')
 
 
+def add_extras(art, manifest, next_id):
+    """Copy EXTRAS into originals/ with ids after the shapes, listed under "extras" in the manifest."""
+    from PIL import Image
+    manifest['extras'] = []
+    for n, (name, src, unit) in enumerate(EXTRAS, next_id):
+        src = art.resolve().parent / src
+        stem = f'{n:03d} {name}'
+        fmt = src.suffix[1:].lower()
+        (art / 'originals' / f'{stem}.{fmt}').write_bytes(src.read_bytes())
+        w, h = Image.open(src).size
+        manifest['extras'].append({'id': n, 'name': stem, 'file': f'originals/{stem}.{fmt}', 'format': fmt,
+                                   'stage_w': round(w * unit, 1), 'stage_h': round(h * unit, 1), 'kind': 'art',
+                                   'used_in': str(src.relative_to(art.resolve().parent))})
+
+
 def write_gallery(art, manifest):
     images = manifest['images']
-    by_id = {im['id']: im for im in images + manifest['shapes']}
+    by_id = {im['id']: im for im in images + manifest['shapes'] + manifest.get('extras', [])}
 
     def tile(im):
         if im.get('uses'):
             used = '<br>'.join(html.escape(f'{u["sprite"]} #{u["index"]} {u["costume"]}') for u in im['uses'][:5])
             if len(im['uses']) > 5:
                 used += f'<br>+{len(im["uses"]) - 5} more'
+        elif im.get('used_in'):
+            used = html.escape(f'not a Scratch costume: {im["used_in"]}')
         else:
             used = f'shape under {len(im["used_by"])} text images'
         return (f'<figure data-name="{html.escape(im["name"])}"><div class="img">'
@@ -217,7 +239,7 @@ def write_gallery(art, manifest):
                 f'<figcaption><b>{html.escape(im["name"])}</b><br><small>{im["format"]} · '
                 f'{im["stage_w"]:g}×{im["stage_h"]:g} on stage</small><div class="uses">{used}</div></figcaption></figure>')
 
-    draw = [im for im in images if im['kind'] == 'art'] + manifest['shapes']
+    draw = [im for im in images if im['kind'] == 'art'] + manifest['shapes'] + manifest.get('extras', [])
 
     styles = {}
     for im in images:

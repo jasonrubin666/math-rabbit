@@ -266,3 +266,4 @@ id,kind,file,format,stage_w,stage_h,text,font,base,uses,used_by
 265,art,originals/265 Key2 costume1 shape.svg,svg,26.9,27.8,,,,0,"shape for images 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156"
 266,art,originals/266 4DigitTopThousands 1 shape.svg,svg,56.0,124.9,,,,0,"shape for images 241, 242, 243, 244, 245, 246, 247, 248, 249, 250"
 267,art,originals/267 4DigitTopThousands 11 shape.svg,svg,56.0,125.1,,,,0,"shape for images 251, 252, 253, 254, 255, 256, 257, 258, 259, 260"
+268,art,originals/268 Rabbit desk.png,png,300.0,144.5,,,,0,src/rabbit/desk.png

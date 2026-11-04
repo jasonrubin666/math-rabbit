@@ -1,16 +1,17 @@
 # Math Rabbit art
 
-**92 images to draw**, down from 549 Scratch costumes:
+**93 images to draw**, down from 549 Scratch costumes:
 
 - 549 costumes → 261 distinct images once copies are merged (the digit "1" alone was 18 costumes).
 - 135 of those are only text: the card numbers 0–99, the percentage digits, the settings labels (Multiplication, Simple Addition, …, card counts, timer values, ∞). They don't need art; the rewrite can draw them with a font.
 - 40 more are text over a simple shape: score popups (+5 … WOW!), pressed calculator keys, the pad's carry bubbles, the report card's "Click to Restart!". Each shape is drawn once and the text goes on top. That's 6 shapes, plus the report card paper that already exists as an image.
 
-So: 86 pictures + 6 shapes.
+So: 86 pictures + 6 shapes, plus the desk the rabbit sits behind (268), which the game draws from
+`src/rabbit/desk.png` rather than a Scratch costume.
 
 ## Files
 
-- `originals/NNN <name>.svg|png`: the 92 Mad Dad images to draw. Numbers up to 261 are the merged images (gaps are text, drawn with a font, so they have no file); 262–267 are the shapes split out from under text.
+- `originals/NNN <name>.svg|png`: the 93 images to draw. Numbers up to 261 are the merged images (gaps are text, drawn with a font, so they have no file); 262–267 are the shapes split out from under text; 268 is the rabbit's desk.
 - `replace/`: put new art here starting with the same 3-digit number (`112 rabbit one.png` replaces `112 ScoreThousands Score1.png`). PNG or SVG.
 - `index.html`: what to draw, then a table of the text styles. Serve the folder so replacements show up: `npx http-server art -p 8793`.
 - `manifest.json` / `manifest.csv`: every image, with:
@@ -20,7 +21,7 @@ So: 86 pictures + 6 shapes.
   - `uses`: every costume (sprite + number) that shows it
   - `shapes`: the 6 split-out shapes and which images sit on them
 
-Not included: the scientist costumes the 3D rabbit draws over (`TitleScreenDad`, `GameOver2T`) and 8 blank costumes.
+Not included: the scientist costumes the 3D rabbit draws over (`TitleScreenDad`, `GameOver2T`; their desk is 268) and 8 blank costumes.
 
 ## Sizes
 

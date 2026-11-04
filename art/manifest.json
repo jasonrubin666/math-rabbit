@@ -9483,5 +9483,17 @@
     260
    ]
   }
+ ],
+ "extras": [
+  {
+   "id": 268,
+   "name": "268 Rabbit desk",
+   "file": "originals/268 Rabbit desk.png",
+   "format": "png",
+   "stage_w": 300.0,
+   "stage_h": 144.5,
+   "kind": "art",
+   "used_in": "src/rabbit/desk.png"
+  }
  ]
 }
