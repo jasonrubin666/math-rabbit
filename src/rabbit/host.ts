@@ -20,13 +20,14 @@ const FRAME_H = 260.861;
 /**
  * Where the desk goes, in % of the frame, for a picture `aspect` (width / height) wide: as wide as the
  * frame, its drawn paws (centered 52.5% across the picture) under the middle of his sweater (52.47%
- * across the frame), and its bottom on the bottom of the screen when the title scene is zoomed all the
- * way out (121.34% down the frame). The tabletop then hides the bottom of his sweater (89.5% down).
+ * across the frame), and its bottom 3% of the screen's height (10.8 stage units, 4.14% of the frame) below
+ * the bottom of the screen when the title scene is zoomed all the way out (121.34% down the frame). The
+ * tabletop then still hides the bottom of his sweater (it sits 84.9% down; the sweater ends 89.5% down).
  */
 const FRAME_ASPECT = 347.815 / 260.861;
 function deskLayout(aspect: number) {
   const width = 100, height = (width * FRAME_ASPECT) / aspect;
-  return { left: 52.47 - 0.525 * width, top: 121.34 - height, width, height };
+  return { left: 52.47 - 0.525 * width, top: 121.34 + 4.14 - height, width, height };
 }
 // The camera frames the rabbit in the scientist's frame. His ears reach above it, so the canvas extends
 // EARS_ROOM × the frame's height above the frame, with the same view (the extra fov and the off-center
