@@ -1,0 +1,9226 @@
+{
+ "source": "MadDad.sb3",
+ "images": [
+  {
+   "id": 1,
+   "name": "001 Stage Win",
+   "file": "originals/001 Stage Win.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "Stage",
+     "index": 1,
+     "costume": "Win",
+     "md5ext": "38b1374bdf8cf1b105c406161a56f1f7.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 2,
+   "name": "002 Stage TitleScreen",
+   "file": "originals/002 Stage TitleScreen.svg",
+   "format": "svg",
+   "stage_w": 483.7,
+   "stage_h": 377.6,
+   "uses": [
+    {
+     "sprite": "Stage",
+     "index": 2,
+     "costume": "TitleScreen",
+     "md5ext": "a808bfaf18f9f8d307f88348afec0477.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 3,
+   "name": "003 Stage DeskCards",
+   "file": "originals/003 Stage DeskCards.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 359.5,
+   "uses": [
+    {
+     "sprite": "Stage",
+     "index": 3,
+     "costume": "DeskCards",
+     "md5ext": "e7e213f65a3ced450015103b30b7112e.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 4,
+   "name": "004 Stage DeskPad",
+   "file": "originals/004 Stage DeskPad.png",
+   "format": "png",
+   "stage_w": 479.5,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "Stage",
+     "index": 4,
+     "costume": "DeskPad",
+     "md5ext": "a6f07aae227e896a672b75124595215d.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 5,
+   "name": "005 BackCards CardBack",
+   "file": "originals/005 BackCards CardBack.svg",
+   "format": "svg",
+   "stage_w": 66.3,
+   "stage_h": 103.0,
+   "uses": [
+    {
+     "sprite": "BackCards",
+     "index": 1,
+     "costume": "CardBack",
+     "md5ext": "ee3a4e2e70f890f29e733e30e85cc66b.svg"
+    },
+    {
+     "sprite": "FrontCard",
+     "index": 1,
+     "costume": "CardBack",
+     "md5ext": "e902155808194aad8a7db39bcd4ca920.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 6,
+   "name": "006 FrontCard Multiplication",
+   "file": "originals/006 FrontCard Multiplication.svg",
+   "format": "svg",
+   "stage_w": 63.8,
+   "stage_h": 104.8,
+   "uses": [
+    {
+     "sprite": "FrontCard",
+     "index": 2,
+     "costume": "Multiplication",
+     "md5ext": "841b3b6abac8b535bd594d7af2ba162a.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 7,
+   "name": "007 FrontCard SimpleAddition",
+   "file": "originals/007 FrontCard SimpleAddition.svg",
+   "format": "svg",
+   "stage_w": 64.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "FrontCard",
+     "index": 3,
+     "costume": "SimpleAddition",
+     "md5ext": "e9c49092fb15a1d733aca59b95eea4c7.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 8,
+   "name": "008 FrontCard 2DigitAddition",
+   "file": "originals/008 FrontCard 2DigitAddition.svg",
+   "format": "svg",
+   "stage_w": 64.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "FrontCard",
+     "index": 4,
+     "costume": "2DigitAddition",
+     "md5ext": "e4f31c4e24267167c925728f861be6d0.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 9,
+   "name": "009 FrontCard SimpleSubtraction",
+   "file": "originals/009 FrontCard SimpleSubtraction.svg",
+   "format": "svg",
+   "stage_w": 63.9,
+   "stage_h": 104.8,
+   "uses": [
+    {
+     "sprite": "FrontCard",
+     "index": 5,
+     "costume": "SimpleSubtraction",
+     "md5ext": "717b34ef695ea586d3750172a2c5084c.svg"
+    },
+    {
+     "sprite": "FrontCard",
+     "index": 6,
+     "costume": "2DigitSubtraction",
+     "md5ext": "3b50e2f69015e5bd236d4c4b2e81ca22.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 10,
+   "name": "010 FrontCard Division",
+   "file": "originals/010 FrontCard Division.svg",
+   "format": "svg",
+   "stage_w": 64.4,
+   "stage_h": 105.7,
+   "uses": [
+    {
+     "sprite": "FrontCard",
+     "index": 7,
+     "costume": "Division",
+     "md5ext": "cede28cef024aeb4b8fffed4bc8ca1c3.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 11,
+   "name": "011 FrontCard CardGlow",
+   "file": "originals/011 FrontCard CardGlow.svg",
+   "format": "svg",
+   "stage_w": 88.4,
+   "stage_h": 128.1,
+   "uses": [
+    {
+     "sprite": "FrontCard",
+     "index": 8,
+     "costume": "CardGlow",
+     "md5ext": "5235244fd913d63f4a7473409c23fc7b.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 12,
+   "name": "012 NumberTop 1",
+   "file": "originals/012 NumberTop 1.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "c6de033d2d502773ccec16ad1c946f80.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "3507e2221dadea711785497c265bffc1.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "d2444b0c9f5d3450c18f5eb519890a3c.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "6eedf6e0c497079c86827bab82a5b322.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "f9673dd82792efb0cebe7310d8fe3afc.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "ff313500a09eef79a937e738c62827c5.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "45534dd2a6f322876fd1d43ddfa1c94d.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "a3f46edd8904916f2b87a625dd5844d4.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "8a8d132b33e6e62b34ed0a7d87edcd37.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "f0b9fc9749bc38306006f2585b46c335.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "2cab9882305ed2a09275aada6b04b5cf.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "b0f0b7fe06f1397c18e8b81a15cdb278.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "5aa739829c50e5b1a4d5109fb34d9e3d.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "1c12ab11560df1d083870592db81c9db.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "04b8f57b5ab10856b7905215ca5db531.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 13,
+   "name": "013 NumberTop 2",
+   "file": "originals/013 NumberTop 2.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "39f930ce69f480bf7b07f9259cdc1812.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "2d8b3f87a27939659a60857d4a876fe1.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "bbb8a0eb290623678642bd8cbf548dc1.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "ad2b1a0d495041f267b600ad883abaab.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "5b725ce73c84181b098087560613c1ed.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "8685468340e3c3cf8a0c4abf40312654.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "1cfa50c4bd94595bf8d744afe4527ce3.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "958c4df492f435039fffe29d57fd2d96.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "10a346e331a3fa0b14cd1261eb7142b7.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "7349e613eb9615c70daedb33e7c41cd7.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "229116051da01134594c2ab50bdcbaee.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "90e81b58da98bc18db39005bcd1424e3.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "8b9d0d33bdadcc796bf3b907bf198045.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "044abd5eccfa6b3f915ead1dabc64ca8.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "323aea5496f1edd212d0921d5ebdf4d2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 14,
+   "name": "014 NumberTop 3",
+   "file": "originals/014 NumberTop 3.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "b721c43f63cbe15cbe32bef3236a57f5.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "088c7b6d16ee5fb6b4fa8d30ebcaa6ce.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "0bfd0aba8a65044cee4ad6ae253e451f.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "7b498c1d0979e2a4a8abde5944fd44ad.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "49c7ea520318eb43a0fc8d99d55ea49c.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "cc5fd20bed8cada776b295f80174d8df.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "d2112840683b8465e714592ceba84e66.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "fe5ea377b7cf5d8486079217d3520d54.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "7afff5d22d9585df4438dbe40bbd3d3c.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "af6f735cbbbac54dde8b00f1677cc142.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "ea1910366ccef0308cae86c048541f38.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "52824e2fc506f6924b2d471c9fdd4fe9.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "0ad8db942af7e76a4b14b3c92074d94f.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "623b890b8ccf4ce34514c9c568b124d2.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "839a317c1ab73c361cd84b6aeb722cda.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 15,
+   "name": "015 NumberTop 4",
+   "file": "originals/015 NumberTop 4.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "d56cdea9cb9bdcb754f73883c60fc3cb.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "8406e623eb48b191ba7cafca411bea64.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "e87846891188b64fc89a9c16e379ebed.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "f9b320739011db75b8901f3d82f7d65d.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "72c45eb4600c3a7e547b0f65ddb1556e.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "0363a5b2e0d5a9417992f4f2b3219b95.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "29461c70e73a6077a483c1a8dfe9387b.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "c7cc64d7454247e7c5b34b349bf74d22.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "3521d98a89ce5a7664b21effea3d0dda.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "90f99b0fec6ff63a3bc79e9c8d1f40d3.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "cdc42f304fb9a90c3ef2260bbf290630.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "26a2725a40a1047bf49a131abd1949ef.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "a4e6aa1fc0bb87129a03bb0880a2a631.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "7a7484be7b945c3084cf5a36ab07eb19.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "9671c31f782c635aa4626463252376c6.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 16,
+   "name": "016 NumberTop 5",
+   "file": "originals/016 NumberTop 5.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "9ccd90b516921011b2a7aa51e0f5a931.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "1d8516ac0ca77b38c840efc76cfcae81.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "d2c58a170c6df8264f46da14d29121e7.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "8c6bf610e0c20590133e1c50645786eb.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "fcf8a8f7e776de9f01b7c4d525e6f325.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "26f9069c032106f3063a41c611547924.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "5b8d2204f74ff6932416ffba8eb0e174.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "d382226c66ddd33dfaea52a9abafc864.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "76e00c4ad3c90f34bff9f59fef7131aa.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "7be353200be6b5ad6a8c810895360e67.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "b2da78632873538604d51acf42f6a80e.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "d6d509fb1c7dad6d3cdf960e5b09ab1d.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "7c07a1076090e5ee217f568983e1cff8.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "b0c76ba97e0fb9d0fd00eb3297387546.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "b9da97d184e6ba5cf25edf86e68a1364.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 17,
+   "name": "017 NumberTop 6",
+   "file": "originals/017 NumberTop 6.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "0f5da0247c7d2ab62a091152dc54a9ca.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "820878ef88ed94a0853ecd9eddbdf0eb.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "2f4d50e0032520ca427502f2f10d23b6.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "17a565f624fab843a1af0f446a576482.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "1b10c3fa6837a16a68561559c0562e10.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "143f7df11486d82c3e9d181aae913b58.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "2672f71dfa18d6a49867c6eccc2e7ca2.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "85ee6176953f31140d4d6d151cbd4f20.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "b76449d6b8af5efeef5b1b7e2744d5bd.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "27df76982a78dfb46d65f18d339abdd0.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "027d6903565098f04269871d230726c4.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "d0ac4b8542d30b194ef46166d65627bb.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "4c5bd5b7c210b137749cb6f75619a906.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "786c694c6777de3f9aa5e570325723d5.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "149e4cdafa9866c268bff059f24906a7.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "6",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 18,
+   "name": "018 NumberTop 7",
+   "file": "originals/018 NumberTop 7.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "57b9f0b4809b7fbebd1dae81497d8c0e.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "b84023701235bc77563438bb6bd667e4.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "1316360de124ebaa605dc87b537ebf22.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "c1abd2bad12db4ba38d96286c65cb477.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "19f56eefad18b3f20d030cf152e2c8ad.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "f7ca125aa255fb8672cdeb991f7f6802.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "9883d07ea9750367105c975aac351315.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "8ea266a7403aada84ceb20a37e4679a1.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "c41a1e4d52bd7254699bc72a25559e47.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "b8242acfc30a24b6f66b209b0fd3d183.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "a18a1475d90b4869058568d54b4d3524.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "e1a48b1ae5009fdb857589d4ff2aeacf.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "718faaa9477a013e22ae5bfe15b6eb42.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "6963b9f5b83086c90939922b807a153d.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "1c9411c67f8401666462e7f58ed52736.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "7",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 19,
+   "name": "019 NumberTop 8",
+   "file": "originals/019 NumberTop 8.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "8637fe0eee2c46d6c3fbe013a76962eb.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "e29f1bdf821f7c8f8ff0ae7cc50c5476.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "622384467304ef369b07726f3f5d2fad.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "24a1c34b3ea38a560459addec6d73bb6.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "44b784e1ffeb133a4249217b8ba96066.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "526fb0f1819f086fd97f38506e8c0f8e.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "bd1cd29a58a263bd16f74ed101d91ae3.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "ffc934a12418345dede8ceba05db4c28.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "b67d5a1d81ba6a49f0f21947b5587550.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "4483e58048ca3f45f782cdfa09c67eb4.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "5298e682a1fcff04f8c0e4210bdeea53.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "f496a8e889dbbbe7a13f727af44da1d7.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "bc08343329981c2c5496a378f163c4cc.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "5ff2db42e1454ed90ec22ff72073e0c4.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "fa84bc624c60173bb0a82d24854ce53f.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "8",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 20,
+   "name": "020 NumberTop 9",
+   "file": "originals/020 NumberTop 9.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "2516176c2c7bd5c2c4975076df957fee.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "e939fa5d1143dee12d82437e10509984.svg"
+    },
+    {
+     "sprite": "EntryHundreds",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "8ead100d18c9166abf67ce77d4f16cb3.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "eb246e6766c379269a594d8ff7f82130.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "3d7e7e49562486762d3343e29d242111.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "3f6f2df4e9d05ab3f402b280e2b07a0b.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "4750a51dfee9378525247ef7c233b074.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "5f1b2e0de5fbbdc6defd9aaa90efb292.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "5dba2702e55d5217fb55ccd1adf9e4d3.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "b3e8b2d52c169e456b973fb7a3a85a0f.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "d631e5e1d1436dcf72154bda25a5267e.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "186cfbae2226e2e28f2e8d73d87abc6d.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "814a524ccfc947f3038cd9898d397d8a.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "bd5667e4b8577bde4763fa5f7478f2dc.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "5bf20ee1b9f78e5f978255314a3dd956.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "9",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 21,
+   "name": "021 NumberTop 10",
+   "file": "originals/021 NumberTop 10.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.4,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "99ae77a26588403051e776a10dab0d42.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "fd8c7778a180ae06e0b6650a64b82132.svg"
+    },
+    {
+     "sprite": "Cards",
+     "index": 2,
+     "costume": "10",
+     "md5ext": "177e0c6ff159120d1890f6030ea3f330.svg"
+    },
+    {
+     "sprite": "Timer",
+     "index": 3,
+     "costume": "10",
+     "md5ext": "177e0c6ff159120d1890f6030ea3f330.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "10",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 32.019,
+     "x": 0.4,
+     "y": 34.821,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 22,
+   "name": "022 NumberTop 11",
+   "file": "originals/022 NumberTop 11.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.4,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "f2bfd445230069c5895a138462b05c1d.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "ca4e441db4e9d81752a0e4c1b1551f7f.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "11",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 32.019,
+     "x": 0.4,
+     "y": 34.821,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 23,
+   "name": "023 NumberTop 12",
+   "file": "originals/023 NumberTop 12.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.4,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 12,
+     "costume": "12",
+     "md5ext": "c0008fc253fee286711a3870bad4cf7a.svg"
+    },
+    {
+     "sprite": "NumberBottom",
+     "index": 12,
+     "costume": "12",
+     "md5ext": "f52a4248c1c6a7136840a0f967d2870b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "12",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 32.019,
+     "x": 0.4,
+     "y": 34.821,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 24,
+   "name": "024 NumberTop 50",
+   "file": "originals/024 NumberTop 50.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 13,
+     "costume": "50",
+     "md5ext": "c26723519700f9dbbb2e8bf6fc48d94b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "13",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 25,
+   "name": "025 NumberTop 49",
+   "file": "originals/025 NumberTop 49.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 14,
+     "costume": "49",
+     "md5ext": "5db891bab7ac26ec1c83dbb849c79a68.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "14",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 26,
+   "name": "026 NumberTop 48",
+   "file": "originals/026 NumberTop 48.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 15,
+     "costume": "48",
+     "md5ext": "2eb3251e3230edc1aef5373aa45fdb00.svg"
+    },
+    {
+     "sprite": "Timer",
+     "index": 4,
+     "costume": "15",
+     "md5ext": "0c9906154e79e025194cebeae9b401f4.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "15",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 27,
+   "name": "027 NumberTop 47",
+   "file": "originals/027 NumberTop 47.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 16,
+     "costume": "47",
+     "md5ext": "ac832ac619798018d5a4db19267b508c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "16",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 28,
+   "name": "028 NumberTop 46",
+   "file": "originals/028 NumberTop 46.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 17,
+     "costume": "46",
+     "md5ext": "57c72fb31eb01576ee5aa144262b0a77.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "17",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 29,
+   "name": "029 NumberTop 45",
+   "file": "originals/029 NumberTop 45.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 18,
+     "costume": "45",
+     "md5ext": "ba0a98fa0673b60539447920bb58beda.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "18",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 30,
+   "name": "030 NumberTop 44",
+   "file": "originals/030 NumberTop 44.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 19,
+     "costume": "44",
+     "md5ext": "cb0616787962ad6d4d9a962fcd0ae503.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "19",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 31,
+   "name": "031 NumberTop 43",
+   "file": "originals/031 NumberTop 43.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 20,
+     "costume": "43",
+     "md5ext": "ae2ecf6da7b646fab285914a23b8ef51.svg"
+    },
+    {
+     "sprite": "Timer",
+     "index": 5,
+     "costume": "20",
+     "md5ext": "3cd63e50b5333bb758b14217d7ddcc76.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "20",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 32,
+   "name": "032 NumberTop 42",
+   "file": "originals/032 NumberTop 42.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 21,
+     "costume": "42",
+     "md5ext": "d008ac690b6d08336f141afd7acea3a6.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "21",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 33,
+   "name": "033 NumberTop 41",
+   "file": "originals/033 NumberTop 41.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 22,
+     "costume": "41",
+     "md5ext": "68bd0850bbecbb321a3eaa5ebe81ab07.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "22",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 34,
+   "name": "034 NumberTop 40",
+   "file": "originals/034 NumberTop 40.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 23,
+     "costume": "40",
+     "md5ext": "0cc806b8f2e23d588652bb056319a643.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "23",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 35,
+   "name": "035 NumberTop 39",
+   "file": "originals/035 NumberTop 39.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 24,
+     "costume": "39",
+     "md5ext": "2d8709fe530a1c4bf276ae16bcec8b9f.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "24",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 36,
+   "name": "036 NumberTop 38",
+   "file": "originals/036 NumberTop 38.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 25,
+     "costume": "38",
+     "md5ext": "a3fae274bc245f77d415047c9041838a.svg"
+    },
+    {
+     "sprite": "Cards",
+     "index": 3,
+     "costume": "25",
+     "md5ext": "39b72e1e111bb07373e621ead1923e95.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "25",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 37,
+   "name": "037 NumberTop 37",
+   "file": "originals/037 NumberTop 37.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 26,
+     "costume": "37",
+     "md5ext": "e82ad56219ada7d9eee8758ea05292b9.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "26",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 38,
+   "name": "038 NumberTop 36",
+   "file": "originals/038 NumberTop 36.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 27,
+     "costume": "36",
+     "md5ext": "f1408cbd11011891438e15aeafa2c448.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "27",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 39,
+   "name": "039 NumberTop 35",
+   "file": "originals/039 NumberTop 35.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 28,
+     "costume": "35",
+     "md5ext": "b0d7e4429275aed35dbabd0a12ca3be2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "28",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 40,
+   "name": "040 NumberTop 34",
+   "file": "originals/040 NumberTop 34.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 29,
+     "costume": "34",
+     "md5ext": "47a362ce084a57e103feea1b51d468e1.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "29",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 41,
+   "name": "041 NumberTop 33",
+   "file": "originals/041 NumberTop 33.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 30,
+     "costume": "33",
+     "md5ext": "73d91bf7f7ff03f98dc4abe29ef06bb3.svg"
+    },
+    {
+     "sprite": "Timer",
+     "index": 6,
+     "costume": "30",
+     "md5ext": "323059eb2fc6f2e96b421326dcd49466.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "30",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 42,
+   "name": "042 NumberTop 32",
+   "file": "originals/042 NumberTop 32.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 31,
+     "costume": "32",
+     "md5ext": "6534fc5509117670b87a11e76a3fff85.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "31",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 43,
+   "name": "043 NumberTop 31",
+   "file": "originals/043 NumberTop 31.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 32,
+     "costume": "31",
+     "md5ext": "081d10c0222725b1bffaacf3dc2d4a35.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "32",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 44,
+   "name": "044 NumberTop 30",
+   "file": "originals/044 NumberTop 30.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 33,
+     "costume": "30",
+     "md5ext": "81b5e6ecdd07d01cc43a15f29cc1b80c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "33",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 45,
+   "name": "045 NumberTop 29",
+   "file": "originals/045 NumberTop 29.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 34,
+     "costume": "29",
+     "md5ext": "978a7b71f4437c524e742ed33931419f.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "34",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 46,
+   "name": "046 NumberTop 28",
+   "file": "originals/046 NumberTop 28.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 35,
+     "costume": "28",
+     "md5ext": "587b1c41db1168a7a375a09829f8ebed.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "35",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 47,
+   "name": "047 NumberTop 27",
+   "file": "originals/047 NumberTop 27.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 36,
+     "costume": "27",
+     "md5ext": "568805029b4d22f2dd22b0d4e080a94d.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "36",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 48,
+   "name": "048 NumberTop 26",
+   "file": "originals/048 NumberTop 26.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 37,
+     "costume": "26",
+     "md5ext": "951a644fdda0fe90d13638a74c90d8ab.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "37",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 49,
+   "name": "049 NumberTop 25",
+   "file": "originals/049 NumberTop 25.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 38,
+     "costume": "25",
+     "md5ext": "ef126c85747ac2549632d4b966e01911.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "38",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 50,
+   "name": "050 NumberTop 24",
+   "file": "originals/050 NumberTop 24.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 39,
+     "costume": "24",
+     "md5ext": "e53b14d9aa6b38bbe07c1f4b1fc0590a.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "39",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 51,
+   "name": "051 NumberTop 23",
+   "file": "originals/051 NumberTop 23.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 40,
+     "costume": "23",
+     "md5ext": "8599e8d6abd819d6e4b72060256f2ca7.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "40",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 52,
+   "name": "052 NumberTop 22",
+   "file": "originals/052 NumberTop 22.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 41,
+     "costume": "22",
+     "md5ext": "d958169df31d562f4756081749bb034c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "41",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 53,
+   "name": "053 NumberTop 21",
+   "file": "originals/053 NumberTop 21.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 42,
+     "costume": "21",
+     "md5ext": "3354a45a1ad2ced3fcbcfc52d988752e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "42",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 54,
+   "name": "054 NumberTop 20",
+   "file": "originals/054 NumberTop 20.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 43,
+     "costume": "20",
+     "md5ext": "a0c334dbfbaa47feb3da18e984eb646c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "43",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 55,
+   "name": "055 NumberTop 19",
+   "file": "originals/055 NumberTop 19.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 44,
+     "costume": "19",
+     "md5ext": "a5a5f8f76aff99f91b8f3e6d00cc9ddc.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "44",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 56,
+   "name": "056 NumberTop 18",
+   "file": "originals/056 NumberTop 18.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 45,
+     "costume": "18",
+     "md5ext": "bfdd7d83c54a307e1ba79f5a8de52cf5.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "45",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 57,
+   "name": "057 NumberTop 17",
+   "file": "originals/057 NumberTop 17.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 46,
+     "costume": "17",
+     "md5ext": "7c73ca6ec384415b5bf9a122c3c7987e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "46",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 58,
+   "name": "058 NumberTop 16",
+   "file": "originals/058 NumberTop 16.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 47,
+     "costume": "16",
+     "md5ext": "3c1356afcf4ca15ea997a9686e3912f5.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "47",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 59,
+   "name": "059 NumberTop 15",
+   "file": "originals/059 NumberTop 15.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 48,
+     "costume": "15",
+     "md5ext": "24c71af25dc1aff23fb257cd8f16f164.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "48",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 60,
+   "name": "060 NumberTop 14",
+   "file": "originals/060 NumberTop 14.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 49,
+     "costume": "14",
+     "md5ext": "b5ea0ad50a60628900da77098fc00112.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "49",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 61,
+   "name": "061 NumberTop 13",
+   "file": "originals/061 NumberTop 13.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 50,
+     "costume": "13",
+     "md5ext": "c96c20386ddb37e30ef268210d1dd202.svg"
+    },
+    {
+     "sprite": "Cards",
+     "index": 4,
+     "costume": "50",
+     "md5ext": "8f03be4b8a78f6582b8d34925deb94f3.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "50",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 62,
+   "name": "062 NumberTop 99",
+   "file": "originals/062 NumberTop 99.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 51,
+     "costume": "99",
+     "md5ext": "251e2a92f5bf13240b045167bf0e5567.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "51",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 63,
+   "name": "063 NumberTop 98",
+   "file": "originals/063 NumberTop 98.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 52,
+     "costume": "98",
+     "md5ext": "c9aa8317219d95a66a33a85629015629.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "52",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 64,
+   "name": "064 NumberTop 97",
+   "file": "originals/064 NumberTop 97.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 53,
+     "costume": "97",
+     "md5ext": "ef2a044188c04c5e0c3454be7305891c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "53",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 65,
+   "name": "065 NumberTop 96",
+   "file": "originals/065 NumberTop 96.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 54,
+     "costume": "96",
+     "md5ext": "eb7d51227365b7d2fcf9751d908e0087.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "54",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 66,
+   "name": "066 NumberTop 95",
+   "file": "originals/066 NumberTop 95.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 55,
+     "costume": "95",
+     "md5ext": "f9d68220b39668d9f12c07d41e0310b7.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "55",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 67,
+   "name": "067 NumberTop 94",
+   "file": "originals/067 NumberTop 94.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 56,
+     "costume": "94",
+     "md5ext": "493a346b8a85e2244937cc1da14fc5c0.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "56",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 68,
+   "name": "068 NumberTop 93",
+   "file": "originals/068 NumberTop 93.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 57,
+     "costume": "93",
+     "md5ext": "aba96ca6ac8033f2ad1e4bc6c4177e3d.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "57",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 69,
+   "name": "069 NumberTop 92",
+   "file": "originals/069 NumberTop 92.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 58,
+     "costume": "92",
+     "md5ext": "8f286f3367d3cf8064518b26474b1999.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "58",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 70,
+   "name": "070 NumberTop 91",
+   "file": "originals/070 NumberTop 91.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 59,
+     "costume": "91",
+     "md5ext": "42443f5819f60df8d9aa08d208526973.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "59",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 71,
+   "name": "071 NumberTop 90",
+   "file": "originals/071 NumberTop 90.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 60,
+     "costume": "90",
+     "md5ext": "9d48503a9552b6660c02432af77015c3.svg"
+    },
+    {
+     "sprite": "Timer",
+     "index": 7,
+     "costume": "60",
+     "md5ext": "d1268494e579a1af579a4976d1c97373.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "60",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 72,
+   "name": "072 NumberTop 89",
+   "file": "originals/072 NumberTop 89.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 61,
+     "costume": "89",
+     "md5ext": "283240662b618429fc7d672ed9e54175.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "61",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 73,
+   "name": "073 NumberTop 88",
+   "file": "originals/073 NumberTop 88.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 62,
+     "costume": "88",
+     "md5ext": "877cd2cc1ec1650fde38d14252a117f4.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "62",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 74,
+   "name": "074 NumberTop 87",
+   "file": "originals/074 NumberTop 87.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 63,
+     "costume": "87",
+     "md5ext": "fbd61465e4cde04c52b1076235ae34de.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "63",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 75,
+   "name": "075 NumberTop 86",
+   "file": "originals/075 NumberTop 86.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 64,
+     "costume": "86",
+     "md5ext": "4ea5092921da776a7f99a6447f88a0e6.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "64",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 76,
+   "name": "076 NumberTop 85",
+   "file": "originals/076 NumberTop 85.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 65,
+     "costume": "85",
+     "md5ext": "65b4aabdc713f3775d7f3be1c2add209.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "65",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 77,
+   "name": "077 NumberTop 84",
+   "file": "originals/077 NumberTop 84.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 66,
+     "costume": "84",
+     "md5ext": "1b701caae2aec2ea720d9d5ec2d8e3ab.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "66",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 78,
+   "name": "078 NumberTop 83",
+   "file": "originals/078 NumberTop 83.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 67,
+     "costume": "83",
+     "md5ext": "a24625559682e0f2da9d1a2aaae60a18.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "67",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 79,
+   "name": "079 NumberTop 82",
+   "file": "originals/079 NumberTop 82.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 68,
+     "costume": "82",
+     "md5ext": "53da9077d8b1a153d1138fb0210d5205.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "68",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 80,
+   "name": "080 NumberTop 81",
+   "file": "originals/080 NumberTop 81.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 69,
+     "costume": "81",
+     "md5ext": "49908ef851a1ffe00e7c7c7cfe6fb48a.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "69",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 81,
+   "name": "081 NumberTop 80",
+   "file": "originals/081 NumberTop 80.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 70,
+     "costume": "80",
+     "md5ext": "0e178e805538f86eee400c29f2f08a67.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "70",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 82,
+   "name": "082 NumberTop 79",
+   "file": "originals/082 NumberTop 79.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 71,
+     "costume": "79",
+     "md5ext": "8b33ea58401a96652ba7822e17bd5c06.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "71",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 83,
+   "name": "083 NumberTop 78",
+   "file": "originals/083 NumberTop 78.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 72,
+     "costume": "78",
+     "md5ext": "3afd8370b978aefb84b4d907dda589ea.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "72",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 84,
+   "name": "084 NumberTop 77",
+   "file": "originals/084 NumberTop 77.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 73,
+     "costume": "77",
+     "md5ext": "de598e285620cee45e51e961e069d1fd.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "73",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 85,
+   "name": "085 NumberTop 76",
+   "file": "originals/085 NumberTop 76.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 74,
+     "costume": "76",
+     "md5ext": "54b2ecda424570cf4c69c36f43fd2f17.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "74",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 86,
+   "name": "086 NumberTop 75",
+   "file": "originals/086 NumberTop 75.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 75,
+     "costume": "75",
+     "md5ext": "d064b3cdbf79e69ba56d71db6c5af8fc.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "75",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 87,
+   "name": "087 NumberTop 74",
+   "file": "originals/087 NumberTop 74.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 76,
+     "costume": "74",
+     "md5ext": "d6212f5bfc80e8b7a2eb7633e51de39c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "76",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 88,
+   "name": "088 NumberTop 73",
+   "file": "originals/088 NumberTop 73.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 77,
+     "costume": "73",
+     "md5ext": "9ad75ec7948ca99f1b9a5057cbe4e18f.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "77",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 89,
+   "name": "089 NumberTop 72",
+   "file": "originals/089 NumberTop 72.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 78,
+     "costume": "72",
+     "md5ext": "0a6c65f896bc2d084ec553a099d3d6a5.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "78",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 90,
+   "name": "090 NumberTop 71",
+   "file": "originals/090 NumberTop 71.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 79,
+     "costume": "71",
+     "md5ext": "d158812fa744a9b4f7739b816b69621a.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "79",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 91,
+   "name": "091 NumberTop 70",
+   "file": "originals/091 NumberTop 70.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 80,
+     "costume": "70",
+     "md5ext": "625f644bed833e3f0d80d2244805318a.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "80",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 92,
+   "name": "092 NumberTop 69",
+   "file": "originals/092 NumberTop 69.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 81,
+     "costume": "69",
+     "md5ext": "0c4e220f8caa606eebea616343b0d489.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "81",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 93,
+   "name": "093 NumberTop 68",
+   "file": "originals/093 NumberTop 68.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 82,
+     "costume": "68",
+     "md5ext": "12c546c65b657412e0234f0818c73c60.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "82",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 94,
+   "name": "094 NumberTop 67",
+   "file": "originals/094 NumberTop 67.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 83,
+     "costume": "67",
+     "md5ext": "f225715c9357eeb5aea31ec7fb042d5e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "83",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 95,
+   "name": "095 NumberTop 66",
+   "file": "originals/095 NumberTop 66.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 84,
+     "costume": "66",
+     "md5ext": "541eee28be323addde4421bf68049f06.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "84",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 96,
+   "name": "096 NumberTop 65",
+   "file": "originals/096 NumberTop 65.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 85,
+     "costume": "65",
+     "md5ext": "3098568c7f87a29ebb72312cb0b58e4b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "85",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 97,
+   "name": "097 NumberTop 64",
+   "file": "originals/097 NumberTop 64.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 86,
+     "costume": "64",
+     "md5ext": "e569ffc16f645e16a6ad5db81308ce51.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "86",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 98,
+   "name": "098 NumberTop 63",
+   "file": "originals/098 NumberTop 63.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 87,
+     "costume": "63",
+     "md5ext": "0fa060f3e714b883e2cbd8564e567089.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "87",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 99,
+   "name": "099 NumberTop 62",
+   "file": "originals/099 NumberTop 62.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 88,
+     "costume": "62",
+     "md5ext": "44b083c6c0ce90188d0836afe56a0908.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "88",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 100,
+   "name": "100 NumberTop 61",
+   "file": "originals/100 NumberTop 61.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 89,
+     "costume": "61",
+     "md5ext": "517e8e81dc000ee4cf3c04e2daf54aa6.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "89",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 101,
+   "name": "101 NumberTop 60",
+   "file": "originals/101 NumberTop 60.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 90,
+     "costume": "60",
+     "md5ext": "9e7d9131e81785095bfda7f9bab3257b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "90",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 102,
+   "name": "102 NumberTop 59",
+   "file": "originals/102 NumberTop 59.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 91,
+     "costume": "59",
+     "md5ext": "ab0a0b777684510c9b22dc4b667d25cf.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "91",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 103,
+   "name": "103 NumberTop 58",
+   "file": "originals/103 NumberTop 58.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 92,
+     "costume": "58",
+     "md5ext": "963482b180088278d73cc2e30164bf6a.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "92",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 104,
+   "name": "104 NumberTop 57",
+   "file": "originals/104 NumberTop 57.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 93,
+     "costume": "57",
+     "md5ext": "24d1997731058dab92c9d96ef9349f36.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "93",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 105,
+   "name": "105 NumberTop 56",
+   "file": "originals/105 NumberTop 56.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 94,
+     "costume": "56",
+     "md5ext": "e3f93455c0638ad91eef53446a6187c2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "94",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 106,
+   "name": "106 NumberTop 55",
+   "file": "originals/106 NumberTop 55.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 95,
+     "costume": "55",
+     "md5ext": "20945c275b670e78debefafd57e539a3.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "95",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 107,
+   "name": "107 NumberTop 54",
+   "file": "originals/107 NumberTop 54.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 96,
+     "costume": "54",
+     "md5ext": "562aabc461918ce8e03fb8c1e5835a9b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "96",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 108,
+   "name": "108 NumberTop 53",
+   "file": "originals/108 NumberTop 53.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 97,
+     "costume": "53",
+     "md5ext": "58c46611a902fd558d95f0b079a77110.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "97",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 109,
+   "name": "109 NumberTop 52",
+   "file": "originals/109 NumberTop 52.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 98,
+     "costume": "52",
+     "md5ext": "cc88e575e09f551375b6430fca450c47.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "98",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 110,
+   "name": "110 NumberTop 51",
+   "file": "originals/110 NumberTop 51.svg",
+   "format": "svg",
+   "stage_w": 38.2,
+   "stage_h": 44.3,
+   "uses": [
+    {
+     "sprite": "NumberTop",
+     "index": 99,
+     "costume": "51",
+     "md5ext": "ed511d0555d30cc2242271d8531e6d1e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "99",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 31.952,
+     "x": 0.399,
+     "y": 34.747,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 111,
+   "name": "111 EntryHundreds 10",
+   "file": "originals/111 EntryHundreds 10.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "EntryHundreds",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "1ac6963ef21031cd0abb036f02aa3e24.svg"
+    },
+    {
+     "sprite": "EntryTens",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "2beca030bddf1dd9681fee1ff446e55d.svg"
+    },
+    {
+     "sprite": "EntryOnes",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "0d42fd174c336e13fddb00fec24dcf3c.svg"
+    },
+    {
+     "sprite": "4DigitTopOnes",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "42182fa633a39e5bdc0dfd3aa04b7d78.svg"
+    },
+    {
+     "sprite": "4DigitBottomThousands",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "bdcaee8aec845f93d9f15d9843e2c70d.svg"
+    },
+    {
+     "sprite": "4DigitBottomHundreds",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "16a1bfa66a97e89151648f0ebd884aed.svg"
+    },
+    {
+     "sprite": "4DigitBottomTens",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "b0e8f17389a41e68103a35aa7c8cc489.svg"
+    },
+    {
+     "sprite": "4DigitBottomOnes",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "a68ed705195702e94298c140839e96b7.svg"
+    },
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "89f6ccd0c62ec03e339174957f62b4f3.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "aa12b2e240b26c05c27e1a707b218bf3.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "a98aeb97c0b9d1cf58e23c08d9001255.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "239cb76b1885e1d5a1059ee404d91726.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "de29191ba5c54915509b4ccf7bc12267.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "0",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 112,
+   "name": "112 ScoreThousands Score1",
+   "file": "originals/112 ScoreThousands Score1.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 1,
+     "costume": "Score1",
+     "md5ext": "f459d339916d511afc1497f378aaffcb.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 1,
+     "costume": "Score1",
+     "md5ext": "f459d339916d511afc1497f378aaffcb.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 1,
+     "costume": "Score1",
+     "md5ext": "f459d339916d511afc1497f378aaffcb.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 1,
+     "costume": "Score1",
+     "md5ext": "f459d339916d511afc1497f378aaffcb.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 1,
+     "costume": "Score1",
+     "md5ext": "f459d339916d511afc1497f378aaffcb.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 113,
+   "name": "113 ScoreThousands Score2",
+   "file": "originals/113 ScoreThousands Score2.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 2,
+     "costume": "Score2",
+     "md5ext": "3c24e6543cd55301031d3b0b9eb4c20d.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 2,
+     "costume": "Score2",
+     "md5ext": "3c24e6543cd55301031d3b0b9eb4c20d.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 2,
+     "costume": "Score2",
+     "md5ext": "3c24e6543cd55301031d3b0b9eb4c20d.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 2,
+     "costume": "Score2",
+     "md5ext": "3c24e6543cd55301031d3b0b9eb4c20d.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 2,
+     "costume": "Score2",
+     "md5ext": "3c24e6543cd55301031d3b0b9eb4c20d.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 114,
+   "name": "114 ScoreThousands Score3",
+   "file": "originals/114 ScoreThousands Score3.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 3,
+     "costume": "Score3",
+     "md5ext": "63e69617548225311a57e45433db6973.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 3,
+     "costume": "Score3",
+     "md5ext": "63e69617548225311a57e45433db6973.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 3,
+     "costume": "Score3",
+     "md5ext": "63e69617548225311a57e45433db6973.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 3,
+     "costume": "Score3",
+     "md5ext": "63e69617548225311a57e45433db6973.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 3,
+     "costume": "Score3",
+     "md5ext": "63e69617548225311a57e45433db6973.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 115,
+   "name": "115 ScoreThousands Score4",
+   "file": "originals/115 ScoreThousands Score4.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 4,
+     "costume": "Score4",
+     "md5ext": "ba364f2fbe2affa9c49c21b2ce44267c.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 4,
+     "costume": "Score4",
+     "md5ext": "ba364f2fbe2affa9c49c21b2ce44267c.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 4,
+     "costume": "Score4",
+     "md5ext": "ba364f2fbe2affa9c49c21b2ce44267c.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 4,
+     "costume": "Score4",
+     "md5ext": "ba364f2fbe2affa9c49c21b2ce44267c.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 4,
+     "costume": "Score4",
+     "md5ext": "ba364f2fbe2affa9c49c21b2ce44267c.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 116,
+   "name": "116 ScoreThousands Score5",
+   "file": "originals/116 ScoreThousands Score5.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 5,
+     "costume": "Score5",
+     "md5ext": "e3297f711a276ddb94ee8d0326f23514.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 5,
+     "costume": "Score5",
+     "md5ext": "e3297f711a276ddb94ee8d0326f23514.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 5,
+     "costume": "Score5",
+     "md5ext": "e3297f711a276ddb94ee8d0326f23514.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 5,
+     "costume": "Score5",
+     "md5ext": "e3297f711a276ddb94ee8d0326f23514.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 5,
+     "costume": "Score5",
+     "md5ext": "e3297f711a276ddb94ee8d0326f23514.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 117,
+   "name": "117 ScoreThousands Score6",
+   "file": "originals/117 ScoreThousands Score6.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 6,
+     "costume": "Score6",
+     "md5ext": "6bd824a640936d479a10251638109aa4.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 6,
+     "costume": "Score6",
+     "md5ext": "6bd824a640936d479a10251638109aa4.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 6,
+     "costume": "Score6",
+     "md5ext": "6bd824a640936d479a10251638109aa4.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 6,
+     "costume": "Score6",
+     "md5ext": "6bd824a640936d479a10251638109aa4.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 6,
+     "costume": "Score6",
+     "md5ext": "6bd824a640936d479a10251638109aa4.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 118,
+   "name": "118 ScoreThousands Score7",
+   "file": "originals/118 ScoreThousands Score7.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 7,
+     "costume": "Score7",
+     "md5ext": "2c2a0465443f3cd94da0cf31a6043927.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 7,
+     "costume": "Score7",
+     "md5ext": "2c2a0465443f3cd94da0cf31a6043927.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 7,
+     "costume": "Score7",
+     "md5ext": "2c2a0465443f3cd94da0cf31a6043927.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 7,
+     "costume": "Score7",
+     "md5ext": "2c2a0465443f3cd94da0cf31a6043927.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 7,
+     "costume": "Score7",
+     "md5ext": "2c2a0465443f3cd94da0cf31a6043927.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 119,
+   "name": "119 ScoreThousands Score8",
+   "file": "originals/119 ScoreThousands Score8.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 8,
+     "costume": "Score8",
+     "md5ext": "d4a1bd29e31eb3361e00dc2104149bec.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 8,
+     "costume": "Score8",
+     "md5ext": "d4a1bd29e31eb3361e00dc2104149bec.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 8,
+     "costume": "Score8",
+     "md5ext": "d4a1bd29e31eb3361e00dc2104149bec.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 8,
+     "costume": "Score8",
+     "md5ext": "d4a1bd29e31eb3361e00dc2104149bec.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 8,
+     "costume": "Score8",
+     "md5ext": "d4a1bd29e31eb3361e00dc2104149bec.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 120,
+   "name": "120 ScoreThousands Score9",
+   "file": "originals/120 ScoreThousands Score9.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 9,
+     "costume": "Score9",
+     "md5ext": "330946e573a6e55e95c4f09732ece9cf.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 9,
+     "costume": "Score9",
+     "md5ext": "330946e573a6e55e95c4f09732ece9cf.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 9,
+     "costume": "Score9",
+     "md5ext": "330946e573a6e55e95c4f09732ece9cf.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 9,
+     "costume": "Score9",
+     "md5ext": "330946e573a6e55e95c4f09732ece9cf.png"
+    },
+    {
+     "sprite": "Score:",
+     "index": 9,
+     "costume": "Score9",
+     "md5ext": "330946e573a6e55e95c4f09732ece9cf.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 121,
+   "name": "121 ScoreThousands Score10",
+   "file": "originals/121 ScoreThousands Score10.png",
+   "format": "png",
+   "stage_w": 222.0,
+   "stage_h": 271.0,
+   "uses": [
+    {
+     "sprite": "ScoreThousands",
+     "index": 10,
+     "costume": "Score10",
+     "md5ext": "5110c7b11f0aef00eb792abd0a36077b.png"
+    },
+    {
+     "sprite": "ScoreHundreds",
+     "index": 10,
+     "costume": "Score10",
+     "md5ext": "5110c7b11f0aef00eb792abd0a36077b.png"
+    },
+    {
+     "sprite": "ScoreTens",
+     "index": 10,
+     "costume": "Score10",
+     "md5ext": "5110c7b11f0aef00eb792abd0a36077b.png"
+    },
+    {
+     "sprite": "ScoreOnes",
+     "index": 10,
+     "costume": "Score10",
+     "md5ext": "5110c7b11f0aef00eb792abd0a36077b.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 122,
+   "name": "122 Score_ Score10",
+   "file": "originals/122 Score_ Score10.png",
+   "format": "png",
+   "stage_w": 196.0,
+   "stage_h": 173.0,
+   "uses": [
+    {
+     "sprite": "Score:",
+     "index": 10,
+     "costume": "Score10",
+     "md5ext": "a89e330d604f1e4e987efd05079b2772.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 123,
+   "name": "123 Boom -5",
+   "file": "originals/123 Boom -5.svg",
+   "format": "svg",
+   "stage_w": 60.4,
+   "stage_h": 60.2,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 2,
+     "costume": "-5",
+     "md5ext": "18a78540b3193dfb86f97b77db24fc3c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "-5",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 16.087,
+     "y": 35.734,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 262
+  },
+  {
+   "id": 124,
+   "name": "124 Boom huge",
+   "file": "originals/124 Boom huge.svg",
+   "format": "svg",
+   "stage_w": 79.4,
+   "stage_h": 38.9,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 3,
+     "costume": "huge",
+     "md5ext": "8d4eaf34271499bac70c5836309c00be.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "HUGE!",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 10.335,
+     "y": 26.407,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 263
+  },
+  {
+   "id": 125,
+   "name": "125 Boom wow",
+   "file": "originals/125 Boom wow.svg",
+   "format": "svg",
+   "stage_w": 79.4,
+   "stage_h": 38.9,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 4,
+     "costume": "wow",
+     "md5ext": "e64ddf941e2a68f5eececc6f416a2a62.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "WOW!",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 10.335,
+     "y": 26.407,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 263
+  },
+  {
+   "id": 126,
+   "name": "126 Boom 5",
+   "file": "originals/126 Boom 5.svg",
+   "format": "svg",
+   "stage_w": 55.2,
+   "stage_h": 54.2,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "08498fccefe17b370074fe213f05b2f2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "+5",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 14.592,
+     "y": 35.409,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 264
+  },
+  {
+   "id": 127,
+   "name": "127 Boom 6",
+   "file": "originals/127 Boom 6.svg",
+   "format": "svg",
+   "stage_w": 55.2,
+   "stage_h": 54.2,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "569294098e8df3bc6d7636cb618d9c33.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "+6",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 14.592,
+     "y": 35.409,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 264
+  },
+  {
+   "id": 128,
+   "name": "128 Boom 7",
+   "file": "originals/128 Boom 7.svg",
+   "format": "svg",
+   "stage_w": 55.2,
+   "stage_h": 54.2,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "ff410604b7b5b67d2a6e1a423364e072.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "+7",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 14.592,
+     "y": 35.409,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 264
+  },
+  {
+   "id": 129,
+   "name": "129 Boom 8",
+   "file": "originals/129 Boom 8.svg",
+   "format": "svg",
+   "stage_w": 55.2,
+   "stage_h": 54.2,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "d12c7b85b7d4bb793478aa996de7ab54.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "+8",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 14.592,
+     "y": 35.409,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 264
+  },
+  {
+   "id": 130,
+   "name": "130 Boom 9",
+   "file": "originals/130 Boom 9.svg",
+   "format": "svg",
+   "stage_w": 55.2,
+   "stage_h": 54.2,
+   "uses": [
+    {
+     "sprite": "Boom",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "ea9753f6260ff9ca4e883a3ec6840127.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "+9",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 14.592,
+     "y": 35.409,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 264
+  },
+  {
+   "id": 131,
+   "name": "131 Calculator Calculator1",
+   "file": "originals/131 Calculator Calculator1.png",
+   "format": "png",
+   "stage_w": 250.0,
+   "stage_h": 314.0,
+   "uses": [
+    {
+     "sprite": "Calculator",
+     "index": 1,
+     "costume": "Calculator1",
+     "md5ext": "28b75d9c139b5a48c3f2844e1d285523.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 132,
+   "name": "132 Calculator Calculator2",
+   "file": "originals/132 Calculator Calculator2.png",
+   "format": "png",
+   "stage_w": 250.0,
+   "stage_h": 314.0,
+   "uses": [
+    {
+     "sprite": "Calculator",
+     "index": 2,
+     "costume": "Calculator2",
+     "md5ext": "a7be35c9513c4adb3c1884ed11ba5667.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 133,
+   "name": "133 Calculator Calculator3",
+   "file": "originals/133 Calculator Calculator3.png",
+   "format": "png",
+   "stage_w": 250.0,
+   "stage_h": 314.0,
+   "uses": [
+    {
+     "sprite": "Calculator",
+     "index": 3,
+     "costume": "Calculator3",
+     "md5ext": "37c290bf8ef03c85056bfab32312e1cd.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 134,
+   "name": "134 Calculator Calculator4",
+   "file": "originals/134 Calculator Calculator4.png",
+   "format": "png",
+   "stage_w": 250.0,
+   "stage_h": 314.0,
+   "uses": [
+    {
+     "sprite": "Calculator",
+     "index": 4,
+     "costume": "Calculator4",
+     "md5ext": "5bfbec93d7b6757e0f2ba69b587707e1.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 135,
+   "name": "135 Key1 Key1",
+   "file": "originals/135 Key1 Key1.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key1",
+     "index": 1,
+     "costume": "Key1",
+     "md5ext": "0ce8d578622db308247a270c251df9bd.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 136,
+   "name": "136 Key2 costume1",
+   "file": "originals/136 Key2 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key2",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "0d71b4434678de02bcb708d7ddc232de.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 137,
+   "name": "137 Key2 Key2",
+   "file": "originals/137 Key2 Key2.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key2",
+     "index": 2,
+     "costume": "Key2",
+     "md5ext": "457c9e87a65810394431521f444732ae.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 138,
+   "name": "138 Key3 costume1",
+   "file": "originals/138 Key3 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key3",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "989c2c43a2ee5079903784b4f155070e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 139,
+   "name": "139 Key3 Key3",
+   "file": "originals/139 Key3 Key3.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key3",
+     "index": 2,
+     "costume": "Key3",
+     "md5ext": "d98a3b08da001238946354208c8c28d9.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 140,
+   "name": "140 Key4 costume1",
+   "file": "originals/140 Key4 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key4",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "89b477891f8db7090f5426f8d88ffb69.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 141,
+   "name": "141 Key4 Key4",
+   "file": "originals/141 Key4 Key4.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key4",
+     "index": 2,
+     "costume": "Key4",
+     "md5ext": "65972a2874f8d3d5e38f574f9723a5cc.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 142,
+   "name": "142 Key5 costume1",
+   "file": "originals/142 Key5 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key5",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "02ceafb2a7a2590549905f259113f59d.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 143,
+   "name": "143 Key5 Key5",
+   "file": "originals/143 Key5 Key5.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key5",
+     "index": 2,
+     "costume": "Key5",
+     "md5ext": "cf9fe7f5a3559721a8edec6b2a6403a2.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 144,
+   "name": "144 Key6 costume1",
+   "file": "originals/144 Key6 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key6",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "620f4dd45650c9a8c0be202c88a2c3e9.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "6",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 145,
+   "name": "145 Key6 Key6",
+   "file": "originals/145 Key6 Key6.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key6",
+     "index": 2,
+     "costume": "Key6",
+     "md5ext": "d9e6f09aa73c636c323dbd2345f87acb.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 146,
+   "name": "146 Key7 costume1",
+   "file": "originals/146 Key7 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.9,
+   "uses": [
+    {
+     "sprite": "Key7",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "35cd3971c50c53b2f8336f62885f62b2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "7",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.87,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 147,
+   "name": "147 Key7 key7",
+   "file": "originals/147 Key7 key7.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key7",
+     "index": 2,
+     "costume": "key7",
+     "md5ext": "9d9ca3232e33567c96c546ca865a2b16.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 148,
+   "name": "148 Key8 costume1",
+   "file": "originals/148 Key8 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key8",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "8456146025e9279b7b5e8dd172e4acb6.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "8",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 149,
+   "name": "149 Key8 Key8",
+   "file": "originals/149 Key8 Key8.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key8",
+     "index": 2,
+     "costume": "Key8",
+     "md5ext": "ff2e5e222eeeb7472bdf6bf8b14a968c.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 150,
+   "name": "150 Key9 costume1",
+   "file": "originals/150 Key9 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key9",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "8712ec6ece1215a21829707b9e84433d.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "9",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 151,
+   "name": "151 Key9 key9",
+   "file": "originals/151 Key9 key9.png",
+   "format": "png",
+   "stage_w": 70.0,
+   "stage_h": 70.0,
+   "uses": [
+    {
+     "sprite": "Key9",
+     "index": 2,
+     "costume": "key9",
+     "md5ext": "ecf2b6cc212f26417147568955e424af.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 152,
+   "name": "152 Key0 costume1",
+   "file": "originals/152 Key0 costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Key0",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "7a3ee4f3201049cdca19fd0f4903a2c2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "0",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 153,
+   "name": "153 Key0 key0",
+   "file": "originals/153 Key0 key0.png",
+   "format": "png",
+   "stage_w": 146.0,
+   "stage_h": 82.0,
+   "uses": [
+    {
+     "sprite": "Key0",
+     "index": 2,
+     "costume": "key0",
+     "md5ext": "41f6d4d3dcd52ddeb8d64ae97f161902.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 154,
+   "name": "154 KeyD costume1",
+   "file": "originals/154 KeyD costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "KeyD",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "9bf6ec45012da84a75d177b5df0d0b6f.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "D",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 155,
+   "name": "155 KeyD KeyDel",
+   "file": "originals/155 KeyD KeyDel.png",
+   "format": "png",
+   "stage_w": 58.0,
+   "stage_h": 112.0,
+   "uses": [
+    {
+     "sprite": "KeyD",
+     "index": 2,
+     "costume": "KeyDel",
+     "md5ext": "450b3f81c07e79fc8f150446d4b9f33d.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 156,
+   "name": "156 KeyE costume1",
+   "file": "originals/156 KeyE costume1.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "KeyE",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "dbc1f4282551160ac0da9f659afef987.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "E",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#ffffff",
+     "size": 20.0,
+     "x": 8.137,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 265
+  },
+  {
+   "id": 157,
+   "name": "157 KeyE KeyEnter",
+   "file": "originals/157 KeyE KeyEnter.png",
+   "format": "png",
+   "stage_w": 97.0,
+   "stage_h": 111.0,
+   "uses": [
+    {
+     "sprite": "KeyE",
+     "index": 2,
+     "costume": "KeyEnter",
+     "md5ext": "cbc90a40ea44711dbf76115e75c24105.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 158,
+   "name": "158 Logo Logo",
+   "file": "originals/158 Logo Logo.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 182.5,
+   "uses": [
+    {
+     "sprite": "Logo",
+     "index": 1,
+     "costume": "Logo",
+     "md5ext": "0a6b0abcca38f5f46e7843aa1bbbb1c5.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 159,
+   "name": "159 TitleScreenSprite5 NewTitle2",
+   "file": "originals/159 TitleScreenSprite5 NewTitle2.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "TitleScreenSprite5",
+     "index": 1,
+     "costume": "NewTitle2",
+     "md5ext": "bf40ccb460396a12e15f6f9646cad4c2.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 160,
+   "name": "160 TitleCard Costume1",
+   "file": "originals/160 TitleCard Costume1.png",
+   "format": "png",
+   "stage_w": 66.5,
+   "stage_h": 103.5,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 1,
+     "costume": "Costume1",
+     "md5ext": "eab9955a134c6cf392882d0c18e30f93.png"
+    },
+    {
+     "sprite": "TitleCard",
+     "index": 3,
+     "costume": "Costume3",
+     "md5ext": "eab9955a134c6cf392882d0c18e30f93.png"
+    },
+    {
+     "sprite": "TitleCard",
+     "index": 4,
+     "costume": "Costume4",
+     "md5ext": "eab9955a134c6cf392882d0c18e30f93.png"
+    },
+    {
+     "sprite": "TitleCard",
+     "index": 5,
+     "costume": "Costume5",
+     "md5ext": "eab9955a134c6cf392882d0c18e30f93.png"
+    },
+    {
+     "sprite": "TitleCard",
+     "index": 2,
+     "costume": "Costume2",
+     "md5ext": "7c450eab5634ae195896682b38124740.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 161,
+   "name": "161 TitleCard costume2",
+   "file": "originals/161 TitleCard costume2.png",
+   "format": "png",
+   "stage_w": 66.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 6,
+     "costume": "costume2",
+     "md5ext": "382e9f1ef49bec9bf5f5ecaf3dc77b67.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 162,
+   "name": "162 TitleCard costume3",
+   "file": "originals/162 TitleCard costume3.png",
+   "format": "png",
+   "stage_w": 66.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 7,
+     "costume": "costume3",
+     "md5ext": "ad5889cdb5774364645c6456f8e93749.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 163,
+   "name": "163 TitleCard costume4",
+   "file": "originals/163 TitleCard costume4.png",
+   "format": "png",
+   "stage_w": 66.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 8,
+     "costume": "costume4",
+     "md5ext": "dd95109fdc3466cd502852b2d313116f.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 164,
+   "name": "164 TitleCard costume5",
+   "file": "originals/164 TitleCard costume5.png",
+   "format": "png",
+   "stage_w": 66.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 9,
+     "costume": "costume5",
+     "md5ext": "99a023ea9c3c29566f830e7f1249bedc.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 165,
+   "name": "165 TitleCard costume6",
+   "file": "originals/165 TitleCard costume6.png",
+   "format": "png",
+   "stage_w": 66.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 10,
+     "costume": "costume6",
+     "md5ext": "239f5225cfc851020170da1aee400cfe.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 166,
+   "name": "166 TitleCard costume7",
+   "file": "originals/166 TitleCard costume7.png",
+   "format": "png",
+   "stage_w": 66.0,
+   "stage_h": 105.0,
+   "uses": [
+    {
+     "sprite": "TitleCard",
+     "index": 11,
+     "costume": "costume7",
+     "md5ext": "1f78bc6e1d4431f5d1944387cbb9253d.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 167,
+   "name": "167 StartButton Start2",
+   "file": "originals/167 StartButton Start2.png",
+   "format": "png",
+   "stage_w": 250.0,
+   "stage_h": 90.0,
+   "uses": [
+    {
+     "sprite": "StartButton",
+     "index": 1,
+     "costume": "Start2",
+     "md5ext": "52b419d61ef2034e2061754a555d8733.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 168,
+   "name": "168 FinalScoreHundreds 1",
+   "file": "originals/168 FinalScoreHundreds 1.svg",
+   "format": "svg",
+   "stage_w": 49.2,
+   "stage_h": 93.4,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "11bc0e1f14a95c1a133881154985f883.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 169,
+   "name": "169 FinalScoreHundreds 2",
+   "file": "originals/169 FinalScoreHundreds 2.svg",
+   "format": "svg",
+   "stage_w": 66.0,
+   "stage_h": 88.5,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "6c2b4339544f5c88fbf605ecb686d413.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "cf4a211c90b60a84eaa1e42ab2ee1889.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "9d35426c11220b118b987641368b8ba7.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 170,
+   "name": "170 FinalScoreHundreds 3",
+   "file": "originals/170 FinalScoreHundreds 3.svg",
+   "format": "svg",
+   "stage_w": 61.6,
+   "stage_h": 91.6,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "17a496de95bc1b4891a18249023232f7.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "58dd35fb943aa48221059d048958581a.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "e22f6d63a8f14e997632c26610a41ecb.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 171,
+   "name": "171 FinalScoreHundreds 4",
+   "file": "originals/171 FinalScoreHundreds 4.svg",
+   "format": "svg",
+   "stage_w": 77.4,
+   "stage_h": 94.0,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "adeefed140e8936739aaf581c09bd92c.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "497fe2a28ca944c793a256efcc254e2d.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "2629270f7e492f2af48bf37299f61665.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 172,
+   "name": "172 FinalScoreHundreds 5",
+   "file": "originals/172 FinalScoreHundreds 5.svg",
+   "format": "svg",
+   "stage_w": 64.1,
+   "stage_h": 92.3,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "5598c9afb77eaef694c8d96717e90840.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "1117962735e41a44525195666ed03606.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "a371720d7256238a69cc90898161f4cb.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 173,
+   "name": "173 FinalScoreHundreds 6",
+   "file": "originals/173 FinalScoreHundreds 6.svg",
+   "format": "svg",
+   "stage_w": 75.8,
+   "stage_h": 92.6,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "262a00ff328bb7756b873c06d5ddf90a.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "e294d318e30a4007566c44c614cff6a8.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "94895287cc63e1fde32a159903e84f96.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 174,
+   "name": "174 FinalScoreHundreds 7",
+   "file": "originals/174 FinalScoreHundreds 7.svg",
+   "format": "svg",
+   "stage_w": 67.4,
+   "stage_h": 91.9,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "4614109b40d12072da3cd57d359a1f12.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "1876dd19ac9ee63562c09fa75c45f045.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "5b3049239abbc4220c9e9a64b026928f.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 175,
+   "name": "175 FinalScoreHundreds 8",
+   "file": "originals/175 FinalScoreHundreds 8.svg",
+   "format": "svg",
+   "stage_w": 77.4,
+   "stage_h": 91.9,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "afb2a1f9cf896328ef228d465d7ca0cc.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "42a4e28c3b83e71d56f24b223862b547.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "37aff22a2418f7521329e57386369e25.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 176,
+   "name": "176 FinalScoreHundreds 9",
+   "file": "originals/176 FinalScoreHundreds 9.svg",
+   "format": "svg",
+   "stage_w": 76.6,
+   "stage_h": 93.6,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "06a22643e2d8960da1593847aa9ad2e8.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "10b0241a740714387b7009677dbef82d.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "950d466179758f899f01e798050db767.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 177,
+   "name": "177 FinalScoreHundreds 10",
+   "file": "originals/177 FinalScoreHundreds 10.svg",
+   "format": "svg",
+   "stage_w": 76.3,
+   "stage_h": 90.1,
+   "uses": [
+    {
+     "sprite": "FinalScoreHundreds",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "4fff2c416bf98839ce68b631f287276c.svg"
+    },
+    {
+     "sprite": "FinalTens",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "21f0e9da85de50c1ced51e5e9b6697d6.svg"
+    },
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "4a11fb1117322b1e46ee89de04d323cc.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 178,
+   "name": "178 FinalTens 1",
+   "file": "originals/178 FinalTens 1.svg",
+   "format": "svg",
+   "stage_w": 47.3,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "FinalTens",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "389140b393ca1fae81e4a75dd6e252f4.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 179,
+   "name": "179 FinalScoreOnes 1",
+   "file": "originals/179 FinalScoreOnes 1.svg",
+   "format": "svg",
+   "stage_w": 47.8,
+   "stage_h": 92.7,
+   "uses": [
+    {
+     "sprite": "FinalScoreOnes",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "a9d7f211b2189afecd2e1612805d8deb.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 180,
+   "name": "180 Confetti costume1",
+   "file": "originals/180 Confetti costume1.svg",
+   "format": "svg",
+   "stage_w": 16.0,
+   "stage_h": 9.2,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "7ee3489b2d9b19cdad072bcb59776ed4.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 181,
+   "name": "181 Confetti costume2",
+   "file": "originals/181 Confetti costume2.svg",
+   "format": "svg",
+   "stage_w": 18.2,
+   "stage_h": 11.5,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 2,
+     "costume": "costume2",
+     "md5ext": "77c00e3bb25b66f4ab796699722af3a6.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 182,
+   "name": "182 Confetti costume3",
+   "file": "originals/182 Confetti costume3.svg",
+   "format": "svg",
+   "stage_w": 17.2,
+   "stage_h": 11.5,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 3,
+     "costume": "costume3",
+     "md5ext": "66b616b94d88f9c626f09d5e593ded5d.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 183,
+   "name": "183 Confetti costume6",
+   "file": "originals/183 Confetti costume6.svg",
+   "format": "svg",
+   "stage_w": 18.7,
+   "stage_h": 9.2,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 4,
+     "costume": "costume6",
+     "md5ext": "f98cff3d30efcd56d509dd34c77b83ff.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 184,
+   "name": "184 Confetti costume5",
+   "file": "originals/184 Confetti costume5.svg",
+   "format": "svg",
+   "stage_w": 18.3,
+   "stage_h": 8.0,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 5,
+     "costume": "costume5",
+     "md5ext": "6956f08b078f04b3c15f30a75bfd6079.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 185,
+   "name": "185 Confetti costume4",
+   "file": "originals/185 Confetti costume4.svg",
+   "format": "svg",
+   "stage_w": 19.2,
+   "stage_h": 8.0,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 6,
+     "costume": "costume4",
+     "md5ext": "baa9266745c22bed738c3fef75290598.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 186,
+   "name": "186 Confetti costume7",
+   "file": "originals/186 Confetti costume7.svg",
+   "format": "svg",
+   "stage_w": 18.4,
+   "stage_h": 10.8,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 7,
+     "costume": "costume7",
+     "md5ext": "3ed2e0cf91d67f1f31de91119d09f049.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 187,
+   "name": "187 Confetti costume8",
+   "file": "originals/187 Confetti costume8.svg",
+   "format": "svg",
+   "stage_w": 17.0,
+   "stage_h": 10.1,
+   "uses": [
+    {
+     "sprite": "Confetti",
+     "index": 8,
+     "costume": "costume8",
+     "md5ext": "2ec5d58b2ca97d31ec6a1ceae1fe9c1f.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 188,
+   "name": "188 GameOver Card",
+   "file": "originals/188 GameOver Card.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "GameOver",
+     "index": 1,
+     "costume": "Card",
+     "md5ext": "a67af7e836c8262bfba520688180b171.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 189,
+   "name": "189 GameOver Clock",
+   "file": "originals/189 GameOver Clock.svg",
+   "format": "svg",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "GameOver",
+     "index": 2,
+     "costume": "Clock",
+     "md5ext": "bbb6ccccc632f2c4aa6d489772cea35a.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 190,
+   "name": "190 GameOver Pad",
+   "file": "originals/190 GameOver Pad.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "GameOver",
+     "index": 3,
+     "costume": "Pad",
+     "md5ext": "1bb7ec3613e071050460bf7614aac7b5.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 191,
+   "name": "191 ScoreSheet ScorePaper",
+   "file": "originals/191 ScoreSheet ScorePaper.svg",
+   "format": "svg",
+   "stage_w": 230.5,
+   "stage_h": 345.5,
+   "uses": [
+    {
+     "sprite": "ScoreSheet",
+     "index": 1,
+     "costume": "ScorePaper",
+     "md5ext": "8d0391d208d53f2c9f1c48a0917f3fe6.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 192,
+   "name": "192 ScoreSheet ScorePaper2",
+   "file": "originals/192 ScoreSheet ScorePaper2.svg",
+   "format": "svg",
+   "stage_w": 230.5,
+   "stage_h": 355.9,
+   "uses": [
+    {
+     "sprite": "ScoreSheet",
+     "index": 2,
+     "costume": "ScorePaper2",
+     "md5ext": "2a1a0b153ffdab3e90ad59db9ea90c77.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Click to Restart!",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#fffaeb",
+     "size": 20.0,
+     "x": 32.02,
+     "y": 342.476,
+     "rotate": 1.815,
+     "anchor": "start",
+     "stroke": "#2f2107",
+     "stroke_width": 3.5,
+     "over_base": true
+    },
+    {
+     "text": "Click to Restart!",
+     "font": "Marker",
+     "css_font": "Knewave, cursive",
+     "color": "#fffaeb",
+     "size": 20.0,
+     "x": 31.806,
+     "y": 342.86,
+     "rotate": 1.815,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 191
+  },
+  {
+   "id": 193,
+   "name": "193 PercentageHundreds 1",
+   "file": "originals/193 PercentageHundreds 1.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "1e719691139965ad6d0017f9ea1ff18a.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "90f288286f05886950a8fc7741ce08a4.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 194,
+   "name": "194 PercentageHundreds 2",
+   "file": "originals/194 PercentageHundreds 2.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "295a61fb08abead58f231e0f738b679c.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "3cb60034dac0937e83ec1cdec430ac60.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 195,
+   "name": "195 PercentageHundreds 3",
+   "file": "originals/195 PercentageHundreds 3.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "20d265258bb1db5fa7d9dcc492a7e1a3.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "541dd61dac12ced7ec1195db69445b3c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 196,
+   "name": "196 PercentageHundreds 4",
+   "file": "originals/196 PercentageHundreds 4.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "ed1b56ead3faa99ea40b16c15df8a564.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "19e79c13a14101d74977d89e911c7a85.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 197,
+   "name": "197 PercentageHundreds 5",
+   "file": "originals/197 PercentageHundreds 5.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "2cab7fa18511a6e714081c2c59fcb4cd.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "8a5ae3602a2b211a1c9059cc27d8d37b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 198,
+   "name": "198 PercentageHundreds 6",
+   "file": "originals/198 PercentageHundreds 6.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "8fb75a4a99994a05ea993d964393a3e0.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "bd9c7525fe5717db3ce8024b7ee01778.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "6",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 199,
+   "name": "199 PercentageHundreds 7",
+   "file": "originals/199 PercentageHundreds 7.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "7f5ba17518f4d9e191e5a6430394846f.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "23440711991f40c9b01209155eca1e68.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "7",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 200,
+   "name": "200 PercentageHundreds 8",
+   "file": "originals/200 PercentageHundreds 8.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "33dcee2b3fc995981b07b3bf05c08b39.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "18aa2b0137068bc0f3294651cb9e3b1e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "8",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 201,
+   "name": "201 PercentageHundreds 9",
+   "file": "originals/201 PercentageHundreds 9.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "a988be48c852f8b989df2537ea82e328.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "48df4c3e8794fb275369f3c39085e4c8.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "9",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 202,
+   "name": "202 PercentageHundreds 10",
+   "file": "originals/202 PercentageHundreds 10.svg",
+   "format": "svg",
+   "stage_w": 44.8,
+   "stage_h": 92.5,
+   "uses": [
+    {
+     "sprite": "PercentageHundreds",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "57c90a68e367b0d2b16476588796e7ae.svg"
+    },
+    {
+     "sprite": "PercentageTens",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "20885c059e0651d96a8a023fab1948c2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "0",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 203,
+   "name": "203 PercentageOnes 1",
+   "file": "originals/203 PercentageOnes 1.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "a8a3aa310d591abb1b1783b273529482.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "1%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 204,
+   "name": "204 PercentageOnes 2",
+   "file": "originals/204 PercentageOnes 2.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "cd8653430fdbb3dd508dda46d7e43ff7.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 205,
+   "name": "205 PercentageOnes 3",
+   "file": "originals/205 PercentageOnes 3.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "54c16024068d0eb8fb259dcb821aa30d.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 206,
+   "name": "206 PercentageOnes 4",
+   "file": "originals/206 PercentageOnes 4.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "f731833306d8489fc9e2d4a9bdac5490.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 207,
+   "name": "207 PercentageOnes 5",
+   "file": "originals/207 PercentageOnes 5.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "35ae1d6d12560d1f6503559d6cd10e4a.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 208,
+   "name": "208 PercentageOnes 6",
+   "file": "originals/208 PercentageOnes 6.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "3e390dd8b7b817049e50d3f3842efbf5.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "6%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 209,
+   "name": "209 PercentageOnes 7",
+   "file": "originals/209 PercentageOnes 7.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "ab70e407988aec5bf3b4894004fbebd9.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "7%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 210,
+   "name": "210 PercentageOnes 8",
+   "file": "originals/210 PercentageOnes 8.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "0844805428450a906e8862e45c14d068.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "8%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 211,
+   "name": "211 PercentageOnes 9",
+   "file": "originals/211 PercentageOnes 9.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "85eccb047ba76f99622688a1cbd9610b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "9%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 212,
+   "name": "212 PercentageOnes 0",
+   "file": "originals/212 PercentageOnes 0.svg",
+   "format": "svg",
+   "stage_w": 100.5,
+   "stage_h": 95.1,
+   "uses": [
+    {
+     "sprite": "PercentageOnes",
+     "index": 10,
+     "costume": "0",
+     "md5ext": "c9d910dc077420b0ffc9af7359148927.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "0%",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 65.414,
+     "x": 1.717,
+     "y": 71.101,
+     "rotate": 2.628,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 213,
+   "name": "213 SettingsSheet Settings",
+   "file": "originals/213 SettingsSheet Settings.svg",
+   "format": "svg",
+   "stage_w": 338.1,
+   "stage_h": 225.0,
+   "uses": [
+    {
+     "sprite": "SettingsSheet",
+     "index": 1,
+     "costume": "Settings",
+     "md5ext": "d094e792186068274a42136d4d203b4c.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 214,
+   "name": "214 ModeDown SettingsArrow",
+   "file": "originals/214 ModeDown SettingsArrow.svg",
+   "format": "svg",
+   "stage_w": 33.5,
+   "stage_h": 57.6,
+   "uses": [
+    {
+     "sprite": "ModeDown",
+     "index": 1,
+     "costume": "SettingsArrow",
+     "md5ext": "b9191accd1ec3f6d50bb485ba29acdb4.svg"
+    },
+    {
+     "sprite": "CardsDown",
+     "index": 1,
+     "costume": "SettingsArrow",
+     "md5ext": "1a97688862924e029e35cb8d07e98451.svg"
+    },
+    {
+     "sprite": "TimerDown",
+     "index": 1,
+     "costume": "SettingsArrow",
+     "md5ext": "1a97688862924e029e35cb8d07e98451.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 215,
+   "name": "215 ModeUp SettingsArrow",
+   "file": "originals/215 ModeUp SettingsArrow.svg",
+   "format": "svg",
+   "stage_w": 33.5,
+   "stage_h": 57.6,
+   "uses": [
+    {
+     "sprite": "ModeUp",
+     "index": 1,
+     "costume": "SettingsArrow",
+     "md5ext": "2c39f3302e2502570eea947969d7cd3f.svg"
+    },
+    {
+     "sprite": "CardsUp",
+     "index": 1,
+     "costume": "SettingsArrow",
+     "md5ext": "93788b28331cf2305142653f369f84da.svg"
+    },
+    {
+     "sprite": "TimerUp",
+     "index": 1,
+     "costume": "SettingsArrow",
+     "md5ext": "93788b28331cf2305142653f369f84da.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 216,
+   "name": "216 Mode Multiplication",
+   "file": "originals/216 Mode Multiplication.svg",
+   "format": "svg",
+   "stage_w": 132.9,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 1,
+     "costume": "Multiplication",
+     "md5ext": "8567555c46aac4f52e13e078cdca2ad8.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Multiplication",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 217,
+   "name": "217 Mode SimpleAddition",
+   "file": "originals/217 Mode SimpleAddition.svg",
+   "format": "svg",
+   "stage_w": 152.1,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 2,
+     "costume": "SimpleAddition",
+     "md5ext": "86e1c9f2a277ce37b4d32f16bcd7d843.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Simple Addition",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 218,
+   "name": "218 Mode 2DigitAddition",
+   "file": "originals/218 Mode 2DigitAddition.svg",
+   "format": "svg",
+   "stage_w": 147.3,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 3,
+     "costume": "2DigitAddition",
+     "md5ext": "73d4291b78c736134ca9c208c69a52e0.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2 Digit + 1 Digit",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 219,
+   "name": "219 Mode SimpleSubtraction",
+   "file": "originals/219 Mode SimpleSubtraction.svg",
+   "format": "svg",
+   "stage_w": 181.8,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 4,
+     "costume": "SimpleSubtraction",
+     "md5ext": "3e146fde4b9944f786b4cb9112764bf8.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Simple Subtraction",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 220,
+   "name": "220 Mode 2DigitSubtraction",
+   "file": "originals/220 Mode 2DigitSubtraction.svg",
+   "format": "svg",
+   "stage_w": 142.3,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 5,
+     "costume": "2DigitSubtraction",
+     "md5ext": "94a3d2fbe0ff41b7a93daab50a2bd7b2.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2 Digit - 1 Digit",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 221,
+   "name": "221 Mode Division",
+   "file": "originals/221 Mode Division.svg",
+   "format": "svg",
+   "stage_w": 77.0,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 6,
+     "costume": "Division",
+     "md5ext": "251aebb3ca47768766271f68922c6aaf.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Division",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 222,
+   "name": "222 Mode ClockMinutes",
+   "file": "originals/222 Mode ClockMinutes.svg",
+   "format": "svg",
+   "stage_w": 164.3,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 7,
+     "costume": "ClockMinutes",
+     "md5ext": "16299810b190da2ab59bd70e16ad7421.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Clock w/ Minutes",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 223,
+   "name": "223 Mode ClockHours",
+   "file": "originals/223 Mode ClockHours.svg",
+   "format": "svg",
+   "stage_w": 144.4,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 8,
+     "costume": "ClockHours",
+     "md5ext": "53d597c96cb3fcfc2e0b4275aa91011b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Clock w/ Hours",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 224,
+   "name": "224 Mode ClockHard",
+   "file": "originals/224 Mode ClockHard.svg",
+   "format": "svg",
+   "stage_w": 156.3,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 9,
+     "costume": "ClockHard",
+     "md5ext": "e773e9bd2c754b4f0f92cd9953355aab.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "Clock w/ Hashes",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 225,
+   "name": "225 Mode 4DigitAddition",
+   "file": "originals/225 Mode 4DigitAddition.svg",
+   "format": "svg",
+   "stage_w": 147.3,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 10,
+     "costume": "4DigitAddition",
+     "md5ext": "ef96033eed6a8877ddb2e33de312b838.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4 Digit + 4 Digit",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 226,
+   "name": "226 Mode 4DigitSubtraction",
+   "file": "originals/226 Mode 4DigitSubtraction.svg",
+   "format": "svg",
+   "stage_w": 142.3,
+   "stage_h": 27.8,
+   "uses": [
+    {
+     "sprite": "Mode",
+     "index": 11,
+     "costume": "4DigitSubtraction",
+     "md5ext": "024c4c9f51254b6e6b5589206bae8267.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4 Digit - 4 Digit",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.75,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 227,
+   "name": "227 Cards 5",
+   "file": "originals/227 Cards 5.svg",
+   "format": "svg",
+   "stage_w": 12.4,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Cards",
+     "index": 1,
+     "costume": "5",
+     "md5ext": "1e82d59920ee5b67bbd0dede83ee7e24.svg"
+    },
+    {
+     "sprite": "Timer",
+     "index": 2,
+     "costume": "5",
+     "md5ext": "1e82d59920ee5b67bbd0dede83ee7e24.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 228,
+   "name": "228 Cards 100",
+   "file": "originals/228 Cards 100.svg",
+   "format": "svg",
+   "stage_w": 35.3,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Cards",
+     "index": 5,
+     "costume": "100",
+     "md5ext": "d851b4f0a0a21ed884cf9027a9d6a5d4.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "100",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 229,
+   "name": "229 Timer 3",
+   "file": "originals/229 Timer 3.svg",
+   "format": "svg",
+   "stage_w": 12.4,
+   "stage_h": 27.7,
+   "uses": [
+    {
+     "sprite": "Timer",
+     "index": 1,
+     "costume": "3",
+     "md5ext": "56b63ad2954dfd7d5747793dc693bba9.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 20.0,
+     "x": 0.25,
+     "y": 21.5,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 230,
+   "name": "230 Timer 999",
+   "file": "originals/230 Timer 999.svg",
+   "format": "svg",
+   "stage_w": 27.0,
+   "stage_h": 11.5,
+   "uses": [
+    {
+     "sprite": "Timer",
+     "index": 8,
+     "costume": "999",
+     "md5ext": "545ad0edf5f91c55fcf38069f278bc96.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "∞",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#000000",
+     "size": 11.5,
+     "x": 13.5,
+     "y": 5.75,
+     "rotate": 0,
+     "anchor": "middle",
+     "center": true,
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text"
+  },
+  {
+   "id": 231,
+   "name": "231 ClockHash ClockHard",
+   "file": "originals/231 ClockHash ClockHard.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "ClockHash",
+     "index": 1,
+     "costume": "ClockHard",
+     "md5ext": "110e872aeaf56208c6edf66184c771b0.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 232,
+   "name": "232 ClockHash ClockHours",
+   "file": "originals/232 ClockHash ClockHours.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "ClockHash",
+     "index": 2,
+     "costume": "ClockHours",
+     "md5ext": "d736bfc85533329b51b3184161696e25.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 233,
+   "name": "233 ClockHash ClockMinutes",
+   "file": "originals/233 ClockHash ClockMinutes.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "ClockHash",
+     "index": 3,
+     "costume": "ClockMinutes",
+     "md5ext": "eb9589ed43e50dc511bea001bccc8c73.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 234,
+   "name": "234 ClockHash ClockCorrect",
+   "file": "originals/234 ClockHash ClockCorrect.png",
+   "format": "png",
+   "stage_w": 480.0,
+   "stage_h": 360.0,
+   "uses": [
+    {
+     "sprite": "ClockHash",
+     "index": 4,
+     "costume": "ClockCorrect",
+     "md5ext": "eeece17d5be21fa8c0c725fa351ebcb5.png"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 235,
+   "name": "235 HourHand costume1",
+   "file": "originals/235 HourHand costume1.svg",
+   "format": "svg",
+   "stage_w": 89.2,
+   "stage_h": 29.2,
+   "uses": [
+    {
+     "sprite": "HourHand",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "bc1ed949bcc47366530c75bcbfffd6a0.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 236,
+   "name": "236 MinuteHand costume1",
+   "file": "originals/236 MinuteHand costume1.svg",
+   "format": "svg",
+   "stage_w": 97.8,
+   "stage_h": 17.1,
+   "uses": [
+    {
+     "sprite": "MinuteHand",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "430ca904ecf01b70e03c6d2e56ce4e6c.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 237,
+   "name": "237 SecondHand costume1",
+   "file": "originals/237 SecondHand costume1.svg",
+   "format": "svg",
+   "stage_w": 94.8,
+   "stage_h": 8.6,
+   "uses": [
+    {
+     "sprite": "SecondHand",
+     "index": 1,
+     "costume": "costume1",
+     "md5ext": "1ba75afa681f41d8bce7c84970e36372.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 238,
+   "name": "238 Pad 4DigitAddition",
+   "file": "originals/238 Pad 4DigitAddition.svg",
+   "format": "svg",
+   "stage_w": 303.3,
+   "stage_h": 417.1,
+   "uses": [
+    {
+     "sprite": "Pad",
+     "index": 1,
+     "costume": "4DigitAddition",
+     "md5ext": "ba41c8bcf3e23dcebf7536859aebf12a.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 239,
+   "name": "239 Pad PadAdditionX",
+   "file": "originals/239 Pad PadAdditionX.svg",
+   "format": "svg",
+   "stage_w": 303.4,
+   "stage_h": 416.8,
+   "uses": [
+    {
+     "sprite": "Pad",
+     "index": 2,
+     "costume": "PadAdditionX",
+     "md5ext": "44b4a909287ba1ebe70ea817c0d61292.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 240,
+   "name": "240 Pad PadFirstPage",
+   "file": "originals/240 Pad PadFirstPage.svg",
+   "format": "svg",
+   "stage_w": 301.9,
+   "stage_h": 415.5,
+   "uses": [
+    {
+     "sprite": "Pad",
+     "index": 3,
+     "costume": "PadFirstPage",
+     "md5ext": "2fd61ca3f670639bdf037877dddc1364.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  },
+  {
+   "id": 241,
+   "name": "241 4DigitTopThousands 1",
+   "file": "originals/241 4DigitTopThousands 1.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "ae8aa83234efbc691ca0dd24e698c0d5.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "fb832b7180ad2911e924882212c88195.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 1,
+     "costume": "1",
+     "md5ext": "8fe7c7edddc2fb6806682978a056370c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 242,
+   "name": "242 4DigitTopThousands 2",
+   "file": "originals/242 4DigitTopThousands 2.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "59ec41387b233b683e635c094d91f6f5.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "4ae05cf7132a6235fdf102d7ee483a0f.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 2,
+     "costume": "2",
+     "md5ext": "4757bb1604d86ce0170197ba93074442.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 243,
+   "name": "243 4DigitTopThousands 3",
+   "file": "originals/243 4DigitTopThousands 3.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "c157390fd241018bcf9432d37b000981.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "ef84b509c2b02ded881f3e17fc05a1f5.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 3,
+     "costume": "3",
+     "md5ext": "3d4b05a601f7cfea4bae35b0e423f62c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 244,
+   "name": "244 4DigitTopThousands 4",
+   "file": "originals/244 4DigitTopThousands 4.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "4b362cb7af1d79c493caa929fd88cea4.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "f7c50b5d71eb9123142d4cf47c348b7b.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 4,
+     "costume": "4",
+     "md5ext": "cac26bf494be1515a2a374940606ab87.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 245,
+   "name": "245 4DigitTopThousands 5",
+   "file": "originals/245 4DigitTopThousands 5.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "1bc85e499ccb2027580d59632ec260b7.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "2211f01ea7764d3fb3093d152439e8db.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 5,
+     "costume": "5",
+     "md5ext": "c3ab7f3912a78bacbcfc006611b3272c.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 246,
+   "name": "246 4DigitTopThousands 6",
+   "file": "originals/246 4DigitTopThousands 6.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "8d58c609ccae608577b779bf1a6e2b40.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "665a4732961fb8c5db4707fa5ad72b5b.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 6,
+     "costume": "6",
+     "md5ext": "252a8d1ff98a95f8a96f9a6677fdcba3.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "6",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 247,
+   "name": "247 4DigitTopThousands 7",
+   "file": "originals/247 4DigitTopThousands 7.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "94080414bc4bac4d9c4c4a5615522075.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "982c3791d831f2565157e8d5365d1357.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 7,
+     "costume": "7",
+     "md5ext": "24dfe5a043ec5b81f4f889ada5812850.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "7",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 248,
+   "name": "248 4DigitTopThousands 8",
+   "file": "originals/248 4DigitTopThousands 8.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "f75e70074128f6713ef9c367bb7fd3ac.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "f700b3d6363cd94da52e959bb7937f7e.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 8,
+     "costume": "8",
+     "md5ext": "faf2913c8b3eac0363b7741d3aba036b.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "8",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 249,
+   "name": "249 4DigitTopThousands 9",
+   "file": "originals/249 4DigitTopThousands 9.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "41a2e2e498fa66037a8dfbf48c23be00.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "6b65bf5fc934fd832ee11857a61ae71c.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 9,
+     "costume": "9",
+     "md5ext": "3b1e036fd6bf901ef9d3bc9dbe595611.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "9",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 250,
+   "name": "250 4DigitTopThousands 10",
+   "file": "originals/250 4DigitTopThousands 10.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "ffd811d8d1100c6ed3e5f4aceb614539.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "e52bba59bdf2ab7747dd1a3c11b9a72d.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 10,
+     "costume": "10",
+     "md5ext": "69a0479d3bace37c02fdafc3af622b6e.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "0",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 97.875,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    }
+   ],
+   "kind": "text on art",
+   "base": 266
+  },
+  {
+   "id": 251,
+   "name": "251 4DigitTopThousands 11",
+   "file": "originals/251 4DigitTopThousands 11.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "811ca2a36214053e5ff82a2f8891db40.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "56c5b5d10c2cac3441c959abb96c5c0b.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "535ecff4568ea2fe002bd930a3c4f860.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 252,
+   "name": "252 4DigitTopThousands 12",
+   "file": "originals/252 4DigitTopThousands 12.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 12,
+     "costume": "12",
+     "md5ext": "53a4c84c35e654211a615703c23f0d98.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 12,
+     "costume": "12",
+     "md5ext": "de415cf3df44d113f87aad828d55f325.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 12,
+     "costume": "12",
+     "md5ext": "26bdcec393450298e6ad3c9b2baf7437.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "2",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 253,
+   "name": "253 4DigitTopThousands 13",
+   "file": "originals/253 4DigitTopThousands 13.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 13,
+     "costume": "13",
+     "md5ext": "e1ec6f9eeb6c2b13751130f9d175ba2b.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 13,
+     "costume": "13",
+     "md5ext": "4f040b170a68010ae38e41445268d5a7.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 13,
+     "costume": "13",
+     "md5ext": "2feca4136ea87d38e389cfa84ed08947.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "3",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 254,
+   "name": "254 4DigitTopThousands 14",
+   "file": "originals/254 4DigitTopThousands 14.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 14,
+     "costume": "14",
+     "md5ext": "a207e729fecb1459cad06146c64e5f07.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 14,
+     "costume": "14",
+     "md5ext": "a1f1ea81233cd26beff47e2fa7122653.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 14,
+     "costume": "14",
+     "md5ext": "11ebfa1a38a9ccbf6861147ae5e1c994.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "4",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 255,
+   "name": "255 4DigitTopThousands 15",
+   "file": "originals/255 4DigitTopThousands 15.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 15,
+     "costume": "15",
+     "md5ext": "e7d781e0f7075f293a5db7d66b435425.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 15,
+     "costume": "15",
+     "md5ext": "01ac23a41d7e22f29a123c9d15a03a9f.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 15,
+     "costume": "15",
+     "md5ext": "2956b29c01d6c84fc06b89fd26b49a43.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "5",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 256,
+   "name": "256 4DigitTopThousands 16",
+   "file": "originals/256 4DigitTopThousands 16.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 16,
+     "costume": "16",
+     "md5ext": "086c32695fa28497f8fcdf8e40fcc8a7.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 16,
+     "costume": "16",
+     "md5ext": "66e47b9394ac9354715fb6e42e8e0e23.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 16,
+     "costume": "16",
+     "md5ext": "fe26391043886bd597e7d0291980f026.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "6",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 257,
+   "name": "257 4DigitTopThousands 17",
+   "file": "originals/257 4DigitTopThousands 17.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 17,
+     "costume": "17",
+     "md5ext": "15a11cddab0addcf10918d39c15dda6a.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 17,
+     "costume": "17",
+     "md5ext": "b450b9aeba2386f97f3bdbb89f7c1c23.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 17,
+     "costume": "17",
+     "md5ext": "7d631d8454e7435309aa3f9b5df47ba4.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "7",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 258,
+   "name": "258 4DigitTopThousands 18",
+   "file": "originals/258 4DigitTopThousands 18.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 18,
+     "costume": "18",
+     "md5ext": "ea330790fe4313d579f00c5c00a5f0c9.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 18,
+     "costume": "18",
+     "md5ext": "2fcba7c82daffa01aff0914ceedc4ca7.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 18,
+     "costume": "18",
+     "md5ext": "c429098f18a326720ababa1217139fc1.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "8",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 259,
+   "name": "259 4DigitTopThousands 19",
+   "file": "originals/259 4DigitTopThousands 19.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 19,
+     "costume": "19",
+     "md5ext": "dcf3e8f588b3e435176d80441a8bbf18.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 19,
+     "costume": "19",
+     "md5ext": "d43642e3cf121e76a55c17a77be4cc6e.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 19,
+     "costume": "19",
+     "md5ext": "0eb0e87d7b1fd73a4e321b1f85713951.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "9",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 260,
+   "name": "260 4DigitTopThousands 20",
+   "file": "originals/260 4DigitTopThousands 20.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "uses": [
+    {
+     "sprite": "4DigitTopThousands",
+     "index": 20,
+     "costume": "20",
+     "md5ext": "f39813c74f6817303a3c4401fe92d5c5.svg"
+    },
+    {
+     "sprite": "4DigitTopHundreds",
+     "index": 20,
+     "costume": "20",
+     "md5ext": "9aeea409ba7017a1fd4cfa00205814f5.svg"
+    },
+    {
+     "sprite": "4DigitTopTens",
+     "index": 20,
+     "costume": "20",
+     "md5ext": "c33762ab668fde2002246071cebddb41.svg"
+    }
+   ],
+   "text": [
+    {
+     "text": "0",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 90.0,
+     "x": 1.125,
+     "y": 98.071,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": false
+    },
+    {
+     "text": "1",
+     "font": "Sans Serif",
+     "css_font": "\"Noto Sans\", sans-serif; font-weight: 500",
+     "color": "#2f2107",
+     "size": 24.038,
+     "x": 10.67,
+     "y": 26.142,
+     "rotate": 0,
+     "anchor": "start",
+     "stroke": null,
+     "stroke_width": 0,
+     "over_base": true
+    }
+   ],
+   "kind": "text on art",
+   "base": 267
+  },
+  {
+   "id": 261,
+   "name": "261 4DigitEntry10Thousands 11",
+   "file": "originals/261 4DigitEntry10Thousands 11.svg",
+   "format": "svg",
+   "stage_w": 38.9,
+   "stage_h": 64.2,
+   "uses": [
+    {
+     "sprite": "4DigitEntry10Thousands",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "669853021967aa5c4dd52d781af4cab0.svg"
+    },
+    {
+     "sprite": "4DigitEntryThousands",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "2a0554500e1598d6cd052d3c2a2316e6.svg"
+    },
+    {
+     "sprite": "4DigitEntryHundreds",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "c6da3050d3c06a80c602d1cd306303e7.svg"
+    },
+    {
+     "sprite": "4DigitEntryTens",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "08de5db81c7162f195b2bab894540626.svg"
+    },
+    {
+     "sprite": "4DigitEntryOnes",
+     "index": 11,
+     "costume": "11",
+     "md5ext": "4ee1a335c8c46d59c7383d33c42deab5.svg"
+    }
+   ],
+   "text": [],
+   "kind": "art"
+  }
+ ],
+ "skipped": [
+  {
+   "sprite": "TitleScreenDad",
+   "index": 1,
+   "costume": "Dad",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "TitleScreenDad",
+   "index": 2,
+   "costume": "Mouth1",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "TitleScreenDad",
+   "index": 3,
+   "costume": "Blink",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "GameOver2T",
+   "index": 1,
+   "costume": "Dad",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "GameOver2T",
+   "index": 2,
+   "costume": "DadMouth1",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "GameOver2T",
+   "index": 3,
+   "costume": "DadBlink",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "GameOver2T",
+   "index": 4,
+   "costume": "Dad2",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "GameOver2T",
+   "index": 5,
+   "costume": "Dad2Mouth1",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "GameOver2T",
+   "index": 6,
+   "costume": "Dad2Blink",
+   "why": "the 3D rabbit draws over it"
+  },
+  {
+   "sprite": "EntryHundreds",
+   "index": 11,
+   "costume": "11",
+   "why": "blank"
+  },
+  {
+   "sprite": "EntryTens",
+   "index": 11,
+   "costume": "11",
+   "why": "blank"
+  },
+  {
+   "sprite": "EntryOnes",
+   "index": 11,
+   "costume": "11",
+   "why": "blank"
+  },
+  {
+   "sprite": "ScoreThousands",
+   "index": 11,
+   "costume": "Score11",
+   "why": "blank"
+  },
+  {
+   "sprite": "ScoreHundreds",
+   "index": 11,
+   "costume": "Score11",
+   "why": "blank"
+  },
+  {
+   "sprite": "ScoreTens",
+   "index": 11,
+   "costume": "Score11",
+   "why": "blank"
+  },
+  {
+   "sprite": "ScoreOnes",
+   "index": 11,
+   "costume": "Score11",
+   "why": "blank"
+  },
+  {
+   "sprite": "Boom",
+   "index": 1,
+   "costume": "costume1",
+   "why": "blank"
+  }
+ ],
+ "shapes": [
+  {
+   "id": 262,
+   "name": "262 Boom -5 shape",
+   "file": "originals/262 Boom -5 shape.svg",
+   "format": "svg",
+   "stage_w": 60.4,
+   "stage_h": 60.2,
+   "kind": "art",
+   "used_by": [
+    123
+   ]
+  },
+  {
+   "id": 263,
+   "name": "263 Boom huge shape",
+   "file": "originals/263 Boom huge shape.svg",
+   "format": "svg",
+   "stage_w": 79.4,
+   "stage_h": 38.9,
+   "kind": "art",
+   "used_by": [
+    124,
+    125
+   ]
+  },
+  {
+   "id": 264,
+   "name": "264 Boom 5 shape",
+   "file": "originals/264 Boom 5 shape.svg",
+   "format": "svg",
+   "stage_w": 55.2,
+   "stage_h": 54.2,
+   "kind": "art",
+   "used_by": [
+    126,
+    127,
+    128,
+    129,
+    130
+   ]
+  },
+  {
+   "id": 265,
+   "name": "265 Key2 costume1 shape",
+   "file": "originals/265 Key2 costume1 shape.svg",
+   "format": "svg",
+   "stage_w": 26.9,
+   "stage_h": 27.8,
+   "kind": "art",
+   "used_by": [
+    136,
+    138,
+    140,
+    142,
+    144,
+    146,
+    148,
+    150,
+    152,
+    154,
+    156
+   ]
+  },
+  {
+   "id": 266,
+   "name": "266 4DigitTopThousands 1 shape",
+   "file": "originals/266 4DigitTopThousands 1 shape.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 124.9,
+   "kind": "art",
+   "used_by": [
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250
+   ]
+  },
+  {
+   "id": 267,
+   "name": "267 4DigitTopThousands 11 shape",
+   "file": "originals/267 4DigitTopThousands 11 shape.svg",
+   "format": "svg",
+   "stage_w": 56.0,
+   "stage_h": 125.1,
+   "kind": "art",
+   "used_by": [
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260
+   ]
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+id,kind,file,format,stage_w,stage_h,text,font,base,uses,used_by
+1,art,originals/001 Stage Win.png,png,480.0,360.0,,,,1,Stage#1 Win
+2,art,originals/002 Stage TitleScreen.svg,svg,483.7,377.6,,,,1,Stage#2 TitleScreen
+3,art,originals/003 Stage DeskCards.png,png,480.0,359.5,,,,1,Stage#3 DeskCards
+4,art,originals/004 Stage DeskPad.png,png,479.5,360.0,,,,1,Stage#4 DeskPad
+5,art,originals/005 BackCards CardBack.svg,svg,66.3,103.0,,,,2,BackCards#1 CardBack; FrontCard#1 CardBack
+6,art,originals/006 FrontCard Multiplication.svg,svg,63.8,104.8,,,,1,FrontCard#2 Multiplication
+7,art,originals/007 FrontCard SimpleAddition.svg,svg,64.0,105.0,,,,1,FrontCard#3 SimpleAddition
+8,art,originals/008 FrontCard 2DigitAddition.svg,svg,64.0,105.0,,,,1,FrontCard#4 2DigitAddition
+9,art,originals/009 FrontCard SimpleSubtraction.svg,svg,63.9,104.8,,,,2,FrontCard#5 SimpleSubtraction; FrontCard#6 2DigitSubtraction
+10,art,originals/010 FrontCard Division.svg,svg,64.4,105.7,,,,1,FrontCard#7 Division
+11,art,originals/011 FrontCard CardGlow.svg,svg,88.4,128.1,,,,1,FrontCard#8 CardGlow
+12,text,originals/012 NumberTop 1.svg,svg,56.0,124.9,1,Sans Serif,,15,NumberTop#1 1; NumberBottom#1 1; EntryHundreds#1 1; EntryTens#1 1; EntryOnes#1 1; 4DigitTopOnes#1 1; 4DigitBottomThousands#1 1; 4DigitBottomHundreds#1 1; 4DigitBottomTens#1 1; 4DigitBottomOnes#1 1; 4DigitEntry10Thousands#1 1; 4DigitEntryThousands#1 1; 4DigitEntryHundreds#1 1; 4DigitEntryTens#1 1; 4DigitEntryOnes#1 1
+13,text,originals/013 NumberTop 2.svg,svg,56.0,124.9,2,Sans Serif,,15,NumberTop#2 2; NumberBottom#2 2; EntryHundreds#2 2; EntryTens#2 2; EntryOnes#2 2; 4DigitTopOnes#2 2; 4DigitBottomThousands#2 2; 4DigitBottomHundreds#2 2; 4DigitBottomTens#2 2; 4DigitBottomOnes#2 2; 4DigitEntry10Thousands#2 2; 4DigitEntryThousands#2 2; 4DigitEntryHundreds#2 2; 4DigitEntryTens#2 2; 4DigitEntryOnes#2 2
+14,text,originals/014 NumberTop 3.svg,svg,56.0,124.9,3,Sans Serif,,15,NumberTop#3 3; NumberBottom#3 3; EntryHundreds#3 3; EntryTens#3 3; EntryOnes#3 3; 4DigitTopOnes#3 3; 4DigitBottomThousands#3 3; 4DigitBottomHundreds#3 3; 4DigitBottomTens#3 3; 4DigitBottomOnes#3 3; 4DigitEntry10Thousands#3 3; 4DigitEntryThousands#3 3; 4DigitEntryHundreds#3 3; 4DigitEntryTens#3 3; 4DigitEntryOnes#3 3
+15,text,originals/015 NumberTop 4.svg,svg,56.0,124.9,4,Sans Serif,,15,NumberTop#4 4; NumberBottom#4 4; EntryHundreds#4 4; EntryTens#4 4; EntryOnes#4 4; 4DigitTopOnes#4 4; 4DigitBottomThousands#4 4; 4DigitBottomHundreds#4 4; 4DigitBottomTens#4 4; 4DigitBottomOnes#4 4; 4DigitEntry10Thousands#4 4; 4DigitEntryThousands#4 4; 4DigitEntryHundreds#4 4; 4DigitEntryTens#4 4; 4DigitEntryOnes#4 4
+16,text,originals/016 NumberTop 5.svg,svg,56.0,124.9,5,Sans Serif,,15,NumberTop#5 5; NumberBottom#5 5; EntryHundreds#5 5; EntryTens#5 5; EntryOnes#5 5; 4DigitTopOnes#5 5; 4DigitBottomThousands#5 5; 4DigitBottomHundreds#5 5; 4DigitBottomTens#5 5; 4DigitBottomOnes#5 5; 4DigitEntry10Thousands#5 5; 4DigitEntryThousands#5 5; 4DigitEntryHundreds#5 5; 4DigitEntryTens#5 5; 4DigitEntryOnes#5 5
+17,text,originals/017 NumberTop 6.svg,svg,56.0,124.9,6,Sans Serif,,15,NumberTop#6 6; NumberBottom#6 6; EntryHundreds#6 6; EntryTens#6 6; EntryOnes#6 6; 4DigitTopOnes#6 6; 4DigitBottomThousands#6 6; 4DigitBottomHundreds#6 6; 4DigitBottomTens#6 6; 4DigitBottomOnes#6 6; 4DigitEntry10Thousands#6 6; 4DigitEntryThousands#6 6; 4DigitEntryHundreds#6 6; 4DigitEntryTens#6 6; 4DigitEntryOnes#6 6
+18,text,originals/018 NumberTop 7.svg,svg,56.0,124.9,7,Sans Serif,,15,NumberTop#7 7; NumberBottom#7 7; EntryHundreds#7 7; EntryTens#7 7; EntryOnes#7 7; 4DigitTopOnes#7 7; 4DigitBottomThousands#7 7; 4DigitBottomHundreds#7 7; 4DigitBottomTens#7 7; 4DigitBottomOnes#7 7; 4DigitEntry10Thousands#7 7; 4DigitEntryThousands#7 7; 4DigitEntryHundreds#7 7; 4DigitEntryTens#7 7; 4DigitEntryOnes#7 7
+19,text,originals/019 NumberTop 8.svg,svg,56.0,124.9,8,Sans Serif,,15,NumberTop#8 8; NumberBottom#8 8; EntryHundreds#8 8; EntryTens#8 8; EntryOnes#8 8; 4DigitTopOnes#8 8; 4DigitBottomThousands#8 8; 4DigitBottomHundreds#8 8; 4DigitBottomTens#8 8; 4DigitBottomOnes#8 8; 4DigitEntry10Thousands#8 8; 4DigitEntryThousands#8 8; 4DigitEntryHundreds#8 8; 4DigitEntryTens#8 8; 4DigitEntryOnes#8 8
+20,text,originals/020 NumberTop 9.svg,svg,56.0,124.9,9,Sans Serif,,15,NumberTop#9 9; NumberBottom#9 9; EntryHundreds#9 9; EntryTens#9 9; EntryOnes#9 9; 4DigitTopOnes#9 9; 4DigitBottomThousands#9 9; 4DigitBottomHundreds#9 9; 4DigitBottomTens#9 9; 4DigitBottomOnes#9 9; 4DigitEntry10Thousands#9 9; 4DigitEntryThousands#9 9; 4DigitEntryHundreds#9 9; 4DigitEntryTens#9 9; 4DigitEntryOnes#9 9
+21,text,originals/021 NumberTop 10.svg,svg,38.2,44.4,10,Sans Serif,,4,NumberTop#10 10; NumberBottom#10 10; Cards#2 10; Timer#3 10
+22,text,originals/022 NumberTop 11.svg,svg,38.2,44.4,11,Sans Serif,,2,NumberTop#11 11; NumberBottom#11 11
+23,text,originals/023 NumberTop 12.svg,svg,38.2,44.4,12,Sans Serif,,2,NumberTop#12 12; NumberBottom#12 12
+24,text,originals/024 NumberTop 50.svg,svg,38.2,44.3,13,Sans Serif,,1,NumberTop#13 50
+25,text,originals/025 NumberTop 49.svg,svg,38.2,44.3,14,Sans Serif,,1,NumberTop#14 49
+26,text,originals/026 NumberTop 48.svg,svg,38.2,44.3,15,Sans Serif,,2,NumberTop#15 48; Timer#4 15
+27,text,originals/027 NumberTop 47.svg,svg,38.2,44.3,16,Sans Serif,,1,NumberTop#16 47
+28,text,originals/028 NumberTop 46.svg,svg,38.2,44.3,17,Sans Serif,,1,NumberTop#17 46
+29,text,originals/029 NumberTop 45.svg,svg,38.2,44.3,18,Sans Serif,,1,NumberTop#18 45
+30,text,originals/030 NumberTop 44.svg,svg,38.2,44.3,19,Sans Serif,,1,NumberTop#19 44
+31,text,originals/031 NumberTop 43.svg,svg,38.2,44.3,20,Sans Serif,,2,NumberTop#20 43; Timer#5 20
+32,text,originals/032 NumberTop 42.svg,svg,38.2,44.3,21,Sans Serif,,1,NumberTop#21 42
+33,text,originals/033 NumberTop 41.svg,svg,38.2,44.3,22,Sans Serif,,1,NumberTop#22 41
+34,text,originals/034 NumberTop 40.svg,svg,38.2,44.3,23,Sans Serif,,1,NumberTop#23 40
+35,text,originals/035 NumberTop 39.svg,svg,38.2,44.3,24,Sans Serif,,1,NumberTop#24 39
+36,text,originals/036 NumberTop 38.svg,svg,38.2,44.3,25,Sans Serif,,2,NumberTop#25 38; Cards#3 25
+37,text,originals/037 NumberTop 37.svg,svg,38.2,44.3,26,Sans Serif,,1,NumberTop#26 37
+38,text,originals/038 NumberTop 36.svg,svg,38.2,44.3,27,Sans Serif,,1,NumberTop#27 36
+39,text,originals/039 NumberTop 35.svg,svg,38.2,44.3,28,Sans Serif,,1,NumberTop#28 35
+40,text,originals/040 NumberTop 34.svg,svg,38.2,44.3,29,Sans Serif,,1,NumberTop#29 34
+41,text,originals/041 NumberTop 33.svg,svg,38.2,44.3,30,Sans Serif,,2,NumberTop#30 33; Timer#6 30
+42,text,originals/042 NumberTop 32.svg,svg,38.2,44.3,31,Sans Serif,,1,NumberTop#31 32
+43,text,originals/043 NumberTop 31.svg,svg,38.2,44.3,32,Sans Serif,,1,NumberTop#32 31
+44,text,originals/044 NumberTop 30.svg,svg,38.2,44.3,33,Sans Serif,,1,NumberTop#33 30
+45,text,originals/045 NumberTop 29.svg,svg,38.2,44.3,34,Sans Serif,,1,NumberTop#34 29
+46,text,originals/046 NumberTop 28.svg,svg,38.2,44.3,35,Sans Serif,,1,NumberTop#35 28
+47,text,originals/047 NumberTop 27.svg,svg,38.2,44.3,36,Sans Serif,,1,NumberTop#36 27
+48,text,originals/048 NumberTop 26.svg,svg,38.2,44.3,37,Sans Serif,,1,NumberTop#37 26
+49,text,originals/049 NumberTop 25.svg,svg,38.2,44.3,38,Sans Serif,,1,NumberTop#38 25
+50,text,originals/050 NumberTop 24.svg,svg,38.2,44.3,39,Sans Serif,,1,NumberTop#39 24
+51,text,originals/051 NumberTop 23.svg,svg,38.2,44.3,40,Sans Serif,,1,NumberTop#40 23
+52,text,originals/052 NumberTop 22.svg,svg,38.2,44.3,41,Sans Serif,,1,NumberTop#41 22
+53,text,originals/053 NumberTop 21.svg,svg,38.2,44.3,42,Sans Serif,,1,NumberTop#42 21
+54,text,originals/054 NumberTop 20.svg,svg,38.2,44.3,43,Sans Serif,,1,NumberTop#43 20
+55,text,originals/055 NumberTop 19.svg,svg,38.2,44.3,44,Sans Serif,,1,NumberTop#44 19
+56,text,originals/056 NumberTop 18.svg,svg,38.2,44.3,45,Sans Serif,,1,NumberTop#45 18
+57,text,originals/057 NumberTop 17.svg,svg,38.2,44.3,46,Sans Serif,,1,NumberTop#46 17
+58,text,originals/058 NumberTop 16.svg,svg,38.2,44.3,47,Sans Serif,,1,NumberTop#47 16
+59,text,originals/059 NumberTop 15.svg,svg,38.2,44.3,48,Sans Serif,,1,NumberTop#48 15
+60,text,originals/060 NumberTop 14.svg,svg,38.2,44.3,49,Sans Serif,,1,NumberTop#49 14
+61,text,originals/061 NumberTop 13.svg,svg,38.2,44.3,50,Sans Serif,,2,NumberTop#50 13; Cards#4 50
+62,text,originals/062 NumberTop 99.svg,svg,38.2,44.3,51,Sans Serif,,1,NumberTop#51 99
+63,text,originals/063 NumberTop 98.svg,svg,38.2,44.3,52,Sans Serif,,1,NumberTop#52 98
+64,text,originals/064 NumberTop 97.svg,svg,38.2,44.3,53,Sans Serif,,1,NumberTop#53 97
+65,text,originals/065 NumberTop 96.svg,svg,38.2,44.3,54,Sans Serif,,1,NumberTop#54 96
+66,text,originals/066 NumberTop 95.svg,svg,38.2,44.3,55,Sans Serif,,1,NumberTop#55 95
+67,text,originals/067 NumberTop 94.svg,svg,38.2,44.3,56,Sans Serif,,1,NumberTop#56 94
+68,text,originals/068 NumberTop 93.svg,svg,38.2,44.3,57,Sans Serif,,1,NumberTop#57 93
+69,text,originals/069 NumberTop 92.svg,svg,38.2,44.3,58,Sans Serif,,1,NumberTop#58 92
+70,text,originals/070 NumberTop 91.svg,svg,38.2,44.3,59,Sans Serif,,1,NumberTop#59 91
+71,text,originals/071 NumberTop 90.svg,svg,38.2,44.3,60,Sans Serif,,2,NumberTop#60 90; Timer#7 60
+72,text,originals/072 NumberTop 89.svg,svg,38.2,44.3,61,Sans Serif,,1,NumberTop#61 89
+73,text,originals/073 NumberTop 88.svg,svg,38.2,44.3,62,Sans Serif,,1,NumberTop#62 88
+74,text,originals/074 NumberTop 87.svg,svg,38.2,44.3,63,Sans Serif,,1,NumberTop#63 87
+75,text,originals/075 NumberTop 86.svg,svg,38.2,44.3,64,Sans Serif,,1,NumberTop#64 86
+76,text,originals/076 NumberTop 85.svg,svg,38.2,44.3,65,Sans Serif,,1,NumberTop#65 85
+77,text,originals/077 NumberTop 84.svg,svg,38.2,44.3,66,Sans Serif,,1,NumberTop#66 84
+78,text,originals/078 NumberTop 83.svg,svg,38.2,44.3,67,Sans Serif,,1,NumberTop#67 83
+79,text,originals/079 NumberTop 82.svg,svg,38.2,44.3,68,Sans Serif,,1,NumberTop#68 82
+80,text,originals/080 NumberTop 81.svg,svg,38.2,44.3,69,Sans Serif,,1,NumberTop#69 81
+81,text,originals/081 NumberTop 80.svg,svg,38.2,44.3,70,Sans Serif,,1,NumberTop#70 80
+82,text,originals/082 NumberTop 79.svg,svg,38.2,44.3,71,Sans Serif,,1,NumberTop#71 79
+83,text,originals/083 NumberTop 78.svg,svg,38.2,44.3,72,Sans Serif,,1,NumberTop#72 78
+84,text,originals/084 NumberTop 77.svg,svg,38.2,44.3,73,Sans Serif,,1,NumberTop#73 77
+85,text,originals/085 NumberTop 76.svg,svg,38.2,44.3,74,Sans Serif,,1,NumberTop#74 76
+86,text,originals/086 NumberTop 75.svg,svg,38.2,44.3,75,Sans Serif,,1,NumberTop#75 75
+87,text,originals/087 NumberTop 74.svg,svg,38.2,44.3,76,Sans Serif,,1,NumberTop#76 74
+88,text,originals/088 NumberTop 73.svg,svg,38.2,44.3,77,Sans Serif,,1,NumberTop#77 73
+89,text,originals/089 NumberTop 72.svg,svg,38.2,44.3,78,Sans Serif,,1,NumberTop#78 72
+90,text,originals/090 NumberTop 71.svg,svg,38.2,44.3,79,Sans Serif,,1,NumberTop#79 71
+91,text,originals/091 NumberTop 70.svg,svg,38.2,44.3,80,Sans Serif,,1,NumberTop#80 70
+92,text,originals/092 NumberTop 69.svg,svg,38.2,44.3,81,Sans Serif,,1,NumberTop#81 69
+93,text,originals/093 NumberTop 68.svg,svg,38.2,44.3,82,Sans Serif,,1,NumberTop#82 68
+94,text,originals/094 NumberTop 67.svg,svg,38.2,44.3,83,Sans Serif,,1,NumberTop#83 67
+95,text,originals/095 NumberTop 66.svg,svg,38.2,44.3,84,Sans Serif,,1,NumberTop#84 66
+96,text,originals/096 NumberTop 65.svg,svg,38.2,44.3,85,Sans Serif,,1,NumberTop#85 65
+97,text,originals/097 NumberTop 64.svg,svg,38.2,44.3,86,Sans Serif,,1,NumberTop#86 64
+98,text,originals/098 NumberTop 63.svg,svg,38.2,44.3,87,Sans Serif,,1,NumberTop#87 63
+99,text,originals/099 NumberTop 62.svg,svg,38.2,44.3,88,Sans Serif,,1,NumberTop#88 62
+100,text,originals/100 NumberTop 61.svg,svg,38.2,44.3,89,Sans Serif,,1,NumberTop#89 61
+101,text,originals/101 NumberTop 60.svg,svg,38.2,44.3,90,Sans Serif,,1,NumberTop#90 60
+102,text,originals/102 NumberTop 59.svg,svg,38.2,44.3,91,Sans Serif,,1,NumberTop#91 59
+103,text,originals/103 NumberTop 58.svg,svg,38.2,44.3,92,Sans Serif,,1,NumberTop#92 58
+104,text,originals/104 NumberTop 57.svg,svg,38.2,44.3,93,Sans Serif,,1,NumberTop#93 57
+105,text,originals/105 NumberTop 56.svg,svg,38.2,44.3,94,Sans Serif,,1,NumberTop#94 56
+106,text,originals/106 NumberTop 55.svg,svg,38.2,44.3,95,Sans Serif,,1,NumberTop#95 55
+107,text,originals/107 NumberTop 54.svg,svg,38.2,44.3,96,Sans Serif,,1,NumberTop#96 54
+108,text,originals/108 NumberTop 53.svg,svg,38.2,44.3,97,Sans Serif,,1,NumberTop#97 53
+109,text,originals/109 NumberTop 52.svg,svg,38.2,44.3,98,Sans Serif,,1,NumberTop#98 52
+110,text,originals/110 NumberTop 51.svg,svg,38.2,44.3,99,Sans Serif,,1,NumberTop#99 51
+111,text,originals/111 EntryHundreds 10.svg,svg,56.0,124.9,0,Sans Serif,,13,EntryHundreds#10 10; EntryTens#10 10; EntryOnes#10 10; 4DigitTopOnes#10 10; 4DigitBottomThousands#10 10; 4DigitBottomHundreds#10 10; 4DigitBottomTens#10 10; 4DigitBottomOnes#10 10; 4DigitEntry10Thousands#10 10; 4DigitEntryThousands#10 10; 4DigitEntryHundreds#10 10; 4DigitEntryTens#10 10; 4DigitEntryOnes#10 10
+112,art,originals/112 ScoreThousands Score1.png,png,222.0,271.0,,,,5,ScoreThousands#1 Score1; ScoreHundreds#1 Score1; ScoreTens#1 Score1; ScoreOnes#1 Score1; Score:#1 Score1
+113,art,originals/113 ScoreThousands Score2.png,png,222.0,271.0,,,,5,ScoreThousands#2 Score2; ScoreHundreds#2 Score2; ScoreTens#2 Score2; ScoreOnes#2 Score2; Score:#2 Score2
+114,art,originals/114 ScoreThousands Score3.png,png,222.0,271.0,,,,5,ScoreThousands#3 Score3; ScoreHundreds#3 Score3; ScoreTens#3 Score3; ScoreOnes#3 Score3; Score:#3 Score3
+115,art,originals/115 ScoreThousands Score4.png,png,222.0,271.0,,,,5,ScoreThousands#4 Score4; ScoreHundreds#4 Score4; ScoreTens#4 Score4; ScoreOnes#4 Score4; Score:#4 Score4
+116,art,originals/116 ScoreThousands Score5.png,png,222.0,271.0,,,,5,ScoreThousands#5 Score5; ScoreHundreds#5 Score5; ScoreTens#5 Score5; ScoreOnes#5 Score5; Score:#5 Score5
+117,art,originals/117 ScoreThousands Score6.png,png,222.0,271.0,,,,5,ScoreThousands#6 Score6; ScoreHundreds#6 Score6; ScoreTens#6 Score6; ScoreOnes#6 Score6; Score:#6 Score6
+118,art,originals/118 ScoreThousands Score7.png,png,222.0,271.0,,,,5,ScoreThousands#7 Score7; ScoreHundreds#7 Score7; ScoreTens#7 Score7; ScoreOnes#7 Score7; Score:#7 Score7
+119,art,originals/119 ScoreThousands Score8.png,png,222.0,271.0,,,,5,ScoreThousands#8 Score8; ScoreHundreds#8 Score8; ScoreTens#8 Score8; ScoreOnes#8 Score8; Score:#8 Score8
+120,art,originals/120 ScoreThousands Score9.png,png,222.0,271.0,,,,5,ScoreThousands#9 Score9; ScoreHundreds#9 Score9; ScoreTens#9 Score9; ScoreOnes#9 Score9; Score:#9 Score9
+121,art,originals/121 ScoreThousands Score10.png,png,222.0,271.0,,,,4,ScoreThousands#10 Score10; ScoreHundreds#10 Score10; ScoreTens#10 Score10; ScoreOnes#10 Score10
+122,art,originals/122 Score_ Score10.png,png,196.0,173.0,,,,1,Score:#10 Score10
+123,text on art,originals/123 Boom -5.svg,svg,60.4,60.2,-5,Marker,262,1,Boom#2 -5
+124,text on art,originals/124 Boom huge.svg,svg,79.4,38.9,HUGE!,Marker,263,1,Boom#3 huge
+125,text on art,originals/125 Boom wow.svg,svg,79.4,38.9,WOW!,Marker,263,1,Boom#4 wow
+126,text on art,originals/126 Boom 5.svg,svg,55.2,54.2,+5,Marker,264,1,Boom#5 5
+127,text on art,originals/127 Boom 6.svg,svg,55.2,54.2,+6,Marker,264,1,Boom#6 6
+128,text on art,originals/128 Boom 7.svg,svg,55.2,54.2,+7,Marker,264,1,Boom#7 7
+129,text on art,originals/129 Boom 8.svg,svg,55.2,54.2,+8,Marker,264,1,Boom#8 8
+130,text on art,originals/130 Boom 9.svg,svg,55.2,54.2,+9,Marker,264,1,Boom#9 9
+131,art,originals/131 Calculator Calculator1.png,png,250.0,314.0,,,,1,Calculator#1 Calculator1
+132,art,originals/132 Calculator Calculator2.png,png,250.0,314.0,,,,1,Calculator#2 Calculator2
+133,art,originals/133 Calculator Calculator3.png,png,250.0,314.0,,,,1,Calculator#3 Calculator3
+134,art,originals/134 Calculator Calculator4.png,png,250.0,314.0,,,,1,Calculator#4 Calculator4
+135,art,originals/135 Key1 Key1.png,png,70.0,70.0,,,,1,Key1#1 Key1
+136,text on art,originals/136 Key2 costume1.svg,svg,26.9,27.8,2,Sans Serif,265,1,Key2#1 costume1
+137,art,originals/137 Key2 Key2.png,png,70.0,70.0,,,,1,Key2#2 Key2
+138,text on art,originals/138 Key3 costume1.svg,svg,26.9,27.8,3,Sans Serif,265,1,Key3#1 costume1
+139,art,originals/139 Key3 Key3.png,png,70.0,70.0,,,,1,Key3#2 Key3
+140,text on art,originals/140 Key4 costume1.svg,svg,26.9,27.8,4,Sans Serif,265,1,Key4#1 costume1
+141,art,originals/141 Key4 Key4.png,png,70.0,70.0,,,,1,Key4#2 Key4
+142,text on art,originals/142 Key5 costume1.svg,svg,26.9,27.8,5,Sans Serif,265,1,Key5#1 costume1
+143,art,originals/143 Key5 Key5.png,png,70.0,70.0,,,,1,Key5#2 Key5
+144,text on art,originals/144 Key6 costume1.svg,svg,26.9,27.8,6,Sans Serif,265,1,Key6#1 costume1
+145,art,originals/145 Key6 Key6.png,png,70.0,70.0,,,,1,Key6#2 Key6
+146,text on art,originals/146 Key7 costume1.svg,svg,26.9,27.9,7,Sans Serif,265,1,Key7#1 costume1
+147,art,originals/147 Key7 key7.png,png,70.0,70.0,,,,1,Key7#2 key7
+148,text on art,originals/148 Key8 costume1.svg,svg,26.9,27.8,8,Sans Serif,265,1,Key8#1 costume1
+149,art,originals/149 Key8 Key8.png,png,70.0,70.0,,,,1,Key8#2 Key8
+150,text on art,originals/150 Key9 costume1.svg,svg,26.9,27.8,9,Sans Serif,265,1,Key9#1 costume1
+151,art,originals/151 Key9 key9.png,png,70.0,70.0,,,,1,Key9#2 key9
+152,text on art,originals/152 Key0 costume1.svg,svg,26.9,27.8,0,Sans Serif,265,1,Key0#1 costume1
+153,art,originals/153 Key0 key0.png,png,146.0,82.0,,,,1,Key0#2 key0
+154,text on art,originals/154 KeyD costume1.svg,svg,26.9,27.8,D,Sans Serif,265,1,KeyD#1 costume1
+155,art,originals/155 KeyD KeyDel.png,png,58.0,112.0,,,,1,KeyD#2 KeyDel
+156,text on art,originals/156 KeyE costume1.svg,svg,26.9,27.8,E,Sans Serif,265,1,KeyE#1 costume1
+157,art,originals/157 KeyE KeyEnter.png,png,97.0,111.0,,,,1,KeyE#2 KeyEnter
+158,art,originals/158 Logo Logo.png,png,480.0,182.5,,,,1,Logo#1 Logo
+159,art,originals/159 TitleScreenSprite5 NewTitle2.png,png,480.0,360.0,,,,1,TitleScreenSprite5#1 NewTitle2
+160,art,originals/160 TitleCard Costume1.png,png,66.5,103.5,,,,5,TitleCard#1 Costume1; TitleCard#3 Costume3; TitleCard#4 Costume4; TitleCard#5 Costume5; TitleCard#2 Costume2
+161,art,originals/161 TitleCard costume2.png,png,66.0,105.0,,,,1,TitleCard#6 costume2
+162,art,originals/162 TitleCard costume3.png,png,66.0,105.0,,,,1,TitleCard#7 costume3
+163,art,originals/163 TitleCard costume4.png,png,66.0,105.0,,,,1,TitleCard#8 costume4
+164,art,originals/164 TitleCard costume5.png,png,66.0,105.0,,,,1,TitleCard#9 costume5
+165,art,originals/165 TitleCard costume6.png,png,66.0,105.0,,,,1,TitleCard#10 costume6
+166,art,originals/166 TitleCard costume7.png,png,66.0,105.0,,,,1,TitleCard#11 costume7
+167,art,originals/167 StartButton Start2.png,png,250.0,90.0,,,,1,StartButton#1 Start2
+168,art,originals/168 FinalScoreHundreds 1.svg,svg,49.2,93.4,,,,1,FinalScoreHundreds#1 1
+169,art,originals/169 FinalScoreHundreds 2.svg,svg,66.0,88.5,,,,3,FinalScoreHundreds#2 2; FinalTens#2 2; FinalScoreOnes#2 2
+170,art,originals/170 FinalScoreHundreds 3.svg,svg,61.6,91.6,,,,3,FinalScoreHundreds#3 3; FinalTens#3 3; FinalScoreOnes#3 3
+171,art,originals/171 FinalScoreHundreds 4.svg,svg,77.4,94.0,,,,3,FinalScoreHundreds#4 4; FinalTens#4 4; FinalScoreOnes#4 4
+172,art,originals/172 FinalScoreHundreds 5.svg,svg,64.1,92.3,,,,3,FinalScoreHundreds#5 5; FinalTens#5 5; FinalScoreOnes#5 5
+173,art,originals/173 FinalScoreHundreds 6.svg,svg,75.8,92.6,,,,3,FinalScoreHundreds#6 6; FinalTens#6 6; FinalScoreOnes#6 6
+174,art,originals/174 FinalScoreHundreds 7.svg,svg,67.4,91.9,,,,3,FinalScoreHundreds#7 7; FinalTens#7 7; FinalScoreOnes#7 7
+175,art,originals/175 FinalScoreHundreds 8.svg,svg,77.4,91.9,,,,3,FinalScoreHundreds#8 8; FinalTens#8 8; FinalScoreOnes#8 8
+176,art,originals/176 FinalScoreHundreds 9.svg,svg,76.6,93.6,,,,3,FinalScoreHundreds#9 9; FinalTens#9 9; FinalScoreOnes#9 9
+177,art,originals/177 FinalScoreHundreds 10.svg,svg,76.3,90.1,,,,3,FinalScoreHundreds#10 10; FinalTens#10 10; FinalScoreOnes#10 10
+178,art,originals/178 FinalTens 1.svg,svg,47.3,92.5,,,,1,FinalTens#1 1
+179,art,originals/179 FinalScoreOnes 1.svg,svg,47.8,92.7,,,,1,FinalScoreOnes#1 1
+180,art,originals/180 Confetti costume1.svg,svg,16.0,9.2,,,,1,Confetti#1 costume1
+181,art,originals/181 Confetti costume2.svg,svg,18.2,11.5,,,,1,Confetti#2 costume2
+182,art,originals/182 Confetti costume3.svg,svg,17.2,11.5,,,,1,Confetti#3 costume3
+183,art,originals/183 Confetti costume6.svg,svg,18.7,9.2,,,,1,Confetti#4 costume6
+184,art,originals/184 Confetti costume5.svg,svg,18.3,8.0,,,,1,Confetti#5 costume5
+185,art,originals/185 Confetti costume4.svg,svg,19.2,8.0,,,,1,Confetti#6 costume4
+186,art,originals/186 Confetti costume7.svg,svg,18.4,10.8,,,,1,Confetti#7 costume7
+187,art,originals/187 Confetti costume8.svg,svg,17.0,10.1,,,,1,Confetti#8 costume8
+188,art,originals/188 GameOver Card.png,png,480.0,360.0,,,,1,GameOver#1 Card
+189,art,originals/189 GameOver Clock.svg,svg,480.0,360.0,,,,1,GameOver#2 Clock
+190,art,originals/190 GameOver Pad.png,png,480.0,360.0,,,,1,GameOver#3 Pad
+191,art,originals/191 ScoreSheet ScorePaper.svg,svg,230.5,345.5,,,,1,ScoreSheet#1 ScorePaper
+192,text on art,originals/192 ScoreSheet ScorePaper2.svg,svg,230.5,355.9,Click to Restart! | Click to Restart!,Marker,191,1,ScoreSheet#2 ScorePaper2
+193,text,originals/193 PercentageHundreds 1.svg,svg,44.8,92.5,1,Sans Serif,,2,PercentageHundreds#1 1; PercentageTens#1 1
+194,text,originals/194 PercentageHundreds 2.svg,svg,44.8,92.5,2,Sans Serif,,2,PercentageHundreds#2 2; PercentageTens#2 2
+195,text,originals/195 PercentageHundreds 3.svg,svg,44.8,92.5,3,Sans Serif,,2,PercentageHundreds#3 3; PercentageTens#3 3
+196,text,originals/196 PercentageHundreds 4.svg,svg,44.8,92.5,4,Sans Serif,,2,PercentageHundreds#4 4; PercentageTens#4 4
+197,text,originals/197 PercentageHundreds 5.svg,svg,44.8,92.5,5,Sans Serif,,2,PercentageHundreds#5 5; PercentageTens#5 5
+198,text,originals/198 PercentageHundreds 6.svg,svg,44.8,92.5,6,Sans Serif,,2,PercentageHundreds#6 6; PercentageTens#6 6
+199,text,originals/199 PercentageHundreds 7.svg,svg,44.8,92.5,7,Sans Serif,,2,PercentageHundreds#7 7; PercentageTens#7 7
+200,text,originals/200 PercentageHundreds 8.svg,svg,44.8,92.5,8,Sans Serif,,2,PercentageHundreds#8 8; PercentageTens#8 8
+201,text,originals/201 PercentageHundreds 9.svg,svg,44.8,92.5,9,Sans Serif,,2,PercentageHundreds#9 9; PercentageTens#9 9
+202,text,originals/202 PercentageHundreds 10.svg,svg,44.8,92.5,0,Sans Serif,,2,PercentageHundreds#10 10; PercentageTens#10 10
+203,text,originals/203 PercentageOnes 1.svg,svg,100.5,95.1,1%,Sans Serif,,1,PercentageOnes#1 1
+204,text,originals/204 PercentageOnes 2.svg,svg,100.5,95.1,2%,Sans Serif,,1,PercentageOnes#2 2
+205,text,originals/205 PercentageOnes 3.svg,svg,100.5,95.1,3%,Sans Serif,,1,PercentageOnes#3 3
+206,text,originals/206 PercentageOnes 4.svg,svg,100.5,95.1,4%,Sans Serif,,1,PercentageOnes#4 4
+207,text,originals/207 PercentageOnes 5.svg,svg,100.5,95.1,5%,Sans Serif,,1,PercentageOnes#5 5
+208,text,originals/208 PercentageOnes 6.svg,svg,100.5,95.1,6%,Sans Serif,,1,PercentageOnes#6 6
+209,text,originals/209 PercentageOnes 7.svg,svg,100.5,95.1,7%,Sans Serif,,1,PercentageOnes#7 7
+210,text,originals/210 PercentageOnes 8.svg,svg,100.5,95.1,8%,Sans Serif,,1,PercentageOnes#8 8
+211,text,originals/211 PercentageOnes 9.svg,svg,100.5,95.1,9%,Sans Serif,,1,PercentageOnes#9 9
+212,text,originals/212 PercentageOnes 0.svg,svg,100.5,95.1,0%,Sans Serif,,1,PercentageOnes#10 0
+213,art,originals/213 SettingsSheet Settings.svg,svg,338.1,225.0,,,,1,SettingsSheet#1 Settings
+214,art,originals/214 ModeDown SettingsArrow.svg,svg,33.5,57.6,,,,3,ModeDown#1 SettingsArrow; CardsDown#1 SettingsArrow; TimerDown#1 SettingsArrow
+215,art,originals/215 ModeUp SettingsArrow.svg,svg,33.5,57.6,,,,3,ModeUp#1 SettingsArrow; CardsUp#1 SettingsArrow; TimerUp#1 SettingsArrow
+216,text,originals/216 Mode Multiplication.svg,svg,132.9,27.7,Multiplication,Sans Serif,,1,Mode#1 Multiplication
+217,text,originals/217 Mode SimpleAddition.svg,svg,152.1,27.7,Simple Addition,Sans Serif,,1,Mode#2 SimpleAddition
+218,text,originals/218 Mode 2DigitAddition.svg,svg,147.3,27.7,2 Digit + 1 Digit,Sans Serif,,1,Mode#3 2DigitAddition
+219,text,originals/219 Mode SimpleSubtraction.svg,svg,181.8,27.7,Simple Subtraction,Sans Serif,,1,Mode#4 SimpleSubtraction
+220,text,originals/220 Mode 2DigitSubtraction.svg,svg,142.3,27.7,2 Digit - 1 Digit,Sans Serif,,1,Mode#5 2DigitSubtraction
+221,text,originals/221 Mode Division.svg,svg,77.0,27.7,Division,Sans Serif,,1,Mode#6 Division
+222,text,originals/222 Mode ClockMinutes.svg,svg,164.3,27.7,Clock w/ Minutes,Sans Serif,,1,Mode#7 ClockMinutes
+223,text,originals/223 Mode ClockHours.svg,svg,144.4,27.7,Clock w/ Hours,Sans Serif,,1,Mode#8 ClockHours
+224,text,originals/224 Mode ClockHard.svg,svg,156.3,27.7,Clock w/ Hashes,Sans Serif,,1,Mode#9 ClockHard
+225,text,originals/225 Mode 4DigitAddition.svg,svg,147.3,27.8,4 Digit + 4 Digit,Sans Serif,,1,Mode#10 4DigitAddition
+226,text,originals/226 Mode 4DigitSubtraction.svg,svg,142.3,27.8,4 Digit - 4 Digit,Sans Serif,,1,Mode#11 4DigitSubtraction
+227,text,originals/227 Cards 5.svg,svg,12.4,27.7,5,Sans Serif,,2,Cards#1 5; Timer#2 5
+228,text,originals/228 Cards 100.svg,svg,35.3,27.7,100,Sans Serif,,1,Cards#5 100
+229,text,originals/229 Timer 3.svg,svg,12.4,27.7,3,Sans Serif,,1,Timer#1 3
+230,text,originals/230 Timer 999.svg,svg,27.0,11.5,∞,Sans Serif,,1,Timer#8 999
+231,art,originals/231 ClockHash ClockHard.png,png,480.0,360.0,,,,1,ClockHash#1 ClockHard
+232,art,originals/232 ClockHash ClockHours.png,png,480.0,360.0,,,,1,ClockHash#2 ClockHours
+233,art,originals/233 ClockHash ClockMinutes.png,png,480.0,360.0,,,,1,ClockHash#3 ClockMinutes
+234,art,originals/234 ClockHash ClockCorrect.png,png,480.0,360.0,,,,1,ClockHash#4 ClockCorrect
+235,art,originals/235 HourHand costume1.svg,svg,89.2,29.2,,,,1,HourHand#1 costume1
+236,art,originals/236 MinuteHand costume1.svg,svg,97.8,17.1,,,,1,MinuteHand#1 costume1
+237,art,originals/237 SecondHand costume1.svg,svg,94.8,8.6,,,,1,SecondHand#1 costume1
+238,art,originals/238 Pad 4DigitAddition.svg,svg,303.3,417.1,,,,1,Pad#1 4DigitAddition
+239,art,originals/239 Pad PadAdditionX.svg,svg,303.4,416.8,,,,1,Pad#2 PadAdditionX
+240,art,originals/240 Pad PadFirstPage.svg,svg,301.9,415.5,,,,1,Pad#3 PadFirstPage
+241,text on art,originals/241 4DigitTopThousands 1.svg,svg,56.0,124.9,1,Sans Serif,266,3,4DigitTopThousands#1 1; 4DigitTopHundreds#1 1; 4DigitTopTens#1 1
+242,text on art,originals/242 4DigitTopThousands 2.svg,svg,56.0,124.9,2,Sans Serif,266,3,4DigitTopThousands#2 2; 4DigitTopHundreds#2 2; 4DigitTopTens#2 2
+243,text on art,originals/243 4DigitTopThousands 3.svg,svg,56.0,124.9,3,Sans Serif,266,3,4DigitTopThousands#3 3; 4DigitTopHundreds#3 3; 4DigitTopTens#3 3
+244,text on art,originals/244 4DigitTopThousands 4.svg,svg,56.0,124.9,4,Sans Serif,266,3,4DigitTopThousands#4 4; 4DigitTopHundreds#4 4; 4DigitTopTens#4 4
+245,text on art,originals/245 4DigitTopThousands 5.svg,svg,56.0,124.9,5,Sans Serif,266,3,4DigitTopThousands#5 5; 4DigitTopHundreds#5 5; 4DigitTopTens#5 5
+246,text on art,originals/246 4DigitTopThousands 6.svg,svg,56.0,124.9,6,Sans Serif,266,3,4DigitTopThousands#6 6; 4DigitTopHundreds#6 6; 4DigitTopTens#6 6
+247,text on art,originals/247 4DigitTopThousands 7.svg,svg,56.0,124.9,7,Sans Serif,266,3,4DigitTopThousands#7 7; 4DigitTopHundreds#7 7; 4DigitTopTens#7 7
+248,text on art,originals/248 4DigitTopThousands 8.svg,svg,56.0,124.9,8,Sans Serif,266,3,4DigitTopThousands#8 8; 4DigitTopHundreds#8 8; 4DigitTopTens#8 8
+249,text on art,originals/249 4DigitTopThousands 9.svg,svg,56.0,124.9,9,Sans Serif,266,3,4DigitTopThousands#9 9; 4DigitTopHundreds#9 9; 4DigitTopTens#9 9
+250,text on art,originals/250 4DigitTopThousands 10.svg,svg,56.0,124.9,0,Sans Serif,266,3,4DigitTopThousands#10 10; 4DigitTopHundreds#10 10; 4DigitTopTens#10 10
+251,text on art,originals/251 4DigitTopThousands 11.svg,svg,56.0,125.1,1 | 1,Sans Serif,267,3,4DigitTopThousands#11 11; 4DigitTopHundreds#11 11; 4DigitTopTens#11 11
+252,text on art,originals/252 4DigitTopThousands 12.svg,svg,56.0,125.1,2 | 1,Sans Serif,267,3,4DigitTopThousands#12 12; 4DigitTopHundreds#12 12; 4DigitTopTens#12 12
+253,text on art,originals/253 4DigitTopThousands 13.svg,svg,56.0,125.1,3 | 1,Sans Serif,267,3,4DigitTopThousands#13 13; 4DigitTopHundreds#13 13; 4DigitTopTens#13 13
+254,text on art,originals/254 4DigitTopThousands 14.svg,svg,56.0,125.1,4 | 1,Sans Serif,267,3,4DigitTopThousands#14 14; 4DigitTopHundreds#14 14; 4DigitTopTens#14 14
+255,text on art,originals/255 4DigitTopThousands 15.svg,svg,56.0,125.1,5 | 1,Sans Serif,267,3,4DigitTopThousands#15 15; 4DigitTopHundreds#15 15; 4DigitTopTens#15 15
+256,text on art,originals/256 4DigitTopThousands 16.svg,svg,56.0,125.1,6 | 1,Sans Serif,267,3,4DigitTopThousands#16 16; 4DigitTopHundreds#16 16; 4DigitTopTens#16 16
+257,text on art,originals/257 4DigitTopThousands 17.svg,svg,56.0,125.1,7 | 1,Sans Serif,267,3,4DigitTopThousands#17 17; 4DigitTopHundreds#17 17; 4DigitTopTens#17 17
+258,text on art,originals/258 4DigitTopThousands 18.svg,svg,56.0,125.1,8 | 1,Sans Serif,267,3,4DigitTopThousands#18 18; 4DigitTopHundreds#18 18; 4DigitTopTens#18 18
+259,text on art,originals/259 4DigitTopThousands 19.svg,svg,56.0,125.1,9 | 1,Sans Serif,267,3,4DigitTopThousands#19 19; 4DigitTopHundreds#19 19; 4DigitTopTens#19 19
+260,text on art,originals/260 4DigitTopThousands 20.svg,svg,56.0,125.1,0 | 1,Sans Serif,267,3,4DigitTopThousands#20 20; 4DigitTopHundreds#20 20; 4DigitTopTens#20 20
+261,art,originals/261 4DigitEntry10Thousands 11.svg,svg,38.9,64.2,,,,5,4DigitEntry10Thousands#11 11; 4DigitEntryThousands#11 11; 4DigitEntryHundreds#11 11; 4DigitEntryTens#11 11; 4DigitEntryOnes#11 11
+262,art,originals/262 Boom -5 shape.svg,svg,60.4,60.2,,,,0,shape for images 123
+263,art,originals/263 Boom huge shape.svg,svg,79.4,38.9,,,,0,"shape for images 124, 125"
+264,art,originals/264 Boom 5 shape.svg,svg,55.2,54.2,,,,0,"shape for images 126, 127, 128, 129, 130"
+265,art,originals/265 Key2 costume1 shape.svg,svg,26.9,27.8,,,,0,"shape for images 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156"
+266,art,originals/266 4DigitTopThousands 1 shape.svg,svg,56.0,124.9,,,,0,"shape for images 241, 242, 243, 244, 245, 246, 247, 248, 249, 250"
+267,art,originals/267 4DigitTopThousands 11 shape.svg,svg,56.0,125.1,,,,0,"shape for images 251, 252, 253, 254, 255, 256, 257, 258, 259, 260"
