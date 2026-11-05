@@ -17,7 +17,8 @@ uniform vec4 uWhiteL, uWhiteR; // eye whites: cx, cy, rx, ry (rest space)
 uniform vec2 uSclera;          // eye-white grey on screen: middle, edge
 uniform vec3 uRim[16];        // fur color around each eye every 45 degrees (left eye 0-7, right 8-15)
 uniform float uLidBoost;      // eyelids cover the eye alone, without the stacked fur, so they need lifting
-const float RIM_WHITE = 1.8;  // dark rim splats this close to an eye white (in white radii, squared) join it
+const float RIM_WHITE = 1.4;  // dark rim splats this close to an eye white (in white radii, squared) join it
+const float RIM_WHITE_SIZE = 0.08;  // ...if no bigger than this (1-sigma, as a fraction of the white's width)
 uniform float uFluff;         // splat size multiplier (softer look)
 uniform float uFuzz;          // fur-wisp opacity (fluffy fringe)
 uniform vec3 uTint;           // scene lighting match
@@ -82,7 +83,9 @@ void main() {
     // the eye keeps its size, and the rest takes the color of the fur next to it.
     bool dark = dot(col, vec3(0.299, 0.587, 0.114)) < 0.3;
     float wr = dot(wd, wd);
-    bool sclera = wr < 1.0 || (dark && wr < RIM_WHITE);
+    // (only small splats: big soft ones would spray white over the fur and the nose)
+    float sigma = sqrt(max(B.x, max(B.w, C.y)));
+    bool sclera = wr < 1.0 || (dark && wr < RIM_WHITE && sigma < RIM_WHITE_SIZE * white.z);
     float grain = 0.86 + 0.28 * fract(sin(float(aIndex) * 12.9898) * 43758.5453);
     int e = flag == 1 ? 0 : 1;
     // (the rim part shades a little darker outward, so its fuzzy splats read as the eye's edge)
@@ -413,7 +416,7 @@ export async function createRabbit(canvas, opts = {}) {
   gl.uniform2fv(U('uSclera'), RIG.scleraColor);
   gl.uniform4fv(U('uEyeR'), [RIG.eyeR.c[0], RIG.eyeR.c[1], RIG.eyeR.r[0], RIG.eyeR.r[1]]);
   // sampled splat colors read darker than the stacked fur on screen, so lift them
-  gl.uniform3fv(U('uRim'), sampleRimColors(file.pos, file.rgba, nFile));
+  gl.uniform3fv(U('uRim'), sampleRimColors(file.pos, file.rgba, nFile, rig.flag));
   gl.uniform1f(U('uLidBoost'), 1.3);
 
   // ---- camera (OpenCV-style: x right, y down, z forward) ----

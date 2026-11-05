@@ -75,7 +75,7 @@ export function computeWeights(pos, n) {
 // from +x): the light falls across his face, so it differs around each eye. The dark rim
 // around each eye white and the eyelids are painted with these, blended by direction.
 export const RIM_SECTORS = 8;
-export function sampleRimColors(pos, rgba, n) {
+export function sampleRimColors(pos, rgba, n, flag) {
   const out = new Float32Array(2 * RIM_SECTORS * 3);
   [RIG.eyeL, RIG.eyeR].forEach((eye, e) => {
     const acc = Array.from({ length: RIM_SECTORS }, () => [0, 0, 0, 0]), all = [0, 0, 0, 0];
@@ -83,7 +83,11 @@ export function sampleRimColors(pos, rgba, n) {
       const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
       const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
       const r = rgba[4 * i], g = rgba[4 * i + 1], b = rgba[4 * i + 2];
-      if (d < 1.3 || d > 2.6 || z < eye.c[2] - 0.045 || rgba[4 * i + 3] < 128 || 0.299 * r + 0.587 * g + 0.114 * b < 0.3 * 255) continue;
+      if (d < 1.3 || d > 2.6 || z < eye.c[2] - 0.045 || rgba[4 * i + 3] < 128) continue;
+      // fur only: not the eyes themselves, nor dark lashes or whitish splats (grey, with little color)
+      if (flag[i] !== FLAG.none && flag[i] !== FLAG.nearEye) continue;
+      const lum = 0.299 * r + 0.587 * g + 0.114 * b, sat = (Math.max(r, g, b) - Math.min(r, g, b)) / Math.max(1, Math.max(r, g, b));
+      if (lum < 0.3 * 255 || sat < 0.25) continue;
       // nearest two sectors share each sample, so neighbouring sectors blend smoothly
       const f = ((Math.atan2(dy, dx) / (2 * Math.PI)) * RIM_SECTORS + RIM_SECTORS) % RIM_SECTORS;
       const k0 = Math.floor(f), t = f - k0;
