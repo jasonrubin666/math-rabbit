@@ -27,7 +27,7 @@ export const RIG = {
   // Moving pupils: the eye whites (c, r) are repainted each frame as white with a dark pupil (radius
   // `pupilR`) whose resting spot is where the model's pupil is (toward the nose and a little down, i.e.
   // looking at the player); glances move it up to `pupilTravel` (x, y) from there.
-  whiteL: { c: [-0.0785, 0.0], r: [0.038, 0.0407], pupil: [-0.065, -0.013] },
+  whiteL: { c: [-0.0785, 0.0], r: [0.0345, 0.037], pupil: [-0.065, -0.013] },
   whiteR: { c: [0.081, 0.002], r: [0.035, 0.045], pupil: [0.064, -0.015] },
   pupilR: 0.0135, pupilTravel: [0.028, 0.024],
   scleraColor: [0.9, 0.74], pupilColor: [0.07, 0.045, 0.03],   // eye-white grey on screen: [middle, edge]
@@ -71,76 +71,24 @@ export function computeWeights(pos, n) {
   return { bone0, bone1, w0, flag };
 }
 
-const lumOf = (rgba, i) => (0.299 * rgba[4 * i] + 0.587 * rgba[4 * i + 1] + 0.114 * rgba[4 * i + 2]) / 255;
-const satOf = (rgba, i) => {
-  const r = rgba[4 * i], g = rgba[4 * i + 1], b = rgba[4 * i + 2], hi = Math.max(r, g, b);
-  return hi ? (hi - Math.min(r, g, b)) / hi : 0;
-};
-/** A solid splat of fur: not the eyes or mouth, and not the black eye outline or whitish eye splats. */
-const isFur = (i, rgba, flag) =>
-  (flag[i] === FLAG.none || flag[i] === FLAG.nearEye) && rgba[4 * i + 3] >= 128 && !isRim(rgba, i) && satOf(rgba, i) > 0.15;
-/** The model's dark eye outline (and its painted pupil's leftovers): too dark to be lit fur. */
-const isRim = (rgba, i) => lumOf(rgba, i) < 0.3;
-const whiteDist = (w, x, y) => ((x - w.c[0]) / w.r[0]) ** 2 + ((y - w.c[1]) / w.r[1]) ** 2;
-// the shader turns dark rim splats this close to a white (squared, in white radii) and this small into
-// eye white (see RIM_WHITE in the renderer); the rest of the rim is recolored here
-export const RIM_WHITE = 1.0, RIM_WHITE_SIZE = 0.08, RIM_INNER = 0.8;
-
-/**
- * Repaint the model's dark outline around each eye white with the fur right next to each splat (the
- * average of its nearest fur splats), so the light and shadow across his face carry on unbroken.
- * Changes `rgba` in place for splats 0..n-1.
- */
-export function recolorEyeRims(pos, rgba, cov, flag, n) {
-  const whites = [RIG.whiteL, RIG.whiteR];
-  const targets = [], fur = [];
+// Average fur color in a ring around each eye: used to paint the eyelid when blinking.
+export function sampleLidColor(pos, rgba, n) {
+  const acc = [0, 0, 0]; let count = 0;
   for (let i = 0; i < n; i++) {
-    const x = pos[3 * i], y = pos[3 * i + 1];
-    if (Math.abs(y) > 0.12 || Math.abs(x) > 0.2) continue;
-    const w = whites[x < 0 ? 0 : 1], wr = whiteDist(w, x, y);
-    if (wr > 9) continue;
-    const isEye = flag[i] === FLAG.eyeL || flag[i] === FLAG.eyeR;
-    if (isRim(rgba, i) && (isEye || (flag[i] === FLAG.nearEye && wr < 2.6))) {
-      // the shader paints small ones right at the white, and big ones well inside it, as eye white
-      const small = Math.sqrt(Math.max(cov[6 * i], cov[6 * i + 3], cov[6 * i + 5])) < RIM_WHITE_SIZE * w.r[0];
-      if (!(isEye && wr < (small ? RIM_WHITE : RIM_INNER))) targets.push(i);
-    } else if (isFur(i, rgba, flag)) fur.push(i);
-  }
-  // nearest fur by a coarse grid
-  const cell = 0.006, grid = new Map(), key = (a, b, c) => `${a},${b},${c}`;
-  for (const j of fur) {
-    const k = key(Math.floor(pos[3 * j] / cell), Math.floor(pos[3 * j + 1] / cell), Math.floor(pos[3 * j + 2] / cell));
-    if (!grid.has(k)) grid.set(k, []);
-    grid.get(k).push(j);
-  }
-  const K = 10;
-  for (const i of targets) {
     const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
-    const gx = Math.floor(x / cell), gy = Math.floor(y / cell), gz = Math.floor(z / cell);
-    let near = [];
-    for (let reach = 1; reach <= 4 && near.length < K; reach++) {
-      near = [];
-      for (let a = -reach; a <= reach; a++) for (let b = -reach; b <= reach; b++) for (let c = -reach; c <= reach; c++) {
-        for (const j of grid.get(key(gx + a, gy + b, gz + c)) ?? []) {
-          near.push([Math.hypot(pos[3 * j] - x, pos[3 * j + 1] - y, pos[3 * j + 2] - z), j]);
-        }
+    for (const eye of [RIG.eyeL, RIG.eyeR]) {
+      const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
+      if (d > RIG.lidRing[0] && d < RIG.lidRing[1] && dy > 0 && z > eye.c[2] - 0.045 && rgba[4 * i + 3] > 128) {
+        acc[0] += rgba[4 * i]; acc[1] += rgba[4 * i + 1]; acc[2] += rgba[4 * i + 2]; count++;
       }
     }
-    if (!near.length) continue;
-    near.sort((p, q) => p[0] - q[0]);
-    const acc = [0, 0, 0]; let wsum = 0;
-    for (const [d, j] of near.slice(0, K)) {
-      const wgt = 1 / (d + 0.001);
-      for (let c = 0; c < 3; c++) acc[c] += wgt * rgba[4 * j + c];
-      wsum += wgt;
-    }
-    for (let c = 0; c < 3; c++) rgba[4 * i + c] = Math.round(acc[c] / wsum);
   }
+  return count ? acc.map(v => v / count / 255) : [0.7, 0.5, 0.3];
 }
 
 // The fur color just outside each eye, sampled in RIM_SECTORS directions (every 45 degrees,
 // counterclockwise from +x): the light falls across his face, so it differs around each eye. The
-// eyelids are painted with these, blended by direction.
+// eyelids are painted with these, blended by direction, so each matches its side of the face.
 export const RIM_SECTORS = 8;
 export function sampleRimColors(pos, rgba, n, flag) {
   const out = new Float32Array(2 * RIM_SECTORS * 3);
@@ -149,9 +97,11 @@ export function sampleRimColors(pos, rgba, n, flag) {
     for (let i = 0; i < n; i++) {
       const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
       const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
-      const r = rgba[4 * i], g = rgba[4 * i + 1], b = rgba[4 * i + 2];
-      // just outside the eye, fur only
-      if (d < 1.0 || d > 1.8 || z < eye.c[2] - 0.045 || !isFur(i, rgba, flag)) continue;
+      if (d < 1.0 || d > 1.8 || z < eye.c[2] - 0.045 || rgba[4 * i + 3] < 128) continue;
+      // fur only: not the eyes themselves, nor the dark eye outline or whitish splats
+      if (flag[i] !== FLAG.none && flag[i] !== FLAG.nearEye) continue;
+      const r = rgba[4 * i], g = rgba[4 * i + 1], b = rgba[4 * i + 2], hi = Math.max(r, g, b);
+      if ((0.299 * r + 0.587 * g + 0.114 * b) / 255 < 0.3 || (hi ? (hi - Math.min(r, g, b)) / hi : 0) < 0.15) continue;
       // nearest two sectors share each sample, so neighbouring sectors blend smoothly
       const f = ((Math.atan2(dy, dx) / (2 * Math.PI)) * RIM_SECTORS + RIM_SECTORS) % RIM_SECTORS;
       const k0 = Math.floor(f), t = f - k0;
