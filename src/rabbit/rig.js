@@ -29,8 +29,8 @@ export const RIG = {
   // looking at the player); glances move it up to `pupilTravel` (x, y) from there.
   whiteL: { c: [-0.0785, 0.0], r: [0.0345, 0.037], pupil: [-0.065, -0.013] },
   whiteR: { c: [0.083, 0.005], r: [0.032, 0.041], pupil: [0.064, -0.015] },
-  pupilR: 0.0135, pupilTravel: [0.012, 0.01],
-  scleraColor: [0.77, 0.76, 0.75], pupilColor: [0.07, 0.045, 0.03],
+  pupilR: 0.0135, pupilTravel: [0.028, 0.024],
+  scleraColor: [0.62, 0.585, 0.54], pupilColor: [0.07, 0.045, 0.03],   // off-white whites (lift and tint brighten them on screen)
 };
 
 const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
@@ -133,6 +133,8 @@ export class Animator {
     this.lookSmooth = [0, 0];
     this.wander = true;          // pick new places to look on his own every few seconds
     this.eyes = [0, 0];          // where the pupils point, -1..1; they move faster than the head
+    this.eyeShift = [0, 0];      // a side glance of the eyes alone, the head staying put
+    this.nextShift = 0;
     this.nextGlance = 0.8;
     this.talking = false; this.talkStart = 0; this.jaw = 0; this.syllableKick = 0;
     this.nextBlink = 1.5; this.blinkStart = -1;
@@ -210,9 +212,15 @@ export class Animator {
     const bones = new Float32Array(16 * 5);
     [torso, head, earL, earR, jaw].forEach((m, i) => bones.set(m, i * 16));
     // pupils dart toward the glance, ahead of the head
+    // and now and then glance on their own (the head stays put), then come back
+    if (this.wander && t > this.nextShift) {
+      this.eyeShift = Math.random() < 0.45 ? [0, 0] : [rand(-1, 1), rand(-0.6, 0.6)];
+      this.nextShift = t + rand(0.5, 1.8);
+    }
     const ke = 1 - Math.exp(-dt * 18);
-    this.eyes[0] += (this.look[0] - this.eyes[0]) * ke;
-    this.eyes[1] += (this.look[1] - this.eyes[1]) * ke;
+    const ex = 1.3 * this.look[0] + this.eyeShift[0], ey = 1.3 * this.look[1] + this.eyeShift[1];
+    this.eyes[0] += (ex - this.eyes[0]) * ke;
+    this.eyes[1] += (ey - this.eyes[1]) * ke;
     return { bones, lid: [lid, lid], eyes: this.eyes };
   }
 }
