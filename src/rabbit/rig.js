@@ -71,36 +71,33 @@ export function computeWeights(pos, n) {
   return { bone0, bone1, w0, flag };
 }
 
-// Average fur color in a ring around each eye: used to paint the eyelid when blinking.
-export function sampleLidColor(pos, rgba, n) {
-  const acc = [0, 0, 0]; let count = 0;
-  for (let i = 0; i < n; i++) {
-    const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
-    for (const eye of [RIG.eyeL, RIG.eyeR]) {
-      const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
-      if (d > RIG.lidRing[0] && d < RIG.lidRing[1] && dy > 0 && z > eye.c[2] - 0.045 && rgba[4 * i + 3] > 128) {
-        acc[0] += rgba[4 * i]; acc[1] += rgba[4 * i + 1]; acc[2] += rgba[4 * i + 2]; count++;
-      }
-    }
-  }
-  return count ? acc.map(v => v / count / 255) : [0.7, 0.5, 0.3];
-}
-
-// Each eye's own surrounding fur color, [left, right] (one side of his face is in shadow): the dark rim
-// around each eye white is repainted with it.
+// The fur color around each eye, sampled in RIM_SECTORS directions (every 45 degrees, counterclockwise
+// from +x): the light falls across his face, so it differs around each eye. The dark rim
+// around each eye white and the eyelids are painted with these, blended by direction.
+export const RIM_SECTORS = 8;
 export function sampleRimColors(pos, rgba, n) {
-  return [RIG.eyeL, RIG.eyeR].map(eye => {
-    const acc = [0, 0, 0]; let count = 0;
+  const out = new Float32Array(2 * RIM_SECTORS * 3);
+  [RIG.eyeL, RIG.eyeR].forEach((eye, e) => {
+    const acc = Array.from({ length: RIM_SECTORS }, () => [0, 0, 0, 0]), all = [0, 0, 0, 0];
     for (let i = 0; i < n; i++) {
       const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
       const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
       const r = rgba[4 * i], g = rgba[4 * i + 1], b = rgba[4 * i + 2];
-      if (d > 1.3 && d < 2.6 && z > eye.c[2] - 0.045 && rgba[4 * i + 3] > 128 && 0.299 * r + 0.587 * g + 0.114 * b > 0.3 * 255) {
-        acc[0] += r; acc[1] += g; acc[2] += b; count++;
+      if (d < 1.3 || d > 2.6 || z < eye.c[2] - 0.045 || rgba[4 * i + 3] < 128 || 0.299 * r + 0.587 * g + 0.114 * b < 0.3 * 255) continue;
+      // nearest two sectors share each sample, so neighbouring sectors blend smoothly
+      const f = ((Math.atan2(dy, dx) / (2 * Math.PI)) * RIM_SECTORS + RIM_SECTORS) % RIM_SECTORS;
+      const k0 = Math.floor(f), t = f - k0;
+      for (const [k, wgt] of [[k0, 1 - t], [(k0 + 1) % RIM_SECTORS, t]]) {
+        acc[k][0] += wgt * r; acc[k][1] += wgt * g; acc[k][2] += wgt * b; acc[k][3] += wgt;
       }
+      all[0] += r; all[1] += g; all[2] += b; all[3]++;
     }
-    return count ? acc.map(v => v / count / 255) : [0.7, 0.5, 0.3];
+    acc.forEach((a, k) => {
+      const src = a[3] > 3 ? a : all;   // too few samples (behind the nose, say): the eye's overall average
+      for (let c = 0; c < 3; c++) out[(e * RIM_SECTORS + k) * 3 + c] = src[3] ? src[c] / src[3] / 255 : 0.5;
+    });
   });
+  return out;
 }
 
 // Dark mouth interior, placed just behind the lips so it only shows when the jaw opens.

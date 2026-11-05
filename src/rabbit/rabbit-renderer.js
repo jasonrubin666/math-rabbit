@@ -4,7 +4,7 @@
 //   const rabbit = await createRabbit(canvas, { cam, tint });
 //   rabbit.render(dt);            // advance the animation and draw one frame
 //   rabbit.anim.external = {...}  // let something else drive jaw/eyelids
-import { BONES, FLAG, RIG, computeWeights, sampleLidColor, sampleRimColors, buildMouthCavity, buildWisps, Animator } from './rig.js';
+import { BONES, FLAG, RIG, computeWeights, sampleRimColors, buildMouthCavity, buildWisps, Animator } from './rig.js';
 
 const VS = `#version 300 es
 precision highp float; precision highp int;
@@ -15,8 +15,9 @@ uniform vec4 uEyeL, uEyeR;    // cx, cy, rx, ry (rest space)
 uniform vec2 uLid;            // closedness per eye 0..1
 uniform vec4 uWhiteL, uWhiteR; // eye whites: cx, cy, rx, ry (rest space)
 uniform vec2 uSclera;          // eye-white grey on screen: middle, edge
-uniform vec3 uLidColor;
-uniform vec3 uRimL, uRimR;     // each eye's surrounding fur color, for the dark rim around its white
+uniform vec3 uRim[16];        // fur color around each eye every 45 degrees (left eye 0-7, right 8-15)
+uniform float uLidBoost;      // eyelids cover the eye alone, without the stacked fur, so they need lifting
+const float RIM_WHITE = 1.8;  // dark rim splats this close to an eye white (in white radii, squared) join it
 uniform float uFluff;         // splat size multiplier (softer look)
 uniform float uFuzz;          // fur-wisp opacity (fluffy fringe)
 uniform vec3 uTint;           // scene lighting match
@@ -25,6 +26,15 @@ in vec2 aPos; in uint aIndex;
 out vec4 vColor; out vec2 vPos;
 ivec2 tc(uint i) { return ivec2(int(i & 2047u), int(i >> 11u)); }
 float lidLine(vec4 eye, float c) { return eye.y + eye.w * (1.0 - 1.25 * c); }
+// the fur color around eye e (0 left, 1 right) in the direction of rest-space point p, blended between
+// the sampled directions
+vec3 rimAt(int e, vec2 p) {
+  vec4 eye = e == 0 ? uEyeL : uEyeR;
+  vec2 d = (p - eye.xy) / eye.zw;
+  float f = mod(atan(d.y, d.x) / 6.2831853 * 8.0 + 8.0, 8.0);
+  int k = int(floor(f));
+  return mix(uRim[e * 8 + k], uRim[e * 8 + (k + 1) % 8], f - float(k));
+}
 void main() {
   vec4 A = texelFetch(uA, tc(aIndex), 0);
   vec4 B = texelFetch(uB, tc(aIndex), 0);
@@ -68,21 +78,27 @@ void main() {
     vec2 wd = (A.xy - white.xy) / white.zw;
     // white, not colored: a neutral grey, lighter in the middle and darker toward the edges (given as the
     // final on-screen shade, so the fur's lift and warm tint don't apply to it)
-    bool sclera = dot(wd, wd) < 1.0;
-    if (sclera) col = vec3(mix(uSclera.x, uSclera.y, smoothstep(0.15, 1.0, length(wd))));
-    // the model's own dark rim around the white (a black outline) takes the fur color, like the other eye
-    else if (dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = (flag == 1 ? uRimL : uRimR) * (0.9 + 0.2 * fract(sin(float(aIndex) * 12.9898) * 43758.5453));
+    // The model's own dark rim around the white (a black outline): its inner part becomes white too, so
+    // the eye keeps its size, and the rest takes the color of the fur next to it.
+    bool dark = dot(col, vec3(0.299, 0.587, 0.114)) < 0.3;
+    float wr = dot(wd, wd);
+    bool sclera = wr < 1.0 || (dark && wr < RIM_WHITE);
+    float grain = 0.86 + 0.28 * fract(sin(float(aIndex) * 12.9898) * 43758.5453);
+    int e = flag == 1 ? 0 : 1;
+    // (the rim part shades a little darker outward, so its fuzzy splats read as the eye's edge)
+    if (sclera) col = vec3(mix(uSclera.x, uSclera.y, smoothstep(0.15, 1.0, length(wd))) * mix(1.0, 0.8, smoothstep(1.0, RIM_WHITE, wr)));
+    else if (dark) col = rimAt(e, A.xy) * mix(1.0, grain, 0.7);
     vec4 eye = flag == 1 ? uEyeL : uEyeR;
     float c = flag == 1 ? uLid.x : uLid.y;
     // curved lid edge (lowest at the middle), furry per-splat variation, darker toward the lash line
     float dx = (A.x - eye.x) / eye.z;
     float line = lidLine(eye, c) - 0.35 * eye.w * c * max(0.0, 1.0 - dx * dx);
     if (c > 0.01) {
-      float grain = 0.86 + 0.28 * fract(sin(float(aIndex) * 12.9898) * 43758.5453);
       float shade = 0.9 * mix(0.72, 1.0, clamp((A.y - line) / (0.8 * eye.w), 0.0, 1.0));
-      if (A.y > line) { col = uLidColor * grain * shade; sclera = false; }
-      else if (A.y > line - 0.0045) { col = uLidColor * 0.25; sclera = false; }
-      else if (c > 0.8) { col = uLidColor * 0.8; sclera = false; }   // fully shut: cover the sliver under the lash line
+      vec3 lidColor = min(vec3(1.0), rimAt(e, A.xy) * uLidBoost);   // matches the fur on that side of the eye
+      if (A.y > line) { col = lidColor * grain * shade; sclera = false; }
+      else if (A.y > line - 0.0045) { col = lidColor * 0.25; sclera = false; }
+      else if (c > 0.8) { col = lidColor * 0.8; sclera = false; }   // fully shut: cover the sliver under the lash line
     }
     if (!sclera) col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
   } else {
@@ -91,7 +107,7 @@ void main() {
       // of the white) take the color of the fur around the eye
       vec4 white = A.x < 0.0 ? uWhiteL : uWhiteR;
       vec2 wd = (A.xy - white.xy) / white.zw;
-      if (dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = A.x < 0.0 ? uRimL : uRimR;
+      if (dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = rimAt(A.x < 0.0 ? 0 : 1, A.xy);
     }
     col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
   }
@@ -326,7 +342,6 @@ export async function createRabbit(canvas, opts = {}) {
   const file = decodeSplats(await (await fetch(splatUrl)).arrayBuffer());
   const nFile = file.n;
   const rig = computeWeights(file.pos, nFile);
-  const lidColor = sampleLidColor(file.pos, file.rgba, nFile);
   const cavity = buildMouthCavity(file.pos, file.rgba, nFile);
   const wisps = buildWisps(file.pos, file.rgba, file.shortAxis, rig, nFile);
   const n = nFile + cavity.length + wisps.length;
@@ -398,10 +413,8 @@ export async function createRabbit(canvas, opts = {}) {
   gl.uniform2fv(U('uSclera'), RIG.scleraColor);
   gl.uniform4fv(U('uEyeR'), [RIG.eyeR.c[0], RIG.eyeR.c[1], RIG.eyeR.r[0], RIG.eyeR.r[1]]);
   // sampled splat colors read darker than the stacked fur on screen, so lift them
-  gl.uniform3fv(U('uLidColor'), lidColor.map(v => Math.min(1, v * 1.6)));
-  const rims = sampleRimColors(file.pos, file.rgba, nFile);
-  gl.uniform3fv(U('uRimL'), rims[0]);
-  gl.uniform3fv(U('uRimR'), rims[1]);
+  gl.uniform3fv(U('uRim'), sampleRimColors(file.pos, file.rgba, nFile));
+  gl.uniform1f(U('uLidBoost'), 1.3);
 
   // ---- camera (OpenCV-style: x right, y down, z forward) ----
   const cam = { yaw: 0, pitch: 0, dist: 1.7, target: [0, 0.02, 0], fov: 35 * Math.PI / 180, ...camOpts };
