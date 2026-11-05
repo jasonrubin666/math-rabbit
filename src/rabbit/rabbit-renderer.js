@@ -82,7 +82,16 @@ void main() {
       else if (c > 0.8) { col = uLidColor * 0.8; sclera = false; }   // fully shut: cover the sliver under the lash line
     }
     if (!sclera) col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
-  } else col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
+  } else {
+    if (flag == 5) {
+      // around the eyes: dark leftovers of the model's own pupil (a crescent at the inner corner, in front
+      // of the white) take the color of the fur around the eye
+      vec4 white = A.x < 0.0 ? uWhiteL : uWhiteR;
+      vec2 wd = (A.xy - white.xy) / white.zw;
+      if (dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = uLidColor;
+    }
+    col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
+  }
   vColor = vec4(col, flag == 4 ? D.a * uFuzz : D.a);
   vPos = aPos * 1.5;
   vec2 center = pos2d.xy / pos2d.w;

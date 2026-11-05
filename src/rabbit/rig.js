@@ -28,7 +28,7 @@ export const RIG = {
   // `pupilR`) whose resting spot is where the model's pupil is (toward the nose and a little down, i.e.
   // looking at the player); glances move it up to `pupilTravel` (x, y) from there.
   whiteL: { c: [-0.0785, 0.0], r: [0.0345, 0.037], pupil: [-0.065, -0.013] },
-  whiteR: { c: [0.083, 0.005], r: [0.032, 0.041], pupil: [0.064, -0.015] },
+  whiteR: { c: [0.081, 0.002], r: [0.035, 0.045], pupil: [0.064, -0.015] },
   pupilR: 0.0135, pupilTravel: [0.028, 0.024],
   scleraColor: [0.9, 0.74], pupilColor: [0.07, 0.045, 0.03],   // eye-white grey on screen: [middle, edge]
 };
