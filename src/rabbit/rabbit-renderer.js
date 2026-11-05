@@ -100,7 +100,8 @@ void main() {
       // of the white) take the color of the fur around the eye
       vec4 white = A.x < 0.0 ? uWhiteL : uWhiteR;
       vec2 wd = (A.xy - white.xy) / white.zw;
-      if (dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = uLidColor;
+      // (the right eye only: around the left one the dark splats are its own outline, which stays)
+      if (A.x > 0.0 && dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = uLidColor;
     }
     col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
   }
