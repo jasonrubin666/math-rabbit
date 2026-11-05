@@ -14,7 +14,7 @@ uniform mat4 uBones[5];
 uniform vec4 uEyeL, uEyeR;    // cx, cy, rx, ry (rest space)
 uniform vec2 uLid;            // closedness per eye 0..1
 uniform vec4 uWhiteL, uWhiteR; // eye whites: cx, cy, rx, ry (rest space)
-uniform vec3 uSclera;
+uniform vec2 uSclera;          // eye-white grey on screen: middle, edge
 uniform vec3 uLidColor;
 uniform float uFluff;         // splat size multiplier (softer look)
 uniform float uFuzz;          // fur-wisp opacity (fluffy fringe)
@@ -65,7 +65,10 @@ void main() {
     // drawn over them afterwards, where he is looking (see PUPIL_VS / PUPIL_FS)
     vec4 white = flag == 1 ? uWhiteL : uWhiteR;
     vec2 wd = (A.xy - white.xy) / white.zw;
-    if (dot(wd, wd) < 1.0) col = uSclera;
+    // white, not colored: a neutral grey, lighter in the middle and darker toward the edges (given as the
+    // final on-screen shade, so the fur's lift and warm tint don't apply to it)
+    bool sclera = dot(wd, wd) < 1.0;
+    if (sclera) col = vec3(mix(uSclera.x, uSclera.y, smoothstep(0.15, 1.0, length(wd))));
     vec4 eye = flag == 1 ? uEyeL : uEyeR;
     float c = flag == 1 ? uLid.x : uLid.y;
     // curved lid edge (lowest at the middle), furry per-splat variation, darker toward the lash line
@@ -74,12 +77,12 @@ void main() {
     if (c > 0.01) {
       float grain = 0.86 + 0.28 * fract(sin(float(aIndex) * 12.9898) * 43758.5453);
       float shade = 0.9 * mix(0.72, 1.0, clamp((A.y - line) / (0.8 * eye.w), 0.0, 1.0));
-      if (A.y > line) col = uLidColor * grain * shade;
-      else if (A.y > line - 0.0045) col = uLidColor * 0.25;
-      else if (c > 0.8) col = uLidColor * 0.8;   // fully shut: cover the sliver under the lash line
+      if (A.y > line) { col = uLidColor * grain * shade; sclera = false; }
+      else if (A.y > line - 0.0045) { col = uLidColor * 0.25; sclera = false; }
+      else if (c > 0.8) { col = uLidColor * 0.8; sclera = false; }   // fully shut: cover the sliver under the lash line
     }
-  }
-  col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
+    if (!sclera) col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
+  } else col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
   vColor = vec4(col, flag == 4 ? D.a * uFuzz : D.a);
   vPos = aPos * 1.5;
   vec2 center = pos2d.xy / pos2d.w;
@@ -220,8 +223,9 @@ function createPupils(gl, compile, file, rig, settings) {
   /** Each eye's pupil for this frame, with its view depth so it can be drawn in order among the splats. */
   function prepare(m, bones, lid, eyes) {
     const head = bones.subarray(16 * BONES.head, 16 * BONES.head + 16);
+    const reach = pupilReach(maps.map(m => m.white), eyes);
     return maps.map(({ white, at, front }, e) => {
-      const [cx, cy] = pupilAt(white, eyes);
+      const [cx, cy] = pupilAt(white, eyes, reach);
       // a flat, forward-facing quad just in front of the eye's surface at the pupil (the eye curves away
       // steeply toward the nose, so following its slope would turn the pupil edge-on)
       const z = at(cx, cy) + 0.002;
@@ -259,14 +263,30 @@ function createPupils(gl, compile, file, rig, settings) {
   return { prepare, drawEye };
 }
 
-/** Where a pupil goes when looking `eyes` (-1..1), kept inside its eye white. */
-function pupilAt(white, eyes) {
+/** Where a pupil goes when looking `eyes` (-1..1), moved `reach` (0..1) of the way there. */
+function pupilAt(white, eyes, reach) {
   const [tx, ty] = RIG.pupilTravel;
-  const rx = white.r[0] - RIG.pupilR * 1.05, ry = white.r[1] - RIG.pupilR * 1.05;
-  let dx = (white.pupil[0] + tx * eyes[0] - white.c[0]) / rx, dy = (white.pupil[1] + ty * eyes[1] - white.c[1]) / ry;
-  const d = Math.hypot(dx, dy);
-  if (d > 1) { dx /= d; dy /= d; }
-  return [white.c[0] + dx * rx, white.c[1] + dy * ry];
+  return [white.pupil[0] + reach * tx * eyes[0], white.pupil[1] + reach * ty * eyes[1]];
+}
+
+/**
+ * How far both pupils can go toward `eyes` with both staying inside their whites. Both move by the same
+ * amount so they never drift apart (each white has its own shape and resting spot, so clamping them one
+ * at a time stopped one pupil while the other kept going).
+ */
+function pupilReach(whites, eyes) {
+  const [tx, ty] = RIG.pupilTravel;
+  let reach = 1;
+  for (const w of whites) {
+    const rx = w.r[0] - RIG.pupilR * 1.05, ry = w.r[1] - RIG.pupilR * 1.05;
+    const px = (w.pupil[0] - w.c[0]) / rx, py = (w.pupil[1] - w.c[1]) / ry;
+    const qx = (tx * eyes[0]) / rx, qy = (ty * eyes[1]) / ry;
+    const qq = qx * qx + qy * qy, pq = px * qx + py * qy;
+    if (qq < 1e-12) continue;
+    // the s where |p + s q| = 1 (the resting spot p is inside, so this root is positive)
+    reach = Math.min(reach, (-pq + Math.sqrt(Math.max(0, pq * pq - qq * (px * px + py * py - 1)))) / qq);
+  }
+  return Math.max(0, reach);
 }
 
 export async function createRabbit(canvas, opts = {}) {
@@ -363,7 +383,7 @@ export async function createRabbit(canvas, opts = {}) {
   gl.uniform4fv(U('uEyeL'), [RIG.eyeL.c[0], RIG.eyeL.c[1], RIG.eyeL.r[0], RIG.eyeL.r[1]]);
   gl.uniform4fv(U('uWhiteL'), [...RIG.whiteL.c, ...RIG.whiteL.r]);
   gl.uniform4fv(U('uWhiteR'), [...RIG.whiteR.c, ...RIG.whiteR.r]);
-  gl.uniform3fv(U('uSclera'), RIG.scleraColor);
+  gl.uniform2fv(U('uSclera'), RIG.scleraColor);
   gl.uniform4fv(U('uEyeR'), [RIG.eyeR.c[0], RIG.eyeR.c[1], RIG.eyeR.r[0], RIG.eyeR.r[1]]);
   // sampled splat colors read darker than the stacked fur on screen, so lift them
   gl.uniform3fv(U('uLidColor'), lidColor.map(v => Math.min(1, v * 1.6)));
