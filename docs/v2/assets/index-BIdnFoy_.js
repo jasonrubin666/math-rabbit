@@ -61,6 +61,8 @@ void main() {
     // final on-screen shade, so the fur's lift and warm tint don't apply to it)
     bool sclera = dot(wd, wd) < 1.0;
     if (sclera) col = vec3(mix(uSclera.x, uSclera.y, smoothstep(0.15, 1.0, length(wd))));
+    // the model's own dark rim around the white (a black outline) takes the fur color, like the other eye
+    else if (dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = uLidColor * (0.86 + 0.28 * fract(sin(float(aIndex) * 12.9898) * 43758.5453));
     vec4 eye = flag == 1 ? uEyeL : uEyeR;
     float c = flag == 1 ? uLid.x : uLid.y;
     // curved lid edge (lowest at the middle), furry per-splat variation, darker toward the lash line
