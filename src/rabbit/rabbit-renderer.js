@@ -4,7 +4,7 @@
 //   const rabbit = await createRabbit(canvas, { cam, tint });
 //   rabbit.render(dt);            // advance the animation and draw one frame
 //   rabbit.anim.external = {...}  // let something else drive jaw/eyelids
-import { BONES, FLAG, RIG, computeWeights, sampleLidColor, buildMouthCavity, buildWisps, Animator } from './rig.js';
+import { BONES, FLAG, RIG, computeWeights, sampleLidColor, sampleRimColors, buildMouthCavity, buildWisps, Animator } from './rig.js';
 
 const VS = `#version 300 es
 precision highp float; precision highp int;
@@ -16,6 +16,7 @@ uniform vec2 uLid;            // closedness per eye 0..1
 uniform vec4 uWhiteL, uWhiteR; // eye whites: cx, cy, rx, ry (rest space)
 uniform vec2 uSclera;          // eye-white grey on screen: middle, edge
 uniform vec3 uLidColor;
+uniform vec3 uRimL, uRimR;     // each eye's surrounding fur color, for the dark rim around its white
 uniform float uFluff;         // splat size multiplier (softer look)
 uniform float uFuzz;          // fur-wisp opacity (fluffy fringe)
 uniform vec3 uTint;           // scene lighting match
@@ -70,7 +71,7 @@ void main() {
     bool sclera = dot(wd, wd) < 1.0;
     if (sclera) col = vec3(mix(uSclera.x, uSclera.y, smoothstep(0.15, 1.0, length(wd))));
     // the model's own dark rim around the white (a black outline) takes the fur color, like the other eye
-    else if (dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = uLidColor * (0.86 + 0.28 * fract(sin(float(aIndex) * 12.9898) * 43758.5453));
+    else if (dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = (flag == 1 ? uRimL : uRimR) * (0.9 + 0.2 * fract(sin(float(aIndex) * 12.9898) * 43758.5453));
     vec4 eye = flag == 1 ? uEyeL : uEyeR;
     float c = flag == 1 ? uLid.x : uLid.y;
     // curved lid edge (lowest at the middle), furry per-splat variation, darker toward the lash line
@@ -90,7 +91,7 @@ void main() {
       // of the white) take the color of the fur around the eye
       vec4 white = A.x < 0.0 ? uWhiteL : uWhiteR;
       vec2 wd = (A.xy - white.xy) / white.zw;
-      if (dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = uLidColor;
+      if (dot(wd, wd) < 2.6 && dot(col, vec3(0.299, 0.587, 0.114)) < 0.3) col = A.x < 0.0 ? uRimL : uRimR;
     }
     col = pow(clamp(col, 0.0, 1.0), vec3(1.0 / uLift)) * uTint;
   }
@@ -398,6 +399,9 @@ export async function createRabbit(canvas, opts = {}) {
   gl.uniform4fv(U('uEyeR'), [RIG.eyeR.c[0], RIG.eyeR.c[1], RIG.eyeR.r[0], RIG.eyeR.r[1]]);
   // sampled splat colors read darker than the stacked fur on screen, so lift them
   gl.uniform3fv(U('uLidColor'), lidColor.map(v => Math.min(1, v * 1.6)));
+  const rims = sampleRimColors(file.pos, file.rgba, nFile);
+  gl.uniform3fv(U('uRimL'), rims[0]);
+  gl.uniform3fv(U('uRimR'), rims[1]);
 
   // ---- camera (OpenCV-style: x right, y down, z forward) ----
   const cam = { yaw: 0, pitch: 0, dist: 1.7, target: [0, 0.02, 0], fov: 35 * Math.PI / 180, ...camOpts };

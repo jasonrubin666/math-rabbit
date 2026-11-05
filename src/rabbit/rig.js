@@ -86,6 +86,23 @@ export function sampleLidColor(pos, rgba, n) {
   return count ? acc.map(v => v / count / 255) : [0.7, 0.5, 0.3];
 }
 
+// Each eye's own surrounding fur color, [left, right] (one side of his face is in shadow): the dark rim
+// around each eye white is repainted with it.
+export function sampleRimColors(pos, rgba, n) {
+  return [RIG.eyeL, RIG.eyeR].map(eye => {
+    const acc = [0, 0, 0]; let count = 0;
+    for (let i = 0; i < n; i++) {
+      const x = pos[3 * i], y = pos[3 * i + 1], z = pos[3 * i + 2];
+      const dx = (x - eye.c[0]) / eye.r[0], dy = (y - eye.c[1]) / eye.r[1], d = dx * dx + dy * dy;
+      const r = rgba[4 * i], g = rgba[4 * i + 1], b = rgba[4 * i + 2];
+      if (d > 1.3 && d < 2.6 && z > eye.c[2] - 0.045 && rgba[4 * i + 3] > 128 && 0.299 * r + 0.587 * g + 0.114 * b > 0.3 * 255) {
+        acc[0] += r; acc[1] += g; acc[2] += b; count++;
+      }
+    }
+    return count ? acc.map(v => v / count / 255) : [0.7, 0.5, 0.3];
+  });
+}
+
 // Dark mouth interior, placed just behind the lips so it only shows when the jaw opens.
 export function buildMouthCavity(pos, rgba, n) {
   const step = 0.003, out = [], near = [];
