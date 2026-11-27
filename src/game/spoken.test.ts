@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { spokenNumber, spokenYesNo } from './spoken';
+import { spokenNumber } from './spoken';
 
 describe('spoken numbers', () => {
   it.each([
@@ -12,10 +12,4 @@ describe('spoken numbers', () => {
   it.each(['', 'banana', 'is it for me', 'yes', 'and', 'sixteen bananas'])('"%s" is not a number', (heard) => {
     expect(spokenNumber(heard)).toBeNull();
   });
-});
-
-describe('yes and no', () => {
-  it.each([['yes', 'yes'], ['Yeah!', 'yes'], ['okay', 'yes'], ['check', 'yes'], ['no', 'no'], ['clear', 'no'], ['nope', 'no']])(
-    '"%s" is %s', (heard, answer) => expect(spokenYesNo(heard)).toBe(answer));
-  it.each(['16', 'yes sixteen', 'no yes', ''])('"%s" is neither', (heard) => expect(spokenYesNo(heard)).toBeNull());
 });

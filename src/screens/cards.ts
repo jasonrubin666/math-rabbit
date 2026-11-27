@@ -8,7 +8,7 @@ import { arithmeticProblem, type ArithmeticProblem } from '../game/modes';
 import { pointsForCorrect, popupLabel, WRONG_PENALTY, clampScore } from '../game/scoring';
 import { calculatorType, CARD_MAX_DIGITS } from '../game/entry';
 import type { Settings } from '../settings';
-import { spokenNumber, spokenYesNo } from '../game/spoken';
+import { spokenNumber } from '../game/spoken';
 import { onVoice, resetVoice, setVoice, voiceOn, voiceSupported } from '../voice';
 
 export type GameResult = { score: number; questions: number; attempts: number; kind: 'card' };
@@ -303,7 +303,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     onGameOver({ score: Math.round(score), questions: n, attempts, kind: 'card' });
   }
 
-  // ---- voice answers: say the number, check it on the card, then say "yes" or press Enter ----
+  // ---- voice answers: say the number, check it on the card, then press the ✓ (Enter) key ----
   const mic = document.createElement('button');
   mic.className = 'mic';
   mic.setAttribute('aria-label', 'Answer by voice');
@@ -324,13 +324,6 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
   function onHeard(alternatives: string[], final: boolean) {
     if (!accepting) return;
     const best = alternatives[0] ?? '';
-    const yesNo = alternatives.map(spokenYesNo).find(Boolean);
-    if (yesNo) {
-      if (!final) return;
-      if (yesNo === 'no') { entry = ''; showEntry(); popEntry(); void play('Pop'); say('Say the answer again'); return; }
-      if (entry) enter();
-      return;
-    }
     const n = alternatives.map(spokenNumber).find(v => v !== null) ?? null;
     if (n === null) {
       if (final) say(`Heard “${escape(best)}”. Say a number.`);
@@ -339,7 +332,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     const text = String(n);
     if (text.length > CARD_MAX_DIGITS) { if (final) say(`${text} is too long`); return; }
     if (text !== entry) { entry = text; showEntry(); popEntry(); if (final) void play('CalcButton'); }
-    if (final) say(`<b>${text}</b>? Say “yes” or press Enter`);
+    if (final) say(`<b>${text}</b>? Press ✓ to enter it`);
   }
   const escape = (t: string) => t.replace(/[&<>"]/g, c => `&#${c.charCodeAt(0)};`);
 

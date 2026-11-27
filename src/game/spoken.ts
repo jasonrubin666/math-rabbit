@@ -1,4 +1,4 @@
-// Reading spoken answers: what the speech recognizer heard → a number, or a "yes" / "no".
+// Reading spoken answers: what the speech recognizer heard → a number.
 // Recognizers return digits ("16") or words ("sixteen", "one hundred and five"), and sometimes
 // sound-alikes for short words ("to" for 2, "for" for 4), so all of those count.
 
@@ -11,8 +11,6 @@ const ONES: Record<string, number> = {
 const TENS: Record<string, number> = {
   twenty: 20, thirty: 30, forty: 40, fourty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90,
 };
-const YES = new Set(['yes', 'yeah', 'yep', 'yup', 'yah', 'ya', 'correct', 'ok', 'okay', 'check', 'enter', 'right', 'sure', 'done']);
-const NO = new Set(['no', 'nope', 'nah', 'clear', 'delete', 'wrong', 'cancel', 'oops', 'redo', 'erase']);
 
 const words = (text: string) =>
   text.toLowerCase().replace(/(\d),(\d)/g, '$1$2').replace(/-/g, ' ').replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter(Boolean);
@@ -50,12 +48,3 @@ export function spokenNumber(text: string): number | null {
 
 /** Filler around an answer: "it's sixteen", "the answer is 16", "um, 16". */
 const FILLER = new Set(['um', 'uh', 'umm', 'uhh', 'er', 'hmm', 'its', 'it', 's', 'is', 'the', 'answer', 'i', 'think', 'say', 'equals', 'makes', 'that', 'thats', 'like']);
-
-/** "yes" (enter it) or "no" (clear it), when that's all that was said; null otherwise. */
-export function spokenYesNo(text: string): 'yes' | 'no' | null {
-  const ws = words(text);
-  if (!ws.length || ws.length > 3) return null;
-  if (ws.every(w => YES.has(w))) return 'yes';
-  if (ws.every(w => NO.has(w))) return 'no';
-  return null;
-}
