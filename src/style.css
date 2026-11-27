@@ -83,3 +83,41 @@ html, body {
   cursor: pointer;
   z-index: 1000;
 }
+
+/* Voice answers (card screen): the mic toggle above the calculator, and what it heard */
+#stage .mic {
+  position: absolute;
+  left: calc(100% * 435 / 480);
+  top: calc(100% * 20 / 360);
+  width: calc(36 * var(--u));
+  height: calc(36 * var(--u));
+  padding: calc(7 * var(--u));
+  border-radius: 50%;
+  border: calc(2 * var(--u)) solid rgba(255, 255, 255, 0.8);
+  background: rgba(30, 30, 30, 0.75);
+  fill: #fff;
+  cursor: pointer;
+  z-index: 500;
+}
+#stage .mic.on {
+  background: #d23b2f;
+  animation: mic-pulse 1.4s ease-in-out infinite;
+}
+@keyframes mic-pulse {
+  50% { box-shadow: 0 0 0 calc(6 * var(--u)) rgba(210, 59, 47, 0.3); }
+}
+#stage .heard {
+  position: absolute;
+  left: calc(100% * 250 / 480);
+  top: calc(100% * 24 / 360);
+  max-width: calc(170 * var(--u));
+  padding: calc(5 * var(--u)) calc(10 * var(--u));
+  border-radius: calc(8 * var(--u));
+  background: rgba(255, 255, 255, 0.92);
+  color: #222;
+  font: 500 calc(12 * var(--u)) / 1.25 "Noto Sans", sans-serif;
+  z-index: 500;
+  pointer-events: none;
+}
+#stage .heard[hidden] { display: none; }
+#stage .heard b { font-size: 1.4em; }

@@ -8,6 +8,8 @@ import { arithmeticProblem, type ArithmeticProblem } from '../game/modes';
 import { pointsForCorrect, popupLabel, WRONG_PENALTY, clampScore } from '../game/scoring';
 import { calculatorType, CARD_MAX_DIGITS } from '../game/entry';
 import type { Settings } from '../settings';
+import { spokenNumber, spokenYesNo } from '../game/spoken';
+import { listen, setVoiceWanted, voiceSupported, voiceWanted } from '../voice';
 
 export type GameResult = { score: number; questions: number; attempts: number; kind: 'card' };
 
@@ -117,6 +119,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     attempts++;
     entry = '';
     showEntry();
+    heard.hidden = true;
     c.back.show(false);
     front.setCostume('CardBack').setEffects({}).show(true);
     front.el.style.zIndex = '200';
@@ -193,6 +196,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
   function press(key: string) {
     if (!accepting) return;
     if (key === 'enter') return enter();
+    heard.hidden = true;
     if (key === 'delete') {
       if (entry) void play('Pop');
       entry = '';
@@ -215,6 +219,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
   function enter() {
     if (!entry) return;                // an empty Enter doesn't cost points (Mad Dad counted it wrong)
     accepting = false;
+    heard.hidden = true;
     void play('Enter');
     stopTimer();
     if (+entry === card().problem.answer) correct(); else wrong(false);
@@ -297,6 +302,58 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     onGameOver({ score: Math.round(score), questions: n, attempts, kind: 'card' });
   }
 
+  // ---- voice answers: say the number, check it on the card, then say "yes" or press Enter ----
+  const mic = document.createElement('button');
+  mic.className = 'mic';
+  mic.setAttribute('aria-label', 'Answer by voice');
+  mic.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>';
+  const heard = document.createElement('div');
+  heard.className = 'heard';
+  heard.hidden = true;
+  let stopListening: (() => void) | null = null;
+
+  function setListening(on: boolean) {
+    stopListening?.();
+    stopListening = on ? listen({ onHeard, onDenied: () => { setListening(false); say('Microphone is off. Check the browser’s permission.'); } }) : null;
+    mic.classList.toggle('on', on);
+    mic.setAttribute('aria-pressed', String(on));
+  }
+  function say(html: string) { heard.innerHTML = html; heard.hidden = false; }
+
+  function onHeard(alternatives: string[], final: boolean) {
+    if (!accepting) return;
+    const best = alternatives[0] ?? '';
+    const yesNo = alternatives.map(spokenYesNo).find(Boolean);
+    if (yesNo) {
+      if (!final) return;
+      if (yesNo === 'no') { entry = ''; showEntry(); popEntry(); void play('Pop'); say('Say the answer again'); return; }
+      if (entry) enter();
+      return;
+    }
+    const n = alternatives.map(spokenNumber).find(v => v !== null) ?? null;
+    if (n === null) {
+      if (final) say(`Heard “${escape(best)}”. Say a number.`);
+      return;
+    }
+    const text = String(n);
+    if (text.length > CARD_MAX_DIGITS) { if (final) say(`${text} is too long`); return; }
+    if (text !== entry) { entry = text; showEntry(); popEntry(); if (final) void play('CalcButton'); }
+    if (final) say(`<b>${text}</b>? Say “yes” or press Enter`);
+  }
+  const escape = (t: string) => t.replace(/[&<>"]/g, c => `&#${c.charCodeAt(0)};`);
+
+  if (voiceSupported) {
+    mic.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      const on = !stopListening;
+      setVoiceWanted(on);
+      setListening(on);
+      if (on) say('Listening. Say the answer.'); else heard.hidden = true;
+    });
+    stage.append(mic, heard);
+    if (voiceWanted()) setListening(true);
+  }
+
   // ---- keyboard ----
   const onKey = (e: KeyboardEvent) => {
     if (/^[0-9]$/.test(e.key)) press(e.key);
@@ -337,6 +394,8 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     /** for tests and debugging */
     get state() { return { problem: deck[cur]?.problem, accepting, entry, score, streak, attempts, left: deck.length }; },
     press,
+    /** as if the microphone heard `text` (for tests and debugging) */
+    hear: (text: string, final = true) => onHeard([text], final),
     update(t: number) {
       now = t;
       const anim = cardAnim;
@@ -371,6 +430,9 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
       scope.cancel();
       stopTimer();
       window.removeEventListener('keydown', onKey);
+      stopListening?.();
+      mic.remove();
+      heard.remove();
       for (const s of [backdrop, front, top, bottom, ...entryDigits, calculator, ...keys, boom, ...scoreDigits.map(d => d.sprite), ...deck.map(c => c.back)]) s.remove();
     },
   };

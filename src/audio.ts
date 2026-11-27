@@ -15,6 +15,21 @@ const playing = new Set<AudioBufferSourceNode>();
 
 /** Clips of someone talking (the host's lines). */
 const VOICE = /^(MadDad|Family\d|Start\d|Correct\d|Wrong\d|Slow\d|Good |Card\d|Clock\d|Clock3Wrong|GameOver\d|100-|SettingsOperator|WhatTime)/;
+/** The per-question timer music: the timer start and its tick-tock loop. */
+const TIMER_MUSIC = /^(Timer|TicTok)$/;
+/** The background music on the title screen and report card. */
+const BACKGROUND_MUSIC = /^music_/;
+
+/**
+ * Switched off for now. Every call to play() stays in place, and the sounds are still loaded by name,
+ * so setting a flag back to true brings that group back.
+ */
+export const SOUND_ON = { timerMusic: false, backgroundMusic: false, voice: true };
+
+const isOn = (name: string) =>
+  (SOUND_ON.timerMusic || !TIMER_MUSIC.test(name)) &&
+  (SOUND_ON.backgroundMusic || !BACKGROUND_MUSIC.test(name)) &&
+  (SOUND_ON.voice || !VOICE.test(name));
 
 export function unlock() {
   if (ctx.state !== 'running') void ctx.resume();
@@ -37,6 +52,7 @@ export const preload = (names: string[]) => Promise.all(names.map(load));
 
 /** Plays a sound; resolves when it finishes (or immediately if it's missing or gets stopped). */
 export async function play(name: string): Promise<void> {
+  if (!isOn(name)) return;
   const buffer = await load(name);
   if (!buffer) return;
   const src = ctx.createBufferSource();
