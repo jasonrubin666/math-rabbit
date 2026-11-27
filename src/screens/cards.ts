@@ -9,7 +9,7 @@ import { pointsForCorrect, popupLabel, WRONG_PENALTY, clampScore } from '../game
 import { calculatorType, CARD_MAX_DIGITS } from '../game/entry';
 import type { Settings } from '../settings';
 import { spokenNumber, spokenYesNo } from '../game/spoken';
-import { listen, setVoiceWanted, voiceSupported, voiceWanted } from '../voice';
+import { onVoice, resetVoice, setVoice, voiceOn, voiceSupported } from '../voice';
 
 export type GameResult = { score: number; questions: number; attempts: number; kind: 'card' };
 
@@ -120,6 +120,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
     entry = '';
     showEntry();
     heard.hidden = true;
+    resetVoice();   // a new question: drop anything still being heard for the last one
     c.back.show(false);
     front.setCostume('CardBack').setEffects({}).show(true);
     front.el.style.zIndex = '200';
@@ -310,14 +311,14 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
   const heard = document.createElement('div');
   heard.className = 'heard';
   heard.hidden = true;
-  let stopListening: (() => void) | null = null;
-
-  function setListening(on: boolean) {
-    stopListening?.();
-    stopListening = on ? listen({ onHeard, onDenied: () => { setListening(false); say('Microphone is off. Check the browser’s permission.'); } }) : null;
-    mic.classList.toggle('on', on);
-    mic.setAttribute('aria-pressed', String(on));
-  }
+  const showMic = () => {
+    mic.classList.toggle('on', voiceOn());
+    mic.setAttribute('aria-pressed', String(voiceOn()));
+  };
+  const offVoice = onVoice({
+    onHeard: (alternatives, final) => onHeard(alternatives, final),
+    onDenied: () => { showMic(); say('Microphone is off. Check the browser’s permission.'); },
+  });
   function say(html: string) { heard.innerHTML = html; heard.hidden = false; }
 
   function onHeard(alternatives: string[], final: boolean) {
@@ -345,13 +346,12 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
   if (voiceSupported) {
     mic.addEventListener('pointerdown', (e) => {
       e.preventDefault();
-      const on = !stopListening;
-      setVoiceWanted(on);
-      setListening(on);
-      if (on) say('Listening. Say the answer.'); else heard.hidden = true;
+      setVoice(!voiceOn());
+      showMic();
+      if (voiceOn()) say('Listening. Say the answer.'); else heard.hidden = true;
     });
     stage.append(mic, heard);
-    if (voiceWanted()) setListening(true);
+    showMic();
   }
 
   // ---- keyboard ----
@@ -430,7 +430,7 @@ export function cardsScreen(stage: HTMLElement, settings: Settings, onGameOver: 
       scope.cancel();
       stopTimer();
       window.removeEventListener('keydown', onKey);
-      stopListening?.();
+      offVoice();
       mic.remove();
       heard.remove();
       for (const s of [backdrop, front, top, bottom, ...entryDigits, calculator, ...keys, boom, ...scoreDigits.map(d => d.sprite), ...deck.map(c => c.back)]) s.remove();

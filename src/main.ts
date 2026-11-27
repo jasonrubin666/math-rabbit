@@ -4,6 +4,7 @@ import './style.css';
 import { STAGE_W } from './ui/stage';
 import { createHost } from './rabbit/host';
 import { unlock } from './audio';
+import { setVoice, voiceWanted } from './voice';
 import { loadSettings } from './settings';
 import { titleScreen } from './screens/title';
 import { cardsScreen, type GameResult } from './screens/cards';
@@ -36,6 +37,8 @@ const fontsReady = Promise.all(['500 16px "Noto Sans"', '16px Knewave', '16px "B
 const tapToStart = document.getElementById('tap-to-start')!;
 tapToStart.addEventListener('pointerdown', () => {
   unlock();
+  // voice answers are on unless turned off: start listening now, so the microphone is asked for here
+  if (voiceWanted()) setVoice(true, false);
   tapToStart.remove();
   void fontsReady.then(toTitle, toTitle);
 }, { once: true });
