@@ -138,10 +138,14 @@ function artSlots(): Plugin {
 }
 
 // Sounds come straight out of the Scratch project by name (Stage's copy wins when sprites share a name).
-// A file in sounds/replace/ named "<sound name>.<ext>" replaces it, e.g. sounds/replace/Correct1.mp3.
+// A file in sounds/replace/ named "<sound name>.<ext>" replaces it, e.g. sounds/replace/Correct1.m4a (the
+// originals, by the same names, are in sounds/originals/). When one name has several files, .wav wins, then
+// .m4a, .mp3, .ogg, the same choice as tools/sounds/apply.py for the Scratch build. Subfolders are ignored.
 const SB3 = path.resolve(import.meta.dirname, 'MadDad.sb3');
 const SOUNDS_REPLACE = path.resolve(import.meta.dirname, 'sounds/replace');
 const SOUNDS_ID = 'virtual:sounds';
+const SOUND_ORDER = ['.wav', '.m4a', '.mp3', '.ogg'];
+const SOUND_TYPES: Record<string, string> = { '.wav': 'audio/wav', '.m4a': 'audio/mp4', '.mp3': 'audio/mpeg', '.ogg': 'audio/ogg' };
 
 function readSounds(): Map<string, { file: string; data: () => Uint8Array }> {
   const zip = unzipSync(fs.readFileSync(SB3));
@@ -154,9 +158,12 @@ function readSounds(): Map<string, { file: string; data: () => Uint8Array }> {
     }
   }
   if (fs.existsSync(SOUNDS_REPLACE)) {
-    for (const f of fs.readdirSync(SOUNDS_REPLACE)) {
-      const name = f.replace(/\.(wav|mp3|m4a|ogg)$/i, '');
-      if (name !== f) out.set(name, { file: f, data: () => fs.readFileSync(path.join(SOUNDS_REPLACE, f)) });
+    const rank = (f: string) => SOUND_ORDER.indexOf(path.extname(f).toLowerCase());
+    const files = fs.readdirSync(SOUNDS_REPLACE)
+      .filter(f => rank(f) >= 0 && fs.statSync(path.join(SOUNDS_REPLACE, f)).isFile())
+      .sort((a, b) => rank(b) - rank(a) || b.localeCompare(a)); // best last, so it's the one that sticks
+    for (const f of files) {
+      out.set(f.slice(0, -path.extname(f).length), { file: f, data: () => fs.readFileSync(path.join(SOUNDS_REPLACE, f)) });
     }
   }
   return out;
@@ -185,8 +192,18 @@ function sounds(): Plugin {
       server.middlewares.use('/@sounds/', (req, res, next) => {
         const s = get().get(decodeURIComponent((req.url ?? '').slice(1).split('?')[0]));
         if (!s) return next();
-        res.setHeader('Content-Type', s.file.endsWith('.mp3') ? 'audio/mpeg' : 'audio/wav');
+        res.setHeader('Content-Type', SOUND_TYPES[path.extname(s.file).toLowerCase()] ?? 'application/octet-stream');
+        res.setHeader('Cache-Control', 'no-store');
         res.end(Buffer.from(s.data()));
+      });
+      // a new or changed recording in sounds/replace/ reloads the page
+      server.watcher.add(SOUNDS_REPLACE);
+      server.watcher.on('all', (_event, file) => {
+        if (!file.startsWith(SOUNDS_REPLACE + path.sep)) return;
+        cache = undefined;
+        const mod = server.moduleGraph.getModuleById('\0' + SOUNDS_ID);
+        if (mod) server.moduleGraph.invalidateModule(mod);
+        server.ws.send({ type: 'full-reload' });
       });
     },
   };

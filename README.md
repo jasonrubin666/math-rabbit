@@ -13,6 +13,7 @@ The game is still the original Scratch project (`MadDad.sb3`), packaged for the 
   - `bridge.js`: draws "rabbit + desk" into the scientist sprites' own costumes before each stage draw. The rabbit therefore follows Scratch's show/hide, size, fades and layering, and the scientist's mouth and blink costumes drive the rabbit's jaw and eyelids.
   - `rabbit.splat`: the cleaned splats; `desk.png`: the desk art from Mad Dad
 - `rabbit-source/rabbit_brown.ply`: the original TRELLIS export (image → 3D Gaussians)
+- `sounds/`: every sound the game plays (`originals/`), and `replace/` for new recordings by the same name; see `sounds/README.md`
 - `tools/build.js`: rebuilds `docs/` from the `.sb3` (keeps `docs/rabbit/`, adds the iPad tags and the rabbit hook)
 - `tools/rabbit/prepare.py`: `.ply` → `rabbit.splat` (drops near-transparent splats and the two stray tails TRELLIS invented)
 
